@@ -22,7 +22,15 @@ const LinksContainer = styled.div`
     box-shadow: 0px 23px 65px rgba(0, 0, 0, 0.14);
 
     @media screen and (max-width: 900px) {
-        display: none;
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        border-radius: 0;
+        width: 100vw;
+        padding: 0;
+        justify-content: space-around;
+        flex-direction: row;
     }
 `;
 
