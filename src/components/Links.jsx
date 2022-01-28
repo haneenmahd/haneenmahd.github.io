@@ -15,6 +15,8 @@ const LinksContainer = styled.div`
     align-items: center;
     padding: 74px 39px;
     background: rgba(255, 255, 255, 0.17);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
     border-radius: 0px 50px 50px 0px;
 `;
 
