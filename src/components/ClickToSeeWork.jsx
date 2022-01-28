@@ -29,6 +29,12 @@ const ClickToSeeButton = styled.button`
         box-shadow: 0px 23px 65px rgba(0, 0, 0, 0.14);
         border: 3px solid #ffffff75;
     }
+
+    @media screen and (max-width: 600px) {
+        p {
+            font-size: 20px;
+        }
+    }
 `;
 
 const ClickToSeeWork = () => {
