@@ -5,7 +5,7 @@ import './App.css'
 function App() {
   return (
     <div className="App">
-      <img src={blob} alt="" />
+      <img src={blob} alt="Background blob" />
     </div>
   )
 }
