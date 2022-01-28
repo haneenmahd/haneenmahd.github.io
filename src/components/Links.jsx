@@ -29,19 +29,19 @@ const Link = styled.a`
 export default function Links() {
     return (
         <LinksContainer>
-            <Link>
+            <Link target="_blank" href="https://discord.com">
                 <DiscordIcon />
             </Link>
 
-            <Link>
+            <Link target="_blank" href="https://github.com/haneenmahd">
                 <GithubIcon />
             </Link>
 
-            <Link>
+            <Link target="_blank" href="https://instagram.com/haneenmahdin">
                 <InstagramIcon />
             </Link>
 
-            <Link>
+            <Link target="_blank" href="https://twitter.com/HaneenMahdin">
                 <TwitterIcon />
             </Link>
         </LinksContainer>
