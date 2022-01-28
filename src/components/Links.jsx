@@ -49,6 +49,12 @@ const Link = styled.a`
             fill: #fff;
         }
     }
+
+    @media screen and (max-width: 600px) {
+        svg {
+            height: 50px; width: 50px;
+        }   
+    }
 `;
 
 export default function Links() {
