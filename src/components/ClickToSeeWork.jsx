@@ -25,6 +25,7 @@ const ClickToSeeButton = styled.button`
 
     &:hover {
         background: rgba(255, 255, 255, 0.262);
+        box-shadow: 0px 23px 65px rgba(0, 0, 0, 0.14);
     }
 `;
 
