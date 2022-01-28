@@ -2,6 +2,7 @@ import blob from './assets/svg/blob.svg'
 import './App.css'
 import Main from './components/Main'
 import styled from 'styled-components'
+import Links from './components/Links';
 
 const BlobImage = styled.img`
   height: auto;
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <BlobImage src={blob} alt="Background blob" />
+      <Links />
       <Main />
     </div>
   )
