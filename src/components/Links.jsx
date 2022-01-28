@@ -25,12 +25,13 @@ const Link = styled.a`
     color: inherit;
     margin: 30px 0;
 
-    svg {
+    svg path#main-path {
         fill: #e4e4e4;
+        transition: all .3s ease-in-out;
     }
 
     &:hover {
-        svg {
+        svg path#main-path {
             fill: #fff;
         }
     }
