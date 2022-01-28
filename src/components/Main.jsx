@@ -14,7 +14,7 @@ const MainContainer = styled.div`
     }
 
     @media screen and (max-width: 1250px) {
-        background: rgba(0, 0, 0, 0.13);
+        background: rgba(0, 0, 0, 0.338);
         backdrop-filter: blur(50px);
         -webkit-backdrop-filter: blur(50px);
     }
