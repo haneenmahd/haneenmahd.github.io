@@ -13,7 +13,7 @@ const LinksContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 74px 49px;
+    padding: 74px 39px;
     background: rgba(255, 255, 255, 0.17);
     border-radius: 0px 50px 50px 0px;
 `;
