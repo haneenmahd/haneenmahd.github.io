@@ -6,7 +6,7 @@ const MainContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 179px 234px;
+    padding: 100px 234px;
 
     * {
         margin: 8px 0;
@@ -16,7 +16,8 @@ const MainContainer = styled.div`
 const MainAvatar = styled.img`
     height: 290px;
     width: 290px;
-    border-radius: 50px;
+    border-radius: 100%;
+    filter: drop-shadow(0px 19px 29px rgba(0, 0, 0, 0.12));
 `;
 
 const MainHeader = styled.h1`
