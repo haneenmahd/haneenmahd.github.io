@@ -24,6 +24,16 @@ const Link = styled.a`
     text-decoration: none;
     color: inherit;
     margin: 30px 0;
+
+    svg {
+        fill: #e4e4e4;
+    }
+
+    &:hover {
+        svg {
+            fill: #fff;
+        }
+    }
 `;
 
 export default function Links() {
