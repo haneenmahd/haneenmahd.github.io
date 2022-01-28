@@ -12,6 +12,7 @@ const ClickToSeeButton = styled.button`
     border: none;
     outline: none;
     cursor: pointer;
+    margin: 20px 0;
     transition: all .3s ease-in-out;
     
     p {
@@ -29,7 +30,7 @@ const ClickToSeeWork = () => {
     return (
         <ClickToSeeButton>
             <NavigateIcon />
-            <p>Click to see my works!</p>
+            <p>Click to see my awesome works 🎉!</p>
         </ClickToSeeButton>
     );
 }
