@@ -15,6 +15,7 @@ const ClickToSeeButton = styled.button`
     outline: none;
     cursor: pointer;
     margin: 20px 0;
+    border: 3px solid transparent;
     transition: all .3s ease-in-out;
     
     p {
@@ -26,6 +27,7 @@ const ClickToSeeButton = styled.button`
     &:hover {
         background: rgba(255, 255, 255, 0.262);
         box-shadow: 0px 23px 65px rgba(0, 0, 0, 0.14);
+        border: 3px solid #ffffff75;
     }
 `;
 
