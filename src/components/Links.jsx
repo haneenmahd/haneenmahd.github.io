@@ -26,11 +26,6 @@ const Link = styled.a`
     margin: 30px 0;
 `;
 
-const LinkIcon = styled.img`
-    height: 100px;
-    width: 100px;
-`;
-
 export default function Links() {
     return (
         <LinksContainer>
