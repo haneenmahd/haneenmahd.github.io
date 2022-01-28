@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const BlobImage = styled.img`
   height: auto;
-  max-width: 100vw;
+  width: 100vw;
   z-index: -1;
   position: absolute;
   top: 0; left: 0;
