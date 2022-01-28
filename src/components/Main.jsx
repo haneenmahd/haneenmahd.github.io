@@ -12,6 +12,12 @@ const MainContainer = styled.div`
     * {
         margin: 8px 0;
     }
+
+    @media screen and (max-width: 1250px) {
+        background: rgba(0, 0, 0, 0.13);
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px);
+    }
 `;
 
 const MainAvatar = styled.img`
