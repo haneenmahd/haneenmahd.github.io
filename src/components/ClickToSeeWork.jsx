@@ -41,7 +41,7 @@ const ClickToSeeWork = () => {
     return (
         <ClickToSeeButton>
             <NavigateIcon />
-            <p>Click to see my awesome works 🎉!</p>
+            <p>My awesome works 🎉!</p>
         </ClickToSeeButton>
     );
 }
