@@ -8,6 +8,8 @@ const ClickToSeeButton = styled.button`
     align-items: center;
     padding: 19px 30px;
     background: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
     border-radius: 63px;
     border: none;
     outline: none;
