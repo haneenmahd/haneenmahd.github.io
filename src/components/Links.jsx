@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import discordIcon from "../assets/svg/discord.svg";
-import githubIcon from "../assets/svg/github.svg";
-import instagramIcon from "../assets/svg/instagram.svg";
-import twitterIcon from "../assets/svg/twitter.svg";
+import DiscordIcon from "../assets/jsx/Discord";
+import GithubIcon from "../assets/jsx/Github";
+import InstagramIcon from "../assets/jsx/Instagram";
+import TwitterIcon from "../assets/jsx/Twitter";
 
 const LinksContainer = styled.div`
     position: fixed;
@@ -35,19 +35,19 @@ export default function Links() {
     return (
         <LinksContainer>
             <Link>
-                <LinkIcon src={discordIcon} alt="Discord channel of Haneen Mahdin" />
+                <DiscordIcon />
             </Link>
 
             <Link>
-                <LinkIcon src={githubIcon} alt="GitHub profile of Haneen Mahdin" />
+                <GithubIcon />
             </Link>
 
             <Link>
-                <LinkIcon src={instagramIcon} alt="Instagram profile of Haneen Mahdin" />
+                <InstagramIcon />
             </Link>
 
             <Link>
-                <LinkIcon src={twitterIcon} alt="Twitter handle of Haneen Mahdin" />
+                <TwitterIcon />
             </Link>
         </LinksContainer>
     );
