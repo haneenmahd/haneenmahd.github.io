@@ -18,6 +18,10 @@ const MainContainer = styled.div`
         backdrop-filter: blur(50px);
         -webkit-backdrop-filter: blur(50px);
     }
+
+    @media screen and (max-width: 900px) {
+        padding: 100px 100px;
+    }
 `;
 
 const MainAvatar = styled.img`
