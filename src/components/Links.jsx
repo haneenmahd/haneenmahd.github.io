@@ -19,6 +19,7 @@ const LinksContainer = styled.div`
     -webkit-backdrop-filter: blur(50px);
     border-radius: 0px 50px 50px 0px;
     z-index: 100;
+    box-shadow: 0px 23px 65px rgba(0, 0, 0, 0.14);
 `;
 
 const Link = styled.a`
