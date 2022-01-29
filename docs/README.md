@@ -1,0 +1,1 @@
+# Build static folder used to deploy my website
