@@ -1,2 +1,1 @@
-rm -rf *.js *.json node_modules *.md *.yml *.html src LICENSE 
-
+mv dist docs
