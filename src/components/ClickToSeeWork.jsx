@@ -37,11 +37,18 @@ const ClickToSeeButton = styled.button`
     }
 `;
 
-const ClickToSeeWork = () => {
+/**
+ * Click to see work component
+ * @param {{
+ *   handleClick: () => void;
+ * }} props 
+ * @returns 
+ */
+const ClickToSeeWork = (props) => {
     return (
-        <ClickToSeeButton>
+        <ClickToSeeButton onClick={props.handleClick}>
             <NavigateIcon />
-            <p>My awesome works 🎉!</p>
+            <p>My awesome works!</p>
         </ClickToSeeButton>
     );
 }
