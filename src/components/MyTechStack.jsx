@@ -85,6 +85,14 @@ export default function MyTechStack() {
              <Progress altText="Expert" value={100} />
          </SkillContainer>
          <SkillContainer>
+             <h4>Git</h4>
+             <Progress altText="Expert" value={100} />
+         </SkillContainer>
+         <SkillContainer>
+             <h4>GitHub</h4>
+             <Progress altText="Expert" value={100} />
+         </SkillContainer>
+         <SkillContainer>
              <h4>UI/UX Design</h4>
              <Progress altText="Expert" value={100} />
          </SkillContainer>
@@ -99,6 +107,10 @@ export default function MyTechStack() {
          <SkillContainer>
              <h4>MongoDB</h4>
              <Progress altText="Expert" value={91} />
+         </SkillContainer>
+         <SkillContainer>
+             <h4>Typescript</h4>
+             <Progress altText="Expert" value={89} />
          </SkillContainer>
          <SkillContainer>
              <h4>React Native/Expo</h4>
