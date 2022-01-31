@@ -6,12 +6,12 @@ const Container = styled.div`
     min-height: 50vh;
     max-width: 100vw;
     padding: 40px 80px;
-    background: #faeded;
+    background: rgba(233, 170, 170, 0.29);
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
     border-radius: 30px;
     margin-top: 50px;
-    box-shadow: 0px 19px 29px rgba(0, 0, 0, 0.12);
+    box-shadow: -3px 50px 100px rgba(233, 170, 170, 0.39);
 
     @media screen and (max-width: 600px) {
         padding: 40px 20px;
@@ -23,17 +23,23 @@ const Header = styled.h1`
     text-align: left;
     font-size: 40px;
     font-weight: 800;
-    color: #b86d6d;
+    color: #fafafa;
 
     @media screen and (max-width: 600px) {
         font-size: 28px;
         text-align: center;
+        color: #0e0d0d;
     }
 `;
 
 const Paragraph = styled.p`
     font-size: 100%;
-    color: #4b2727;
+    color: #f4eded;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 600px) {
+        color: #3a3838;
+    }
 `;
 
 const ProgressAnimation = keyframes`
