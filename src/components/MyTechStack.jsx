@@ -68,7 +68,7 @@ const Progress = styled.div`
 
 const SkillContainer = styled.div`
     text-align: left;
-    margin: 20px 0;
+    margin: 30px 0;
 
     @media screen and (max-width: 600px) {
         text-align: center;
