@@ -45,7 +45,7 @@ const ProgressAnimation = keyframes`
 const Progress = styled.div`
     position: relative;
     height: 40px;
-    width: 250px;
+    width: 100%;
     background: #b86d6d75;
     border-radius: 40px;
     overflow: hidden;
