@@ -5,7 +5,7 @@ import InstagramIcon from "../assets/jsx/Instagram";
 import TwitterIcon from "../assets/jsx/Twitter";
 
 const LinksContainer = styled.div`
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 0;
     transform: translate(0%, -50%);

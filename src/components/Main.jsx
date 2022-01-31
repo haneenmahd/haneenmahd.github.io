@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Avatar from "../assets/png/Avatar.png";
 import ClickToSeeWork from "./ClickToSeeWork";
+import MyTechStack from "./MyTechStack";
 
 const MainContainer = styled.div`
     display: flex;
@@ -61,6 +62,7 @@ export default function Main() {
             I am a great hardworker who practices constantly to build and produce great piece of software. I have worked around with Full stack Applications for a long time and I am a OpenSource developer too.
         </SubHeading>
         <ClickToSeeWork />
+        <MyTechStack />
     </MainContainer>
   );
 }
