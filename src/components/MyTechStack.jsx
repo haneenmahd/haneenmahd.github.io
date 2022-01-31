@@ -5,8 +5,8 @@ import { keyframes } from 'styled-components';
 const Container = styled.div`
     min-height: 50vh;
     max-width: 100vw;
-    padding: 40px 80px;
-    background: rgba(233, 170, 170, 0.29);
+    padding: 80px;
+    background: rgba(233, 170, 170, 0.39);
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
     border-radius: 30px;
@@ -23,7 +23,7 @@ const Header = styled.h1`
     text-align: left;
     font-size: 40px;
     font-weight: 800;
-    color: #fafafa;
+    color: #ffffff;
 
     @media screen and (max-width: 600px) {
         font-size: 28px;
@@ -33,8 +33,9 @@ const Header = styled.h1`
 `;
 
 const Paragraph = styled.p`
-    font-size: 100%;
-    color: #f4eded;
+    font-size: 180%;
+    text-align: left;
+    color: #353535;
     margin-bottom: 30px;
 
     @media screen and (max-width: 600px) {
