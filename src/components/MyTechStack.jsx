@@ -78,7 +78,7 @@ const SkillContainer = styled.div`
 export default function MyTechStack() {
   return (
       <Container>
-         <Header>My Tech Stack 🚀</Header>
+         <Header>My skills 🚀</Header>
          <Paragraph>I usually spend time working on these tech stacks and these are some of I would like to work on in the future</Paragraph>
          <SkillContainer>
              <h4>HTML, CSS, Javascript</h4>
@@ -116,7 +116,6 @@ export default function MyTechStack() {
              <h4>Swift</h4>
              <Progress value={12} />
          </SkillContainer>
-         
       </Container>
   );
 }
