@@ -11,10 +11,10 @@ const NavLinkStyle = styled.a`
   &::before {
     content: " ";
     position: absolute; 
-    bottom: -5px;
+    bottom: -10px;
     height: 2px; width: 0%;
-    background: linear-gradient(15deg, #fff, #fafafa50);
-    transition: .3s ease-in;
+    background: linear-gradient(15deg, #1fc3ff, #9756ff);
+    transition: .3s cubic-bezier(0.98, 0.07, 0.47, 0.74);
   }
 
   &:hover::before {

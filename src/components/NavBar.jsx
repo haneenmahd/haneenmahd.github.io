@@ -18,8 +18,8 @@ export default class NavBar extends Component {
         <Logo />
 
         <div>
-          <NavLink href='/' text='projects' />
-          <NavLink href='/' text='about me' />
+          <NavLink href='/' text='projects 🚀' />
+          <NavLink href='/' text='about me 😃' />
         </div>
       </Container>
     );
