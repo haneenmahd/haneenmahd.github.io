@@ -1,22 +1,11 @@
-import blob from './assets/svg/blob.svg'
 import './App.css'
+import NavBar from './components/NavBar'
 import Main from './components/Main'
-import styled from 'styled-components'
-import Links from './components/Links';
-
-const BlobImage = styled.img`
-  height: auto;
-  width: 100vw;
-  z-index: -1;
-  position: absolute;
-  top: 0; left: 0;
-`;
 
 function App() {
   return (
     <div className="App">
-      <BlobImage src={blob} alt="Background blob" />
-      <Links />
+      <NavBar />
       <Main />
     </div>
   )
