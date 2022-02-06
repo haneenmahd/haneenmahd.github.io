@@ -3,7 +3,7 @@ import Avatar from "../assets/png/Avatar.png";
 import ClickToSeeWork from "./ClickToSeeWork";
 import MyTechStack from "./MyTechStack";
 
-const MainContainer = styled.div`
+const MainContainer = styled.article`
     display: flex;
     flex-direction: column;
     justify-content: center;
