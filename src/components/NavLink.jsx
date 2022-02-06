@@ -7,6 +7,7 @@ const NavLinkStyle = styled.a`
   text-decoration: none;
   margin: 0 8px;
   padding: 4px 8px;
+  transition: .3s cubic-bezier(0.98, 0.07, 0.47, 0.74);
 
   &::before {
     content: " ";
@@ -19,6 +20,10 @@ const NavLinkStyle = styled.a`
 
   &:hover::before {
     width: 85%;
+  }
+
+  &:hover {
+    color: #eee;
   }
 `;
 
