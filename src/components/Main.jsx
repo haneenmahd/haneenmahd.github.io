@@ -4,7 +4,7 @@ import CommonLink from "./CommonLink";
 import { GitHub, Compass, Dribbble, Instagram, Twitter } from 'react-feather';
 
 const MainStyle = styled.article`
-    min-height: calc(100vh - 100px);
+    min-height: 90vh;
     max-width: 100vw;
     color: #fafafa;
 `;
