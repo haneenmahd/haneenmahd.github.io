@@ -68,7 +68,7 @@ export default class Main extends Component {
                     <Link target="_blank" href='https://dribbble.com/haneenmahdin'><Dribbble /></Link>
                     <Link target="_blank" href='https://instagram.com/haneenmahdin'><Instagram /></Link>
                     <Link target="_blank" href='https://twitter.com/HaneenMahdin'><Twitter /></Link>
-                    <Link href='/explore'><Compass /></Link>
+                    <Link href='/projects'><Compass /></Link>
                 </Links>
             </Intro>
         </MainStyle>
