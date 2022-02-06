@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import styled from "styled-components";
 import Logo from '../assets/jsx/Logo';
 import NavLink from './NavLink';
@@ -12,7 +12,7 @@ const Container = styled.nav`
   padding: 10px;
 `;
 
-export default class NavBar extends Component {
+export default class NavBar extends PureComponent {
   render() {
     return (
       <Container>
