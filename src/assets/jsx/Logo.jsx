@@ -2,7 +2,13 @@ import React from 'react';
 import styled from "styled-components";
 
 const LogoContainer = styled.div`
-  min-height: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+
+  h3 {
+    position: relative;
+  }
 `;
 
 export default function Logo() {
