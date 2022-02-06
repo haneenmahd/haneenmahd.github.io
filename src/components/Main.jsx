@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import CommonLink from "./CommonLink";
-import { Disc, GitHub, Activity, Compass } from 'react-feather';
+import { GitHub, Compass, Dribbble, Instagram, Twitter } from 'react-feather';
 
 const MainStyle = styled.article`
     min-height: calc(100vh - 100px);
@@ -48,7 +48,7 @@ const Link = styled.a`
         transition: 0.3s cubic-bezier(0.35, 0.07, 0.38, 1.01);
     }
 
-    &:hover svg {
+    &:hover svg,:focus svg {
         stroke: #a9a9a9;
         fill: #fff;
         transform: scale(1.2);
@@ -64,10 +64,11 @@ export default class Main extends Component {
                 <h4>An aspiring full-stack developer and a UI/UX Designer.</h4>
 
                 <Links>
-                    <Link href='/'><GitHub /></Link>
-                    <Link href='/'><Disc /></Link>
-                    <Link href='/'><Activity /></Link>
-                    <Link href='/'><Compass /></Link>
+                    <Link target="_blank" href='https://github.com/haneenmahd'><GitHub /></Link>
+                    <Link target="_blank" href='https://dribbble.com/haneenmahdin'><Dribbble /></Link>
+                    <Link target="_blank" href='https://instagram.com/haneenmahdin'><Instagram /></Link>
+                    <Link target="_blank" href='https://twitter.com/HaneenMahdin'><Twitter /></Link>
+                    <Link href='/explore'><Compass /></Link>
                 </Links>
             </Intro>
         </MainStyle>
