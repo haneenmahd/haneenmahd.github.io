@@ -15,8 +15,7 @@ const BlobImage = styled.img`
 function App() {
   return (
     <div className="App">
-      <BlobImage src={blob} alt="Background blob" />
-      <Links />
+      <BlobImage src={blob} alt="Background Image" />
       <Main />
     </div>
   )

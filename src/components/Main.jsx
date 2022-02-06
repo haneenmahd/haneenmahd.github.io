@@ -50,8 +50,7 @@ const SubHeading = styled(MainHeader)`
     font-size: 28px;
     line-height: 35px;
     text-align: center;
-
-    color: #e3e3e3;
+    color: #dcdcdc;
 `;
 
 export default function Main() {
@@ -60,7 +59,7 @@ export default function Main() {
         <MainAvatar src={Avatar} alt="Haneen Mahdin's Avatar" />
         <MainHeader>Hello, I am Haneen Mahdin</MainHeader>
         <SubHeading>
-            I am a great hardworker who practices constantly to build and produce great piece of software. I have worked around with Full stack Applications for a long time and I am a OpenSource developer too.
+            I am a great hardworker who practices constantly to build and produce great piece of software. I have worked around with Full stack Applications for a 3+ years and a OpenSource developer too.
         </SubHeading>
         <ClickToSeeWork />
         <MyTechStack />
