@@ -5,10 +5,6 @@ const LogoContainer = styled.div`
   color: #fff;
   text-align: center;
   padding: 10px;
-
-  h3 {
-    position: relative;
-  }
 `;
 
 export default function Logo() {
