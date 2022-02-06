@@ -1,13 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
+import CommonLink from './CommonLink';
 
 const NavLinkStyle = styled.a`
-  position: relative;
-  color: #D1D1D1;
-  text-decoration: none;
-  margin: 0 8px;
-  padding: 4px 8px;
-  transition: .3s cubic-bezier(0.98, 0.07, 0.47, 0.74);
+  ${CommonLink}
 
   &::before {
     content: " ";
