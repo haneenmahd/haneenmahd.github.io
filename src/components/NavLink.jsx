@@ -12,14 +12,14 @@ const NavLinkStyle = styled.a`
   &::before {
     content: " ";
     position: absolute; 
-    bottom: -10px;
+    bottom: -5px;
     height: 2px; width: 0%;
-    background: linear-gradient(15deg, #1fc3ff, #9756ff);
+    background: #eee;
     transition: .3s cubic-bezier(0.98, 0.07, 0.47, 0.74);
   }
 
   &:hover::before {
-    width: 85%;
+    width: 80%;
   }
 
   &:hover {
