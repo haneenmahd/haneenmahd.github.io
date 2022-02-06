@@ -13,7 +13,7 @@ const NavLinkStyle = styled.a`
     position: absolute; 
     bottom: -5px;
     height: 2px; width: 0%;
-    background-color: #fff;
+    background: linear-gradient(15deg, #fff, #fafafa50);
     transition: .3s ease-in;
   }
 
