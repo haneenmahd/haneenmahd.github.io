@@ -9,6 +9,7 @@ const Container = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 10px;
 `;
 
 export default class NavBar extends Component {
@@ -17,9 +18,10 @@ export default class NavBar extends Component {
       <Container>
         <Logo />
 
-        <div>
+        <div style={{ width: "60%" }}>
           <NavLink href='/' text='projects 🚀' />
           <NavLink href='/' text='about me 😃' />
+          <NavLink href='' text='github' />
         </div>
       </Container>
     );
