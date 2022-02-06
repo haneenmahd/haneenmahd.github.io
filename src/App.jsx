@@ -8,7 +8,7 @@ const BlobImage = styled.img`
   height: auto;
   width: 100vw;
   z-index: -1;
-  position: absolute;
+  position: fixed;
   top: 0; left: 0;
 `;
 

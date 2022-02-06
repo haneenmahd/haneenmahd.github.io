@@ -9,13 +9,14 @@ const MainContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 100px 234px;
+    background: rgba(0, 0, 0, 0.538);
 
     * {
         margin: 8px 0;
     }
 
     @media screen and (max-width: 1250px) {
-        background: rgba(0, 0, 0, 0.338);
+       
         backdrop-filter: blur(50px);
         -webkit-backdrop-filter: blur(50px);
     }
