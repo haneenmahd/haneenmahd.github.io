@@ -18,10 +18,9 @@ export default class NavBar extends Component {
       <Container>
         <Logo />
 
-        <div style={{ width: "60%" }}>
+        <div style={{ width: "auto", maxWidth: "100%" }}>
           <NavLink href='/' text='projects' />
           <NavLink href='/' text='about me' />
-          <NavLink href='/' text='links' />
         </div>
       </Container>
     );
