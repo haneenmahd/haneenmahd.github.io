@@ -6,7 +6,7 @@ const NavLinkStyle = styled.a`
   color: #D1D1D1;
   text-decoration: none;
   margin: 0 8px;
-  padding: 2px;
+  padding: 4px 8px;
 
   &::before {
     content: " ";
@@ -18,7 +18,7 @@ const NavLinkStyle = styled.a`
   }
 
   &:hover::before {
-    width: 100%;
+    width: 85%;
   }
 `;
 
