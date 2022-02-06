@@ -1,4 +1,4 @@
-import blob from './assets/svg/blob.svg'
+import blob from './assets/png/BeachDay.png'
 import './App.css'
 import Main from './components/Main'
 import styled from 'styled-components'
