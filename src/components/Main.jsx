@@ -6,6 +6,7 @@ const MainStyle = styled.article`
     min-height: 90vh;
     max-width: 100vw;
     color: #fafafa;
+    padding-top: 100px;
 `;
 
 const Intro = styled.div`
