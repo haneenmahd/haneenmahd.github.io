@@ -97,14 +97,11 @@ const Info = styled.div`
   margin: 0 20px;
   max-width: 100%;
 
-  * {
-    margin: 10px 0;
-  }
-
   p {
     color: #c6c6c6;
     line-height: 1.45rem;
     font-weight: 600;
+    margin: 10px 0;
 
     b {
       color: #d2d2d2;
@@ -117,26 +114,11 @@ const Info = styled.div`
   }
 
   ul {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-    margin-top: 20px;
+    padding-left: 20px;
     color: #c6c6c6;
     line-height: 1.45rem;
     font-weight: 600;
-
-    li {
-      ::before {
-        content: "";
-        height: 4px;
-        width: 10px;
-        padding: 0px 4px;
-        margin-right: 10px;
-        border-radius: 20px;
-        background: none;
-        border: 1px solid #fafafa;
-      }
-    }
+    margin: 20px 0;
   }
 `;
 
