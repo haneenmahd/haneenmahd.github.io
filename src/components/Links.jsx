@@ -48,6 +48,9 @@ export default function Links() {
       <Link href="/projects">
         <Compass />
       </Link>
+      <Link target="_blank" href="mailto:haneenmahdin@gmail.com">
+        <Mail />
+      </Link>
     </LinksStyle>
   );
 }

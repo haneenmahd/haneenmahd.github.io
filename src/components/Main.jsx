@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import Links from './Links';
-import { GitHub, Compass, Dribbble, Instagram, Twitter } from 'react-feather';
 
 const MainStyle = styled.article`
     min-height: 90vh;
