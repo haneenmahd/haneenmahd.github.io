@@ -4,6 +4,7 @@ import ProjectCard from '../components/ProjectCard';
 import ProjectEmojiPlate from '../assets/img/emoji-plate.png';
 import ProjectHashable from '../assets/img/hashable.png';
 import ProjectImagable from '../assets/img/imagable.png';
+import CommonLink from '../components/CommonLink';
 
 const Container = styled.article`
     min-height: 100vh;
@@ -39,6 +40,16 @@ const ProjectContainer = styled.div`
     margin: 50px 0;
 `;
 
+const AllProjectsLink = styled.a`
+    ${CommonLink}
+    color: #166edc;
+    font-weight: bold;
+
+    &:hover {
+        color: #2989ff;
+    }
+`;
+
 export default function Projects() {
   return (
       <Container>
@@ -48,10 +59,21 @@ export default function Projects() {
         </Intro>
 
         <ProjectContainer>
-            <ProjectCard imgSource={ProjectEmojiPlate}></ProjectCard>
-            <ProjectCard imgSource={ProjectHashable}></ProjectCard>
-            <ProjectCard imgSource={ProjectImagable}></ProjectCard>
+            <ProjectCard
+                title='Emoji Plate'
+                description='A collection of textual emojis and symbols'
+                imgSource={ProjectEmojiPlate} />
+            <ProjectCard
+                title='Hashable'
+                description='An open-source, client-side gateway for users to test out and access cryptographic functions and hashing methods. We also support a REST API which users can use to has on client-side Javascript Applications.' 
+                imgSource={ProjectHashable} />
+            <ProjectCard
+                title='Imagable'
+                description='A Utility to resize and optimize your icons for all platforms instanly with one click 🤯!'
+                imgSource={ProjectImagable} />
         </ProjectContainer>
+
+        <AllProjectsLink href='#'>&gt; View all projects</AllProjectsLink>
       </Container>
   );
 }
