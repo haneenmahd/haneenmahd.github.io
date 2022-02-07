@@ -65,6 +65,7 @@ import{s as i,j as e,C as b,r as f,a as t,G as w,D as v,I as y,T as I,b as j,M a
     min-height: 90vh;
     max-width: 100vw;
     color: #fafafa;
+    padding-top: 100px;
 `,T=i.div`
     text-align: left;
     padding: 100px 10%;
