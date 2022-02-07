@@ -44,7 +44,7 @@ export default function Projects() {
       <Container>
         <Intro>
             <h2>Projects 👾</h2>
-            <h4>Here are some of the projects that i have put hard-work, time, and dedication</h4>
+            <h4>Here are some of my works that i have put up my time, skills, and effort into 💪🏻</h4>
         </Intro>
 
         <ProjectContainer>
