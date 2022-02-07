@@ -10,6 +10,9 @@ const Container = styled.nav`
   align-items: center;
   justify-content: space-around;
   padding: 0;
+  position: fixed; top: 0;
+  background-color: #111;
+  z-index: 1000;
 `;
 
 export default class NavBar extends Component {
