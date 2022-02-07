@@ -60,7 +60,7 @@ export default function ProjectCard(props) {
           
           <div>
               <ProjectTitle>{props.title}</ProjectTitle>
-                <ProjectDescription>{props.description}</ProjectDescription>
+              <ProjectDescription>{props.description}</ProjectDescription>
           </div>
       </Card>
   );
