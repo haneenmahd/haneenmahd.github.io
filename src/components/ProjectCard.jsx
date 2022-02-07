@@ -38,6 +38,8 @@ const ProjectDescription = styled.h4`
     font-size: 100%;
     font-weight: normal;
     text-align: left;
+    padding: 7px 0;
+    padding-right: 10px;
     color: #d1d1d1;
     margin: 0;
 `;
