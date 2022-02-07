@@ -25,7 +25,7 @@ const Intro = styled.div`
     }
 
     h4 {
-        font-size: 100%;
+        font-size: 120%;
         color: #c1c1c1;
         font-weight: 600;
     }
@@ -44,7 +44,7 @@ export default function Projects() {
       <Container>
         <Intro>
             <h2>Projects 👾</h2>
-            <h4>Here are some of my works that i have put up my time, skills, and effort into 💪🏻</h4>
+            <h4>Here are some of my works that i have put up my time, skills, and effort into 💪🏻.</h4>
         </Intro>
 
         <ProjectContainer>
