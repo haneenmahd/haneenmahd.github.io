@@ -62,8 +62,6 @@ const ImageShadowAnimation = keyframes`
 const Intro = styled.aside`
   text-align: left;
   padding: 20px;
-  position: -webkit-sticky;
-  top: 100px;
 
   * {
     margin: 6px 0;
@@ -91,6 +89,11 @@ const Intro = styled.aside`
       max-width: 100%;
       height: auto;
     }
+  }
+
+  @media screen and (min-width: 820px) {
+    position: -webkit-sticky;
+    top: 100px;
   }
 `;
 
