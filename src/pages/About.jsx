@@ -62,6 +62,7 @@ const ImageShadowAnimation = keyframes`
 const Intro = styled.aside`
   text-align: left;
   padding: 20px;
+  max-width: 100%;
 
   * {
     margin: 6px 0;
@@ -105,7 +106,6 @@ const InfoGroup = styled.aside`
 
 const Info = styled.div`
   text-align: left;
-  margin: 0 20px;
   max-width: 100%;
 
   p {
@@ -113,6 +113,7 @@ const Info = styled.div`
     line-height: 1.45rem;
     font-weight: 600;
     margin: 10px 0;
+    max-width: 90%;
 
     b {
       color: #d2d2d2;
@@ -130,6 +131,7 @@ const Info = styled.div`
     line-height: 1.45rem;
     font-weight: 600;
     margin: 20px 0;
+    max-width: 90%;
   }
 `;
 
