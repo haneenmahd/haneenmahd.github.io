@@ -62,6 +62,8 @@ const ImageShadowAnimation = keyframes`
 const Intro = styled.aside`
   text-align: left;
   padding: 20px;
+  position: -webkit-sticky;
+  top: 100px;
 
   * {
     margin: 6px 0;
@@ -90,6 +92,12 @@ const Intro = styled.aside`
       height: auto;
     }
   }
+`;
+
+const InfoGroup = styled.aside`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `;
 
 const Info = styled.div`
@@ -130,55 +138,56 @@ export default function About() {
         <img src={ProfileImage} alt="My Pic" />
       </Intro>
 
-      <Info>
-        <h3>Intro</h3>
-        <p>
-          Hello, I am Haneen Mahdin, an 14 year-old aspiring Full-stack
-          Developer building awesome And cool things.
-        </p>
-      </Info>
+      <InfoGroup>
+        <Info>
+          <h3>Intro</h3>
+          <p>
+            Hello, I am Haneen Mahdin, an 14 year-old aspiring Full-stack
+            Developer building awesome And cool things.
+          </p>
+        </Info>
 
-      <Info>
-        <h3>Journey</h3>
-        <p>
-          I was 12 years-old when i first got to code a cool website in HTML and
-          CSS from a FreeCodeCamp.org's crash course. I was really interested in
-          design at first.{" "}
-          <b>I believed in that good design can make a product better</b>. I
-          started to learn web development deeply by creating websites using{" "}
-          <b>React</b>. I learned <b>UI/UX</b> Design later that year. Then I
-          moved on to learning Backend Development with <b>Node.js</b> with{" "}
-          <b>MongoDB</b>. Tried building my own APIs, failed a lot, but never
-          gave up 💪🏻. I learned to build apps using <b>React Native</b> and{" "}
-          <b>Expo</b> afterwards. I started re-searching about new and latest
-          technologies and still continue to learn new things😃!
-        </p>
-      </Info>
+        <Info>
+          <h3>Journey</h3>
+          <p>
+            I was 12 years-old when i first got to code a cool website in HTML
+            and CSS from a FreeCodeCamp.org's crash course. I was really
+            interested in design at first.{" "}
+            <b>I believed in that good design can make a product better</b>. I
+            started to learn web development deeply by creating websites using{" "}
+            <b>React</b>. I learned <b>UI/UX</b> Design later that year. Then I
+            moved on to learning Backend Development with <b>Node.js</b> with{" "}
+            <b>MongoDB</b>. Tried building my own APIs, failed a lot, but never
+            gave up 💪🏻. I learned to build apps using <b>React Native</b> and{" "}
+            <b>Expo</b> afterwards. I started re-searching about new and latest
+            technologies and still continue to learn new things😃!
+          </p>
+        </Info>
 
-      <Info>
-        <h3>Technologies I use 🚀</h3>
-        <ul>
-          <li>HTML, CSS, Javascript</li>
-          <li>React, Vite, Next.js, Styled Components, Sass</li>
-          <li>React Native, Expo</li>
-          <li>Node.js, MongoDB, Express</li>
-          <li>Python, C, C++</li>
-          <li>Swift (learning 😋)</li>
-          <li>VSCode, Git, GitHub</li>
-        </ul>
-      </Info>
+        <Info>
+          <h3>Technologies I use 🚀</h3>
+          <ul>
+            <li>HTML, CSS, Javascript</li>
+            <li>React, Vite, Next.js, Styled Components, Sass</li>
+            <li>React Native, Expo</li>
+            <li>Node.js, MongoDB, Express</li>
+            <li>Python, C, C++</li>
+            <li>Swift (learning 😋)</li>
+            <li>VSCode, Git, GitHub</li>
+          </ul>
+        </Info>
 
-      <Info>
-        <h3>Keep in touch 🥀</h3>
-        <p>
-          I love to get to know more people in this Tech Community and am
-          interested to join in your project or team or company. If you are
-          interested to have a nice talk or something you can text me on{" "}
-          <i>Instagram</i>, <i>Twitter</i> or get me a <i>Mail</i>.
-        </p>
-
-        <Links />        
-      </Info>
+        <Info>
+          <h3>Keep in touch 🥀</h3>
+          <p>
+            I love to get to know more people in this Tech Community and am
+            interested to join in your project or team or company. If you are
+            interested to have a nice talk or something you can text me on{" "}
+            <i>Instagram</i>, <i>Twitter</i> or get me a <i>Mail</i>.
+          </p>
+          <Links />
+        </Info>
+      </InfoGroup>
     </Container>
   );
 }
