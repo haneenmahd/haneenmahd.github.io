@@ -47,7 +47,7 @@ import{s as i,j as e,C as b,r as f,a as t,G as w,D as v,I as y,T as I,b as j,M a
   text-align: left;
   font-size: 24px;
   margin: 0;
-  margin-right: 20px;
+  margin-right: 15px;
 
   svg {
     stroke: #d1d1d1;
@@ -208,8 +208,7 @@ import{s as i,j as e,C as b,r as f,a as t,G as w,D as v,I as y,T as I,b as j,M a
 `,Y=i.aside`
   text-align: left;
   padding: 20px;
-  position: -webkit-sticky;
-  top: 100px;
+  max-width: 100%;
 
   * {
     margin: 6px 0;
@@ -238,13 +237,17 @@ import{s as i,j as e,C as b,r as f,a as t,G as w,D as v,I as y,T as I,b as j,M a
       height: auto;
     }
   }
+
+  @media screen and (min-width: 820px) {
+    position: -webkit-sticky;
+    top: 100px;
+  }
 `,Z=i.aside`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 `,c=i.div`
   text-align: left;
-  margin: 0 20px;
   max-width: 100%;
 
   p {
@@ -252,6 +255,7 @@ import{s as i,j as e,C as b,r as f,a as t,G as w,D as v,I as y,T as I,b as j,M a
     line-height: 1.45rem;
     font-weight: 600;
     margin: 10px 0;
+    max-width: 90%;
 
     b {
       color: #d2d2d2;
@@ -269,5 +273,6 @@ import{s as i,j as e,C as b,r as f,a as t,G as w,D as v,I as y,T as I,b as j,M a
     line-height: 1.45rem;
     font-weight: 600;
     margin: 20px 0;
+    max-width: 90%;
   }
 `;function ee(){return t(X,{children:[t(Y,{children:[e("h2",{children:"About Me"}),e("img",{src:W,alt:"My Pic"})]}),t(Z,{children:[t(c,{children:[e("h3",{children:"Intro"}),e("p",{children:"Hello, I am Haneen Mahdin, an 14 year-old aspiring Full-stack Developer building awesome And cool things."})]}),t(c,{children:[e("h3",{children:"Journey"}),t("p",{children:["I was 12 years-old when i first got to code a cool website in HTML and CSS from a FreeCodeCamp.org's crash course. I was really interested in design at first."," ",e("b",{children:"I believed in that good design can make a product better"}),". I started to learn web development deeply by creating websites using"," ",e("b",{children:"React"}),". I learned ",e("b",{children:"UI/UX"})," Design later that year. Then I moved on to learning Backend Development with ",e("b",{children:"Node.js"})," with"," ",e("b",{children:"MongoDB"}),". Tried building my own APIs, failed a lot, but never gave up \u{1F4AA}\u{1F3FB}. I learned to build apps using ",e("b",{children:"React Native"})," and"," ",e("b",{children:"Expo"})," afterwards. I started re-searching about new and latest technologies and still continue to learn new things\u{1F603}!"]})]}),t(c,{children:[e("h3",{children:"Technologies I use \u{1F680}"}),t("ul",{children:[e("li",{children:"HTML, CSS, Javascript"}),e("li",{children:"React, Vite, Next.js, Styled Components, Sass"}),e("li",{children:"React Native, Expo"}),e("li",{children:"Node.js, MongoDB, Express"}),e("li",{children:"Python, C, C++"}),e("li",{children:"Swift (learning \u{1F60B})"}),e("li",{children:"VSCode, Git, GitHub"})]})]}),t(c,{children:[e("h3",{children:"Keep in touch \u{1F940}"}),t("p",{children:["I love to get to know more people in this Tech Community and am interested to join in your project or team or company. If you are interested to have a nice talk or something you can text me on"," ",e("i",{children:"Instagram"}),", ",e("i",{children:"Twitter"})," or get me a ",e("i",{children:"Mail"}),"."]}),e(x,{})]})]})]})}function te(){return t("div",{className:"App",children:[e(z,{}),e($,{}),e(K,{}),e(ee,{})]})}C.render(e(A.StrictMode,{children:e(te,{})}),document.getElementById("root"));
