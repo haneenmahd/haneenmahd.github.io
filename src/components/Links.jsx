@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import CommonLink from "../components/CommonLink";
-import { GitHub, Compass, Dribbble, Instagram, Twitter } from "react-feather";
+import { GitHub, Compass, Dribbble, Instagram, Twitter, Mail } from "react-feather";
 
 const LinksStyle = styled.aside`
   padding: 10px 0;
