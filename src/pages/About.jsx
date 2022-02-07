@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import ProfileImage from "../assets/img/pfp.png";
+import Links from "../components/Links";
 
 const Container = styled.div`
   display: flex;
@@ -193,6 +194,8 @@ export default function About() {
           interested to have a nice talk or something you can text me on{" "}
           <i>Instagram</i>, <i>Twitter</i> or get me a <i>Mail</i>.
         </p>
+
+        <Links />        
       </Info>
     </Container>
   );
