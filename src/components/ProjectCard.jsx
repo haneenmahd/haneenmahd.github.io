@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import { GitHub, Link } from 'react-feather';
+import styled, { css } from 'styled-components';
 
 const Card = styled.div`
     min-height: 300px;
@@ -9,6 +10,7 @@ const Card = styled.div`
     box-shadow: 0;
     margin: 20px;
     overflow: hidden;
+    user-select: none;
     transition: all .3s;
     cursor: pointer;
 
@@ -24,6 +26,10 @@ const Card = styled.div`
     div {
         margin: 20px 0;
         padding: 0 0 0 20px;
+    }
+
+    button {
+        margin-bottom: 20px;
     }
 `;
 
@@ -44,24 +50,74 @@ const ProjectDescription = styled.h4`
     margin: 0;
 `;
 
+const Actions = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`;
+
+const ProjectLinkButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin: 12px;
+  text-decoration: none;
+  max-width: 90px;
+  background: ${(p) =>
+    p.secondary
+      ? css`linear-gradient(180deg, #06c744 0%, #030013 220%)`
+      : css`linear-gradient(180deg, #166edc 0%, #030013 220%)`};
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fafafa;
+  transition: all 0.3s;
+
+  svg {
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+  }
+
+  :active {
+    transform: translateY(5px);
+  }
+`;
+
 /**
  * 
  * @param {{
  *   imgSource: string;
  *   title: string;
  *   description: string;
+ *   projectLink: string;
+ *   githubUrl: string;
  * }} props 
  * @returns 
  */
 export default function ProjectCard(props) {
   return (
-      <Card>
-          <img src={props.imgSource} alt="Preview Image" />
-          
-          <div>
-              <ProjectTitle>{props.title}</ProjectTitle>
-              <ProjectDescription>{props.description}</ProjectDescription>
-          </div>
-      </Card>
+    <Card>
+      <img src={props.imgSource} alt="Preview Image" />
+
+      <div>
+        <ProjectTitle>{props.title}</ProjectTitle>
+        <ProjectDescription>{props.description}</ProjectDescription>
+      </div>
+
+      <Actions>
+        <ProjectLinkButton target="_blank" href={props.projectLink}>
+          <Link /> View
+        </ProjectLinkButton>
+        {props.githubUrl && (
+          <ProjectLinkButton target="_blank" href={props.githubUrl} secondary>
+            <GitHub /> GitHub
+          </ProjectLinkButton>
+        )}
+      </Actions>
+    </Card>
   );
 }

@@ -15,11 +15,11 @@ const NavLinkStyle = styled(Link)`
     transition: .3s cubic-bezier(0.98, 0.07, 0.47, 0.74);
   }
 
-  &:hover::before {
+  &:hover::before, :active::before {
     width: 80%;
   }
 
-  &:hover {
+  &:hover, :active {
     color: #eee;
   }
 `;

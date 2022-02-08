@@ -6,8 +6,6 @@ import Projects from './pages/Projects'
 import NavBar from './components/NavBar'
 import About from './pages/About'
 import { BrowserRouter, Routes, Route, Outlet, useLocation } from 'react-router-dom'
-import Store from './pages/Store'
-import Product from './components/Product'
 
 function RenderingApp() {
   const location = useLocation();
@@ -33,9 +31,6 @@ ReactDOM.render(
           />
           <Route path="projects" element={<Projects />} />
           <Route path="about" element={<About />} />
-          <Route path="store" element={<Store />}>
-            <Route path=":productName" element={<Product />}  />
-          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,48 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import Products from '../store/Products.json';
 import { useParams } from 'react-router-dom';
 import WavedPreview from '../assets/img/waved_preview.png';
-
-const TextAnimation = keyframes`
-    0% {
-        opacity: 0.2;
-    }
-
-    50% {
-        opacity: 0.8;
-    }
-
-    100% {
-        opacity: 0.2;
-    }
-`;
-
-const ImageShadowAnimation = keyframes`
-    0% {
-        box-shadow: 0 20px 20px 20px #2400FF34, 0 20px 20px 0 #76197E34;
-    }
-
-    20% {
-        box-shadow: 0 50px 20px 20px #2400FF34, 0 20px 20px 0 #76197E34;
-    }
-    
-    50% {
-        box-shadow: 0 80px 40px 20px #2400FF46, 0 20px 20px 0 #76197E46
-    }
-
-    60% {
-        box-shadow: 0 50px 35px 20px #22c9cc46, 0 20px 20px 0 #76197E34
-    }
-
-    85% {
-        box-shadow: 0 50px 25px 20px #2400FF34, 0 20px 20px 0 #76197E34
-    }
-
-    100% {
-        box-shadow: 0 20px 20px 20px #2400FF34, 0 20px 20px 0 #2222cc34
-    }
-`;
+import fileDownload from 'js-file-download';
 
 const ProductCard = styled.div`
   min-height: 100px;
@@ -68,18 +29,33 @@ const ProductCard = styled.div`
     height: auto;
     max-width: 100%;
     border-radius: 20px;
-    box-shadow: 0 20px 20px 0 #2400FF76, 0 20px 20px 0 #2222cc76;
-    animation: ${ImageShadowAnimation} 5s linear infinite;
   }
 
-  &:hover {
-    box-shadow: 0 30px 60px 0 #6d6d6d1f;
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: linear-gradient(180deg, #166edc 0%, #030013 220%);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fafafa;
+    transition: all .3s;
+
+    :hover {
+        filter: opacity(0.9);
+    }
+
+    :active {
+        transform: translateY(5px);
+    }
   }
 `;
 
 export default function Product() {
   const { productName } = useParams();
-  const [productResult, setProductResult] = useState({ productName: "", productDescription: "", previewImageSource: "" });
+  const [productResult, setProductResult] = useState({ productName: "", productDescription: "", previewImageSource: "", price: "" });
 
   const findProduct = (name) => {
     Products.map((product) => {
@@ -90,7 +66,7 @@ export default function Product() {
   }
 
   useEffect(() => {
-    findProduct("waved");
+    findProduct(productName);
   }, []);
 
   return (
@@ -99,6 +75,14 @@ export default function Product() {
       <h4>{productResult.productDescription}</h4>
 
       <img src={productResult.productName === "waved" ? WavedPreview : ""} />
+
+      <button
+        onClick={() =>
+          fileDownload(String(WavedPreview), productResult.productName + ".png")
+        }
+      >
+        Get for {productResult.price}
+      </button>
     </ProductCard>
   );
 }
