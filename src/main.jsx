@@ -18,7 +18,9 @@ function RenderingApp() {
   }, [location.pathname]);
 
   return (
-    <div className={`App ${location.pathname !== "/" && "page"}`}>
+    <div style={{
+      paddingTop: location.pathname !== "/" ? 85 : 0
+    }}>
       <NavBar />
 
       {/* React Router renderings */}
