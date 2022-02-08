@@ -4,6 +4,7 @@ import ProjectCard from '../components/ProjectCard';
 import ProjectEmojiPlate from '../assets/img/emoji-plate.png';
 import ProjectHashable from '../assets/img/hashable.png';
 import ProjectImagable from '../assets/img/imagable.png';
+import ProjectTypeInstall from '../assets/img/npm-logo.png';
 import CommonLink from '../components/CommonLink';
 
 const Container = styled.article`
@@ -82,6 +83,13 @@ export default function Projects() {
           imgSource={ProjectHashable}
           projectLink="https://hashable.space"
           githubUrl="https://github.com/haneenmahd/hashable"
+        />
+        <ProjectCard
+          title="typeinstall"
+          description="Automatically installs types for your typescript project"
+          imgSource={ProjectTypeInstall}
+          projectLink="https://www.npmjs.com/package/typeinstall"
+          githubUrl="https://github.com/haneenmahd/typeinstall"
         />
       </ProjectContainer>
 

@@ -16,7 +16,7 @@ const Card = styled.div`
 
     img {
         height: 200px;
-        width: 100%;
+        max-width: 100%;
     }
 
     &:hover {
