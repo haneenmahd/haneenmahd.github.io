@@ -8,6 +8,7 @@ import ProjectTypeInstall from '../assets/img/npm-logo.png';
 import ProjectAppleColors from "../assets/img/apple-colors.jpeg";
 import ProjectBlobby from '../assets/img/python-icon.png';
 import CommonLink from '../components/CommonLink';
+import { Link } from 'react-router-dom';
 
 const Container = styled.article`
     min-height: 100vh;
@@ -43,7 +44,7 @@ const ProjectContainer = styled.div`
     margin: 50px 0;
 `;
 
-const AllProjectsLink = styled.a`
+const AllProjectsLink = styled(Link)`
     ${CommonLink}
     color: #166edc;
     border-radius: 10px;
@@ -117,7 +118,7 @@ export default function Projects(props) {
       </ProjectContainer>
 
       {props.showMoreLinks && (
-        <AllProjectsLink href="#">&gt; View all projects</AllProjectsLink>
+        <AllProjectsLink to="/projects">&gt; View all projects</AllProjectsLink>
       )}
     </Container>
   );
