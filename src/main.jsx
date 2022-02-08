@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
@@ -6,9 +6,16 @@ import Projects from './pages/Projects'
 import NavBar from './components/NavBar'
 import About from './pages/About'
 import { BrowserRouter, Routes, Route, Outlet, useLocation } from 'react-router-dom'
+import smoothscroll from 'smoothscroll-polyfill'
+
+smoothscroll.polyfill();
 
 function RenderingApp() {
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className={`App ${location.pathname !== "/" && "page"}`}>
