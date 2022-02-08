@@ -66,7 +66,7 @@ const ProjectLinkButton = styled.a`
   max-width: 90px;
   background: ${(p) =>
     p.secondary
-      ? "#007b56"
+      ? "#4d4d4d"
       : "#166edc"};
   border: none;
   border-radius: 10px;
