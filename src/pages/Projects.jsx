@@ -67,8 +67,6 @@ const AllProjectsLink = styled(Link)`
 export default function Projects(props) {
   const [theme] = useOutletContext();
 
-  console.log(theme);
-
   return (
     <Container theme={theme}>
       <Intro theme={theme}>

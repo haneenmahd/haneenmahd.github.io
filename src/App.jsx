@@ -22,11 +22,11 @@ const AppStyle = styled.div`
 `;
 
 function App(props) {
-  const [theme] = useOutletContext();
+  const [theme, setTheme] = useOutletContext();
   
   return (
     <AppStyle theme={theme}>
-      <NavBar theme={theme} />
+      <NavBar theme={theme} setTheme={(theme) => setTheme(theme)} />
       <Main theme={theme} />
       <Projects theme={theme} showMoreLinks />
       <About theme={theme} />

@@ -12,7 +12,7 @@ import _theme from './theme/theme'
 smoothscroll.polyfill();
 
 function RenderingApp() {
-  const [theme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const location = useLocation();
 
   useEffect(() => {
@@ -24,10 +24,10 @@ function RenderingApp() {
       paddingTop: location.pathname !== "/" ? 85 : 0,
       backgroundColor: theme === "dark" ? _theme.dark.mainBg : _theme.light.mainBg
     }}>
-      <NavBar theme={theme} />
+      <NavBar theme={theme} setTheme={(theme) => setTheme(theme)} />
 
       {/* React Router renderings */}
-      <Outlet context={[theme]} />
+      <Outlet context={[theme, setTheme]} />
     </div>
   );
 }
