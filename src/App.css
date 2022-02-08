@@ -3,4 +3,9 @@
   max-width: 100vw;
   text-align: center;
   background-color: #111;
+  color: #fafafa;
+}
+
+.App.page {
+  padding-top: 80px;
 }
