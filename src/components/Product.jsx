@@ -8,7 +8,6 @@ const ProductCard = styled.div`
     width: 400px;
     background-color: #222;
     border-radius: 10px;
-    margin: 20px 0;
     padding: 40px 30px;
     text-align: left;
 

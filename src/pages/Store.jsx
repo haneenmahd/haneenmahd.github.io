@@ -33,7 +33,8 @@ const Products = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
+    margin: 40px 0;
 `;
 
 export default function Store() {
