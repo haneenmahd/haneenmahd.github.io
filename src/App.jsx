@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Main />
-      <Projects />
+      <Projects showMoreLinks />
       <About />
     </div>
   )

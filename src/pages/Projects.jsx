@@ -4,7 +4,11 @@ import ProjectCard from '../components/ProjectCard';
 import ProjectEmojiPlate from '../assets/img/emoji-plate.png';
 import ProjectHashable from '../assets/img/hashable.png';
 import ProjectImagable from '../assets/img/imagable.png';
+import ProjectTypeInstall from '../assets/img/npm-logo.png';
+import ProjectAppleColors from "../assets/img/apple-colors.jpeg";
+import ProjectBlobby from '../assets/img/python-icon.png';
 import CommonLink from '../components/CommonLink';
+import { Link } from 'react-router-dom';
 
 const Container = styled.article`
     min-height: 100vh;
@@ -40,40 +44,82 @@ const ProjectContainer = styled.div`
     margin: 50px 0;
 `;
 
-const AllProjectsLink = styled.a`
+const AllProjectsLink = styled(Link)`
     ${CommonLink}
     color: #166edc;
+    border-radius: 10px;
+    padding: 10px 20px;
     font-weight: bold;
 
     &:hover {
         color: #2989ff;
+        background: #2989ff20;
     }
 `;
 
-export default function Projects() {
+export default function Projects(props) {
   return (
-      <Container>
-        <Intro>
-            <h2>Projects 👾</h2>
-            <h4>Here are some of my works that i have put up my time, skills, and effort into 💪🏻.</h4>
-        </Intro>
+    <Container>
+      <Intro>
+        <h2>Projects 👾</h2>
+        <h4>
+          Here are some of my works that i have put up my time, skills, and
+          effort into 💪🏻.
+        </h4>
+      </Intro>
 
-        <ProjectContainer>
+      <ProjectContainer>
+        <ProjectCard
+          title="Imagable"
+          description="A Utility to resize and optimize your icons for all platforms instanly with one click 🤯!"
+          imgSource={ProjectImagable}
+          projectLink="https://imagable.vercel.app"
+          githubUrl="https://github.com/imagable/imagable"
+        />
+        <ProjectCard
+          title="Emoji Plate"
+          description="A collection of textual emojis and symbols"
+          imgSource={ProjectEmojiPlate}
+          projectLink="https://emoji-plate.netlify.app"
+          githubUrl="https://github.com/emoji-plate/client"
+        />
+        <ProjectCard
+          title="Hashable"
+          description="An API to access high-level crypto functions inside your browser ☠️!"
+          imgSource={ProjectHashable}
+          projectLink="https://hashable.space"
+          githubUrl="https://github.com/haneenmahd/hashable"
+        />
+        {props.showMoreLinks || (
+          <>
             <ProjectCard
-                title='Emoji Plate'
-                description='A collection of textual emojis and symbols'
-                imgSource={ProjectEmojiPlate} />
+              title="typeinstall"
+              description="Automatically installs types for your typescript project"
+              imgSource={ProjectTypeInstall}
+              projectLink="https://www.npmjs.com/package/typeinstall"
+              githubUrl="https://github.com/haneenmahd/typeinstall"
+            />
             <ProjectCard
-                title='Hashable'
-                description='An open-source, client-side gateway for users to test out and access cryptographic functions and hashing methods. We also support a REST API which users can use to has on client-side Javascript Applications.' 
-                imgSource={ProjectHashable} />
+              title="apple-colors"
+              description="A Package for using Colors in your User Interace with colors used by apple🍎"
+              imgSource={ProjectAppleColors}
+              projectLink="https://www.npmjs.com/package/typeinstall"
+              githubUrl="https://github.com/haneenmahd/typeinstall"
+            />
             <ProjectCard
-                title='Imagable'
-                description='A Utility to resize and optimize your icons for all platforms instanly with one click 🤯!'
-                imgSource={ProjectImagable} />
-        </ProjectContainer>
+              title="blobby"
+              description="Convert Image Files into Supported Pdf Format"
+              imgSource={ProjectBlobby}
+              projectLink="https://www.npmjs.com/package/typeinstall"
+              githubUrl="https://github.com/haneenmahd/typeinstall"
+            />
+          </>
+        )}
+      </ProjectContainer>
 
-        <AllProjectsLink href='#'>&gt; View all projects</AllProjectsLink>
-      </Container>
+      {props.showMoreLinks && (
+        <AllProjectsLink to="/projects">&gt; View all projects</AllProjectsLink>
+      )}
+    </Container>
   );
 }
