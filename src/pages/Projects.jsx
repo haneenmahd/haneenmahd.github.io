@@ -8,33 +8,39 @@ import ProjectTypeInstall from '../assets/img/npm-logo.png';
 import ProjectAppleColors from "../assets/img/apple-colors.jpeg";
 import ProjectBlobby from '../assets/img/python-icon.png';
 import CommonLink from '../components/CommonLink';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import theme from '../theme/theme';
 
 const Container = styled.article`
-    min-height: 100vh;
-    max-width: 100vw;
-    padding: 50px 10%;
-    color: ${props => props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
+  min-height: 100vh;
+  max-width: 100vw;
+  padding: 50px 10%;
+  background: ${(props) =>
+    props.theme === "dark" ? theme.dark.mainBg : theme.light.mainBg};
+  color: ${(props) =>
+    props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
 `;
 
 const Intro = styled.div`
-    text-align: left;
+  text-align: left;
 
-    * {
-        margin: 6px 0;
-    }
+  * {
+    margin: 6px 0;
+  }
 
-    h2 {
-        font-size: 300%;
-        font-weight: 800;
-    }
+  h2 {
+    font-size: 300%;
+    font-weight: 800;
+    color: ${(props) =>
+      props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
+  }
 
-    h4 {
-        font-size: 120%;
-        color: ${props => props.theme === "dark" ? theme.dark.lightText : theme.light.lightText};
-        font-weight: 600;
-    }
+  h4 {
+    font-size: 120%;
+    color: ${(props) =>
+      props.theme === "dark" ? theme.dark.lightText : theme.light.lightText};
+    font-weight: 600;
+  }
 `;
 
 const ProjectContainer = styled.div`
@@ -59,9 +65,13 @@ const AllProjectsLink = styled(Link)`
 `;
 
 export default function Projects(props) {
+  const [theme] = useOutletContext();
+
+  console.log(theme);
+
   return (
-    <Container>
-      <Intro>
+    <Container theme={theme}>
+      <Intro theme={theme}>
         <h2>Projects 👾</h2>
         <h4>
           Here are some of my works that i have put up my time, skills, and
@@ -71,6 +81,7 @@ export default function Projects(props) {
 
       <ProjectContainer>
         <ProjectCard
+          theme={theme}
           title="Imagable"
           description="A Utility to resize and optimize your icons for all platforms instanly with one click 🤯!"
           imgSource={ProjectImagable}
@@ -78,6 +89,7 @@ export default function Projects(props) {
           githubUrl="https://github.com/imagable/imagable"
         />
         <ProjectCard
+          theme={theme}
           title="Emoji Plate"
           description="A collection of textual emojis and symbols"
           imgSource={ProjectEmojiPlate}
@@ -85,6 +97,7 @@ export default function Projects(props) {
           githubUrl="https://github.com/emoji-plate/client"
         />
         <ProjectCard
+          theme={theme}
           title="Hashable"
           description="An API to access high-level crypto functions inside your browser ☠️!"
           imgSource={ProjectHashable}
@@ -94,6 +107,7 @@ export default function Projects(props) {
         {props.showMoreLinks || (
           <>
             <ProjectCard
+              theme={theme}
               title="typeinstall"
               description="Automatically installs types for your typescript project"
               imgSource={ProjectTypeInstall}
@@ -101,6 +115,7 @@ export default function Projects(props) {
               githubUrl="https://github.com/haneenmahd/typeinstall"
             />
             <ProjectCard
+              theme={theme}
               title="apple-colors"
               description="A Package for using Colors in your User Interace with colors used by apple🍎"
               imgSource={ProjectAppleColors}
@@ -108,6 +123,7 @@ export default function Projects(props) {
               githubUrl="https://github.com/haneenmahd/typeinstall"
             />
             <ProjectCard
+              theme={theme}
               title="blobby"
               description="Convert Image Files into Supported Pdf Format"
               imgSource={ProjectBlobby}

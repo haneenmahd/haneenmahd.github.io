@@ -37,12 +37,17 @@ const NavLinkStyle = styled(Link)`
  * @param {{
  *   to: string;
  *   text: string;
+ *   theme: "dark" | "light";
  * }} props 
  * @returns 
  */
 export default function NavLink(props) {
   return (
-    <NavLinkStyle to={props.to} aria-label={`Link to ${props.href} page`}>
+    <NavLinkStyle
+      theme={props.theme}
+      to={props.to}
+      aria-label={`Link to ${props.href} page`}
+    >
       {props.text}
     </NavLinkStyle>
   );

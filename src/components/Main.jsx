@@ -30,16 +30,22 @@ const Intro = styled.div`
 `;
 
 export default class Main extends Component {
-  render() {
-    return (
-        <MainStyle>
-            <Intro>
-                <h2>Hi, I'm Haneen 👋</h2>
-                <h4>An aspiring full-stack developer and a UI/UX Designer.</h4>
+  constructor(props) {
+    super(props);
+    this.props = props;
+  }
 
-                <Links />
-            </Intro>
-        </MainStyle>
+  render() {
+    const { props } = this;
+    return (
+      <MainStyle theme={props.theme}>
+        <Intro theme={props.theme}>
+          <h2>Hi, I'm Haneen 👋</h2>
+          <h4>An aspiring full-stack developer and a UI/UX Designer.</h4>
+
+          <Links theme={props.theme} />
+        </Intro>
+      </MainStyle>
     );
   }
 }

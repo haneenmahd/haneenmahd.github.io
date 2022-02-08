@@ -1,9 +1,11 @@
+import { useState } from "react";
 import NavBar from "./components/NavBar";
 import Main from "./components/Main";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import styled from "styled-components";
 import theme from "./theme/theme";
+import { useOutletContext } from "react-router-dom";
 
 const AppStyle = styled.div`
   min-height: 100vh;
@@ -19,13 +21,15 @@ const AppStyle = styled.div`
   }
 `;
 
-function App() {
+function App(props) {
+  const [theme] = useOutletContext();
+  
   return (
-    <AppStyle theme="light">
-      <NavBar />
-      <Main />
-      <Projects showMoreLinks />
-      <About />
+    <AppStyle theme={theme}>
+      <NavBar theme={theme} />
+      <Main theme={theme} />
+      <Projects theme={theme} showMoreLinks />
+      <About theme={theme} />
     </AppStyle>
   );
 }

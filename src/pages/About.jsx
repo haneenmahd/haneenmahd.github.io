@@ -1,3 +1,4 @@
+import { useOutletContext } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import ProfileImage from "../assets/img/pfp.png";
 import Links from "../components/Links";
@@ -11,7 +12,10 @@ const Container = styled.div`
   min-height: 100vh;
   max-width: 100vw;
   padding: 50px 7%;
-  color: ${props => props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
+  background: ${(props) =>
+    props.theme === "dark" ? theme.dark.mainBg : theme.light.mainBg};
+  color: ${(props) =>
+    props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
@@ -112,6 +116,7 @@ const InfoGroup = styled.aside`
 const Info = styled.div`
   text-align: left;
   max-width: 100%;
+  color: ${props => props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
 
   p {
     color: ${(props) =>
@@ -149,16 +154,18 @@ const Info = styled.div`
   }
 `;
 
-export default function About() {
+export default function About(props) {
+  const [theme] = useOutletContext();
+
   return (
-    <Container>
-      <Intro>
+    <Container theme={theme}>
+      <Intro theme={theme}>
         <h2>About Me</h2>
         <img src={ProfileImage} alt="My Pic" />
       </Intro>
 
       <InfoGroup>
-        <Info>
+        <Info theme={theme}>
           <h3>Intro</h3>
           <p>
             Hello, I am Haneen Mahdin, an 14 year-old aspiring Full-stack
@@ -166,7 +173,7 @@ export default function About() {
           </p>
         </Info>
 
-        <Info>
+        <Info theme={theme}>
           <h3>Journey</h3>
           <p>
             I was 12 years-old when i first got to code a cool website in HTML
@@ -183,7 +190,7 @@ export default function About() {
           </p>
         </Info>
 
-        <Info>
+        <Info theme={theme}>
           <h3>Technologies I use 🚀</h3>
           <ul>
             <li>HTML, CSS, Javascript</li>
@@ -196,7 +203,7 @@ export default function About() {
           </ul>
         </Info>
 
-        <Info>
+        <Info theme={theme}>
           <h3>Keep in touch 🥀</h3>
           <p>
             I love to get to know more people in this Tech Community and am

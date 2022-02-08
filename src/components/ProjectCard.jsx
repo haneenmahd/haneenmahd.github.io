@@ -1,9 +1,13 @@
 import React from 'react';
 import { GitHub, Link } from 'react-feather';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import theme from '../theme/theme';
 
 const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-height: 300px;
   width: 300px;
   background: ${(props) =>
@@ -27,8 +31,8 @@ const Card = styled.div`
   }
 
   div {
-    margin: 20px 0;
-    padding: 0 0 0 20px;
+    margin: 10px 0;
+    padding: 5px 20px;
   }
 
   button {
@@ -105,17 +109,20 @@ const ProjectLinkButton = styled.a`
  *   description: string;
  *   projectLink: string;
  *   githubUrl: string;
+ *   theme: "dark" | "light";
  * }} props 
  * @returns 
  */
 export default function ProjectCard(props) {
   return (
-    <Card>
+    <Card theme={props.theme}>
       <img src={props.imgSource} alt="Preview Image" />
 
       <div>
-        <ProjectTitle>{props.title}</ProjectTitle>
-        <ProjectDescription>{props.description}</ProjectDescription>
+        <ProjectTitle theme={props.theme}>{props.title}</ProjectTitle>
+        <ProjectDescription theme={props.theme}>
+          {props.description}
+        </ProjectDescription>
       </div>
 
       <Actions>

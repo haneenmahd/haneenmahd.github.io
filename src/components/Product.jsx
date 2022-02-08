@@ -54,7 +54,14 @@ const ProductCard = styled.div`
   }
 `;
 
-export default function Product() {
+/**
+ * 
+ * @param {{
+ *   theme: "dark" | "light";
+ * }} props 
+ * @returns 
+ */
+export default function Product(props) {
   const { productName } = useParams();
   const [productResult, setProductResult] = useState({ productName: "", productDescription: "", previewImageSource: "", price: "" });
 
@@ -71,7 +78,7 @@ export default function Product() {
   }, []);
 
   return (
-    <ProductCard>
+    <ProductCard theme={props.theme}>
       <h1>{productResult.productName}</h1>
       <h4>{productResult.productDescription}</h4>
 
