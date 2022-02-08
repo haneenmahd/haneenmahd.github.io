@@ -5,3 +5,7 @@
   background-color: #111;
   color: #fafafa;
 }
+
+.App.page {
+  padding-top: 15%;
+}

@@ -2,13 +2,17 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
-import Main from './components/Main'
+import Projects from './pages/Projects'
 import NavBar from './components/NavBar'
-import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Outlet, useLocation } from 'react-router-dom'
 
 function RenderingApp() {
+  const location = useLocation();
+
+  console.log(location);
+
   return (
-    <div className='App'>
+    <div className={`App ${location.pathname !== "/" && "page"}`}>
       <NavBar />
 
       {/* React Router renderings */}
@@ -26,7 +30,7 @@ ReactDOM.render(
             index
             element={<App />}
           />
-          <Route path="hello" element={<h1 style={{ paddingTop: 100 }}>Hello World</h1>} />
+          <Route path="projects" element={<Projects />} />
         </Route>
       </Routes>
     </BrowserRouter>
