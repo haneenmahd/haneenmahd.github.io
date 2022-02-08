@@ -78,7 +78,7 @@ export default function Projects() {
         />
         <ProjectCard
           title="Hashable"
-          description="An open-source, client-side gateway for users to test out and access cryptographic functions and hashing methods. We also support a REST API which users can use to has on client-side Javascript Applications."
+          description="An API to access high-level crypto functions inside your browser ☠️!"
           imgSource={ProjectHashable}
           projectLink="https://hashable.space"
           githubUrl="https://github.com/haneenmahd/hashable"
