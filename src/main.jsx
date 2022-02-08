@@ -9,8 +9,6 @@ import { BrowserRouter, Routes, Route, Outlet, useLocation } from 'react-router-
 function RenderingApp() {
   const location = useLocation();
 
-  console.log(location);
-
   return (
     <div className={`App ${location.pathname !== "/" && "page"}`}>
       <NavBar />
