@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Sun, Moon } from 'react-feather';
-import { useOutletContext } from 'react-router-dom';
 import styled from 'styled-components';
 import theme from '../theme/theme';
 
@@ -10,6 +9,7 @@ const Switch = styled.button`
   background: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
   color: ${(props) =>
     props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
 
