@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import CommonLink from './CommonLink';
 
-const NavLinkStyle = styled.a`
+const NavLinkStyle = styled(Link)`
   ${CommonLink}
 
   &::before {
@@ -26,14 +27,14 @@ const NavLinkStyle = styled.a`
 /**
  * Alternative to react-router-dom's NavLink
  * @param {{
- *   href: string;
+ *   to: string;
  *   text: string;
  * }} props 
  * @returns 
  */
 export default function NavLink(props) {
   return (
-    <NavLinkStyle href={props.href} target="_parent" referrerPolicy='same-origin' aria-label={`Link to ${props.href} page`}>
+    <NavLinkStyle to={props.to} aria-label={`Link to ${props.href} page`}>
       {props.text}
     </NavLinkStyle>
   );
