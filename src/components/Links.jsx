@@ -14,7 +14,7 @@ const Link = styled.a`
   text-align: left;
   font-size: 24px;
   margin: 0;
-  margin-right: 15px;
+  margin-right: 2.7%;
 
   svg {
     stroke: #d1d1d1;
