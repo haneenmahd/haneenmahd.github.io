@@ -12,7 +12,6 @@ const Card = styled.div`
     overflow: hidden;
     user-select: none;
     transition: all .3s;
-    cursor: pointer;
 
     img {
         height: 200px;
