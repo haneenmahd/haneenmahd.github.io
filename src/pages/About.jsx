@@ -1,6 +1,8 @@
+import { useOutletContext } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import ProfileImage from "../assets/img/pfp.png";
 import Links from "../components/Links";
+import theme from "../theme/theme";
 
 const Container = styled.div`
   display: flex;
@@ -10,7 +12,10 @@ const Container = styled.div`
   min-height: 100vh;
   max-width: 100vw;
   padding: 50px 7%;
-  color: #fafafa;
+  background: ${(props) =>
+    props.theme === "dark" ? theme.dark.mainBg : theme.light.mainBg};
+  color: ${(props) =>
+    props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
@@ -73,7 +78,7 @@ const Intro = styled.aside`
   }
 
   h4 {
-    color: #c1c1c1;
+    color: ${props => props.theme === "dark" ? theme.dark.lightText : theme.light.lightText};
     font-weight: 600;
     animation: ${TextAnimation} 3s ease-in infinite 1.2s;
   }
@@ -111,16 +116,23 @@ const InfoGroup = styled.aside`
 const Info = styled.div`
   text-align: left;
   max-width: 100%;
+  color: ${props => props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
 
   p {
-    color: #c6c6c6;
+    color: ${(props) =>
+      props.theme === "dark"
+        ? theme.dark.lightTextVariant
+        : theme.light.lightTextVariant};
     line-height: 1.45rem;
     font-weight: 600;
     margin: 10px 0;
     max-width: 90%;
 
     b {
-      color: #d2d2d2;
+      color: ${(props) =>
+        props.theme === "dark"
+          ? theme.dark.lightTextBold
+          : theme.light.lightTextBold};
 
       ::before,
       ::after {
@@ -131,7 +143,10 @@ const Info = styled.div`
 
   ul {
     padding-left: 20px;
-    color: #c6c6c6;
+    color: ${(props) =>
+      props.theme === "dark"
+        ? theme.dark.lightTextVariant
+        : theme.light.lightTextVariant};
     line-height: 1.45rem;
     font-weight: 600;
     margin: 20px 0;
@@ -139,16 +154,18 @@ const Info = styled.div`
   }
 `;
 
-export default function About() {
+export default function About(props) {
+  const [theme] = useOutletContext();
+
   return (
-    <Container>
-      <Intro>
+    <Container theme={theme}>
+      <Intro theme={theme}>
         <h2>About Me</h2>
         <img src={ProfileImage} alt="My Pic" />
       </Intro>
 
       <InfoGroup>
-        <Info>
+        <Info theme={theme}>
           <h3>Intro</h3>
           <p>
             Hello, I am Haneen Mahdin, an 14 year-old aspiring Full-stack
@@ -156,7 +173,7 @@ export default function About() {
           </p>
         </Info>
 
-        <Info>
+        <Info theme={theme}>
           <h3>Journey</h3>
           <p>
             I was 12 years-old when i first got to code a cool website in HTML
@@ -173,7 +190,7 @@ export default function About() {
           </p>
         </Info>
 
-        <Info>
+        <Info theme={theme}>
           <h3>Technologies I use 🚀</h3>
           <ul>
             <li>HTML, CSS, Javascript</li>
@@ -186,7 +203,7 @@ export default function About() {
           </ul>
         </Info>
 
-        <Info>
+        <Info theme={theme}>
           <h3>Keep in touch 🥀</h3>
           <p>
             I love to get to know more people in this Tech Community and am

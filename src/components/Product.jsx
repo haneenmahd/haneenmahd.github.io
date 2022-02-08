@@ -4,6 +4,7 @@ import Products from '../store/Products.json';
 import { useParams } from 'react-router-dom';
 import WavedPreview from '../assets/img/waved_preview.png';
 import fileDownload from 'js-file-download';
+import theme from '../theme/theme';
 
 const ProductCard = styled.div`
   min-height: 100px;
@@ -21,7 +22,7 @@ const ProductCard = styled.div`
   }
 
   h4 {
-    color: #bdbdbd;
+    color: ${props => props.theme === "dark" ? theme.dark.secondaryColor : theme.light.secondaryColor};
   }
 
   img {
@@ -53,7 +54,14 @@ const ProductCard = styled.div`
   }
 `;
 
-export default function Product() {
+/**
+ * 
+ * @param {{
+ *   theme: "dark" | "light";
+ * }} props 
+ * @returns 
+ */
+export default function Product(props) {
   const { productName } = useParams();
   const [productResult, setProductResult] = useState({ productName: "", productDescription: "", previewImageSource: "", price: "" });
 
@@ -70,7 +78,7 @@ export default function Product() {
   }, []);
 
   return (
-    <ProductCard>
+    <ProductCard theme={props.theme}>
       <h1>{productResult.productName}</h1>
       <h4>{productResult.productDescription}</h4>
 

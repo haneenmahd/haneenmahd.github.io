@@ -1,11 +1,12 @@
 import { css } from "styled-components";
+import theme from "../theme/theme";
 
 /**
  * Common styles for link
  */
 const CommonLink = css`
   position: relative;
-  color: #d1d1d1;
+  color: ${props => props.theme === "dark" ? theme.dark.linkColor : theme.light.linkColor};
   text-decoration: none;
   margin: 0 8px;
   padding: 4px 8px;
