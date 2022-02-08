@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import ProfileImage from "../assets/img/pfp.png";
 import Links from "../components/Links";
+import theme from "../theme/theme";
 
 const Container = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ const Container = styled.div`
   min-height: 100vh;
   max-width: 100vw;
   padding: 50px 7%;
-  color: #fafafa;
+  color: ${props => props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
@@ -73,7 +74,7 @@ const Intro = styled.aside`
   }
 
   h4 {
-    color: #c1c1c1;
+    color: ${props => props.theme === "dark" ? theme.dark.lightText : theme.light.lightText};
     font-weight: 600;
     animation: ${TextAnimation} 3s ease-in infinite 1.2s;
   }
@@ -113,14 +114,20 @@ const Info = styled.div`
   max-width: 100%;
 
   p {
-    color: #c6c6c6;
+    color: ${(props) =>
+      props.theme === "dark"
+        ? theme.dark.lightTextVariant
+        : theme.light.lightTextVariant};
     line-height: 1.45rem;
     font-weight: 600;
     margin: 10px 0;
     max-width: 90%;
 
     b {
-      color: #d2d2d2;
+      color: ${(props) =>
+        props.theme === "dark"
+          ? theme.dark.lightTextBold
+          : theme.light.lightTextBold};
 
       ::before,
       ::after {
@@ -131,7 +138,10 @@ const Info = styled.div`
 
   ul {
     padding-left: 20px;
-    color: #c6c6c6;
+    color: ${(props) =>
+      props.theme === "dark"
+        ? theme.dark.lightTextVariant
+        : theme.light.lightTextVariant};
     line-height: 1.45rem;
     font-weight: 600;
     margin: 20px 0;

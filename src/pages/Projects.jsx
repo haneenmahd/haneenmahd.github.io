@@ -9,12 +9,13 @@ import ProjectAppleColors from "../assets/img/apple-colors.jpeg";
 import ProjectBlobby from '../assets/img/python-icon.png';
 import CommonLink from '../components/CommonLink';
 import { Link } from 'react-router-dom';
+import theme from '../theme/theme';
 
 const Container = styled.article`
     min-height: 100vh;
     max-width: 100vw;
     padding: 50px 10%;
-    color: #fafafa;
+    color: ${props => props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
 `;
 
 const Intro = styled.div`
@@ -31,7 +32,7 @@ const Intro = styled.div`
 
     h4 {
         font-size: 120%;
-        color: #c1c1c1;
+        color: ${props => props.theme === "dark" ? theme.dark.lightText : theme.light.lightText};
         font-weight: 600;
     }
 `;
