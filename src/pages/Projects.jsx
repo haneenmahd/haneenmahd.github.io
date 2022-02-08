@@ -5,6 +5,8 @@ import ProjectEmojiPlate from '../assets/img/emoji-plate.png';
 import ProjectHashable from '../assets/img/hashable.png';
 import ProjectImagable from '../assets/img/imagable.png';
 import ProjectTypeInstall from '../assets/img/npm-logo.png';
+import ProjectAppleColors from "../assets/img/apple-colors.jpeg";
+import ProjectBlobby from '../assets/img/python-icon.png';
 import CommonLink from '../components/CommonLink';
 
 const Container = styled.article`
@@ -44,14 +46,17 @@ const ProjectContainer = styled.div`
 const AllProjectsLink = styled.a`
     ${CommonLink}
     color: #166edc;
+    border-radius: 10px;
+    padding: 10px 20px;
     font-weight: bold;
 
     &:hover {
         color: #2989ff;
+        background: #2989ff20;
     }
 `;
 
-export default function Projects() {
+export default function Projects(props) {
   return (
     <Container>
       <Intro>
@@ -84,16 +89,36 @@ export default function Projects() {
           projectLink="https://hashable.space"
           githubUrl="https://github.com/haneenmahd/hashable"
         />
-        <ProjectCard
-          title="typeinstall"
-          description="Automatically installs types for your typescript project"
-          imgSource={ProjectTypeInstall}
-          projectLink="https://www.npmjs.com/package/typeinstall"
-          githubUrl="https://github.com/haneenmahd/typeinstall"
-        />
+        {props.showMoreLinks || (
+          <>
+            <ProjectCard
+              title="typeinstall"
+              description="Automatically installs types for your typescript project"
+              imgSource={ProjectTypeInstall}
+              projectLink="https://www.npmjs.com/package/typeinstall"
+              githubUrl="https://github.com/haneenmahd/typeinstall"
+            />
+            <ProjectCard
+              title="apple-colors"
+              description="A Package for using Colors in your User Interace with colors used by apple🍎"
+              imgSource={ProjectAppleColors}
+              projectLink="https://www.npmjs.com/package/typeinstall"
+              githubUrl="https://github.com/haneenmahd/typeinstall"
+            />
+            <ProjectCard
+              title="blobby"
+              description="Convert Image Files into Supported Pdf Format"
+              imgSource={ProjectBlobby}
+              projectLink="https://www.npmjs.com/package/typeinstall"
+              githubUrl="https://github.com/haneenmahd/typeinstall"
+            />
+          </>
+        )}
       </ProjectContainer>
 
-      <AllProjectsLink href="#">&gt; View all projects</AllProjectsLink>
+      {props.showMoreLinks && (
+        <AllProjectsLink href="#">&gt; View all projects</AllProjectsLink>
+      )}
     </Container>
   );
 }
