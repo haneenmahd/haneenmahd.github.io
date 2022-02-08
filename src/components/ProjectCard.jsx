@@ -66,8 +66,8 @@ const ProjectLinkButton = styled.a`
   max-width: 90px;
   background: ${(p) =>
     p.secondary
-      ? css`linear-gradient(180deg, #06c744 0%, #030013 220%)`
-      : css`linear-gradient(180deg, #166edc 0%, #030013 220%)`};
+      ? "#007b56"
+      : "#166edc"};
   border: none;
   border-radius: 10px;
   font-size: 15px;
