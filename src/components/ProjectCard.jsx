@@ -9,7 +9,7 @@ const Card = styled.div`
     box-shadow: 0;
     margin: 20px;
     overflow: hidden;
-    transition: all .3s ;
+    transition: all .3s;
     cursor: pointer;
 
     img {
