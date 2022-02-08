@@ -73,11 +73,15 @@ export default function Projects() {
           title="Emoji Plate"
           description="A collection of textual emojis and symbols"
           imgSource={ProjectEmojiPlate}
+          projectLink="https://emoji-plate.netlify.app"
+          githubUrl="https://github.com/emoji-plate/client"
         />
         <ProjectCard
           title="Hashable"
           description="An open-source, client-side gateway for users to test out and access cryptographic functions and hashing methods. We also support a REST API which users can use to has on client-side Javascript Applications."
           imgSource={ProjectHashable}
+          projectLink="https://hashable.space"
+          githubUrl="https://github.com/haneenmahd/hashable"
         />
       </ProjectContainer>
 
