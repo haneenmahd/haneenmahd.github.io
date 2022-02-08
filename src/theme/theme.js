@@ -5,6 +5,7 @@ export default {
     navBackground: "rgba(255, 255, 255, 0.5)",
     cardBackground: "#b3b3b3",
     linkColor: "#2a2a2a",
+    iconAccent: "#00000037",
   },
   dark: {
     textColor: "#fafafa",
@@ -12,5 +13,6 @@ export default {
     navBackground: "rgba(0, 0, 0, 0.5)",
     cardBackground: "#222",
     linkColor: "#d1d1d1",
+    iconAccent: "#ffffff37",
   },
 };
