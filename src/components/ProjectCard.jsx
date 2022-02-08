@@ -1,52 +1,63 @@
 import React from 'react';
 import { GitHub, Link } from 'react-feather';
 import styled, { css } from 'styled-components';
+import theme from '../theme/theme';
 
 const Card = styled.div`
-    min-height: 300px;
-    width: 300px;
-    background: #222;
-    border-radius: 10px;
-    box-shadow: 0;
-    margin: 20px;
-    overflow: hidden;
-    user-select: none;
-    transition: all .3s;
+  min-height: 300px;
+  width: 300px;
+  background: ${(props) =>
+    props.theme === "dark"
+      ? theme.dark.cardBackground
+      : theme.light.cardBackground};
+  border-radius: 10px;
+  box-shadow: 0;
+  margin: 20px;
+  overflow: hidden;
+  user-select: none;
+  transition: all 0.3s;
 
-    img {
-        height: 200px;
-        max-width: 100%;
-    }
+  img {
+    height: 200px;
+    max-width: 100%;
+  }
 
-    &:hover {
-        box-shadow: 0 30px 60px 0 #6d6d6d1f;
-    }
+  &:hover {
+    box-shadow: 0 30px 60px 0 #6d6d6d1f;
+  }
 
-    div {
-        margin: 20px 0;
-        padding: 0 0 0 20px;
-    }
+  div {
+    margin: 20px 0;
+    padding: 0 0 0 20px;
+  }
 
-    button {
-        margin-bottom: 20px;
-    }
+  button {
+    margin-bottom: 20px;
+  }
 `;
 
 const ProjectTitle = styled.h4`
-    font-size: 130%;
-    font-weight: bold;
-    text-align: left;
-    margin: 0;
+  font-size: 130%;
+  font-weight: bold;
+  text-align: left;
+  color: ${(props) =>
+    props.theme === "dark"
+      ? theme.dark.textColor
+      : theme.light.textColor};
+  margin: 0;
 `;
 
 const ProjectDescription = styled.h4`
-    font-size: 100%;
-    font-weight: normal;
-    text-align: left;
-    padding: 7px 0;
-    padding-right: 10px;
-    color: #d1d1d1;
-    margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+  text-align: left;
+  padding: 7px 0;
+  padding-right: 10px;
+  color: ${(props) =>
+    props.theme === "dark"
+      ? theme.dark.linkColor
+      : theme.light.linkColor};
+  margin: 0;
 `;
 
 const Actions = styled.div`

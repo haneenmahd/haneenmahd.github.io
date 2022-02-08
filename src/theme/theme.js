@@ -6,6 +6,11 @@ export default {
     cardBackground: "#b3b3b3",
     linkColor: "#2a2a2a",
     iconAccent: "#00000037",
+    darkIconAccent: "#f9f9f9",
+    secondaryColor: "#ededed",
+    iconFill: "#111",
+    linkUnderLineColor: "#1b1b1b",
+    mainBg: '#f4f4f4',
   },
   dark: {
     textColor: "#fafafa",
@@ -14,5 +19,10 @@ export default {
     cardBackground: "#222",
     linkColor: "#d1d1d1",
     iconAccent: "#ffffff37",
+    darkIconAccent: "#a9a9a9",
+    secondaryColor: "#bdbdbd",
+    iconFill: "#fff",
+    linkUnderLineColor: "#eee",
+    mainBg: '#040404',
   },
 };

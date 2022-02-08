@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import CommonLink from "../../components/CommonLink";
+import theme from '../../theme/theme';
 
 const LogoContainer = styled.div`
   padding: 10px;
@@ -9,14 +10,21 @@ const LogoContainer = styled.div`
 
 const CustomLink = styled(Link)`
   ${CommonLink}
-  color: #fafafa;
+  color: ${props => props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
   text-align: center;
 `;
 
-export default function Logo() {
+/**
+ * 
+ * @param {{
+ *   theme: "dark" | "light";
+ * }} props 
+ * @returns 
+ */
+export default function Logo(props) {
   return (
     <LogoContainer>
-      <CustomLink to="/">
+      <CustomLink theme={props.theme} to="/">
         <h3>haneen mahdin</h3>
       </CustomLink>
     </LogoContainer>
