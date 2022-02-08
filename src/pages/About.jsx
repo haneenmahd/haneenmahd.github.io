@@ -102,6 +102,10 @@ const InfoGroup = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media screen and (min-width: 700px) {
+    margin-left: 20px;
+  }
 `;
 
 const Info = styled.div`
