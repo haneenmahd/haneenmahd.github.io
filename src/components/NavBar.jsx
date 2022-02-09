@@ -4,7 +4,6 @@ import { css } from 'styled-components'
 import Logo from '../assets/jsx/Logo'
 import theme from '../theme/theme'
 import NavLink from './NavLink'
-import NavMenu from './NavMenu'
 import ThemeSwitch from './ThemeSwitch'
 
 const Container = styled.nav`
@@ -28,35 +27,22 @@ const Container = styled.nav`
 const NavLinks = styled.div`
   width: auto;
   max-width: 100%;
-  transition: all 0.3s;
 
-  ${(props) =>
-    props.toggled &&
-    css`
-      opacity: 0;
-      transform: scale(0.4);
-      width: 0;
-    `}
+  @media screen and (max-width: 700px) {
+    width: 90%;
+    text-align: center;
+
+    a {
+      font-size: 14px;
+      margin: 0 4px;
+    }
+  }
 `
 
 export default class NavBar extends Component {
   constructor(props) {
     super(props)
     this.props = props
-
-    this.state = {
-      toggled: false,
-    }
-
-    this.setToggle = this.setToggle.bind(this)
-  }
-
-  /**
-   * Toggles the nav menu's toggle state
-   * @param {boolean} value
-   */
-  setToggle(value) {
-    this.setState({ toggled: value })
   }
 
   render() {
@@ -66,16 +52,10 @@ export default class NavBar extends Component {
       <Container theme={props.theme}>
         <Logo theme={props.theme} />
 
-        <NavLinks toggled={state.toggled}>
+        <NavLinks>
           <NavLink theme={props.theme} to="/projects" text="projects" />
           <NavLink theme={props.theme} to="/about" text="about me" />
         </NavLinks>
-
-        <NavMenu
-          toggled={state.toggled}
-          setToggle={this.setToggle}
-          theme={props.theme}
-        />
 
         <ThemeSwitch theme={props.theme} setTheme={props.setTheme} />
       </Container>
