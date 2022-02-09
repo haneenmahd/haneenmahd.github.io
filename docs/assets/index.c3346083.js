@@ -11,8 +11,8 @@ import {
   D as U,
   I as j,
   T as E,
-  b as y,
-  c as v,
+  b as v,
+  c as y,
   d as M,
   u as w,
   F as Q,
@@ -31,29 +31,29 @@ const P = function () {
   if (i && i.supports && i.supports('modulepreload')) return
   for (const o of document.querySelectorAll('link[rel="modulepreload"]')) s(o)
   new MutationObserver((o) => {
-    for (const a of o)
-      if (a.type === 'childList')
-        for (const p of a.addedNodes)
+    for (const l of o)
+      if (l.type === 'childList')
+        for (const p of l.addedNodes)
           p.tagName === 'LINK' && p.rel === 'modulepreload' && s(p)
   }).observe(document, { childList: !0, subtree: !0 })
-  function l(o) {
-    const a = {}
+  function a(o) {
+    const l = {}
     return (
-      o.integrity && (a.integrity = o.integrity),
-      o.referrerpolicy && (a.referrerPolicy = o.referrerpolicy),
+      o.integrity && (l.integrity = o.integrity),
+      o.referrerpolicy && (l.referrerPolicy = o.referrerpolicy),
       o.crossorigin === 'use-credentials'
-        ? (a.credentials = 'include')
+        ? (l.credentials = 'include')
         : o.crossorigin === 'anonymous'
-        ? (a.credentials = 'omit')
-        : (a.credentials = 'same-origin'),
-      a
+        ? (l.credentials = 'omit')
+        : (l.credentials = 'same-origin'),
+      l
     )
   }
   function s(o) {
     if (o.ep) return
     o.ep = !0
-    const a = l(o)
-    fetch(o.href, a)
+    const l = a(o)
+    fetch(o.href, l)
   }
 }
 P()
@@ -118,7 +118,7 @@ const z = n(x)`
   ${m}
 
   &::before {
-    content: " ";
+    content: ' ';
     position: absolute;
     bottom: -5px;
     height: 2px;
@@ -165,13 +165,17 @@ const N = n.button`
     stroke: ${(e) =>
       e.theme === 'dark' ? A.dark.textColor : A.light.textColor};
   }
+
+  @media screen and (max-width: 700px) {
+    margin-right: 10px;
+  }
 `
 function X(e) {
-  const { theme: i, setTheme: l } = e
+  const { theme: i, setTheme: a } = e
   return t(N, {
     theme: e.theme,
     onClick: () => {
-      l(i === 'dark' ? 'light' : 'dark')
+      a(i === 'dark' ? 'light' : 'dark')
     },
     children: i === 'dark' ? t(S, {}) : t(W, {}),
   })
@@ -183,12 +187,27 @@ const q = n.nav`
   align-items: center;
   justify-content: space-around;
   padding: 0;
-  position: fixed; top: 0;
+  position: fixed;
+  top: 0;
   background-color: ${(e) =>
     e.theme === 'dark' ? A.dark.navBackground : A.light.navBackground};
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 1000;
+`,
+  _ = n.div`
+  width: auto;
+  max-width: 100%;
+
+  @media screen and (max-width: 700px) {
+    width: 90%;
+    text-align: center;
+
+    a {
+      font-size: 14px;
+      margin: 0 4px;
+    }
+  }
 `
 class L extends d.exports.Component {
   constructor(i) {
@@ -196,24 +215,23 @@ class L extends d.exports.Component {
     this.props = i
   }
   render() {
-    const { props: i } = this
+    const { state: i, props: a } = this
     return r(q, {
-      theme: i.theme,
+      theme: a.theme,
       children: [
-        t(O, { theme: i.theme }),
-        r('div', {
-          style: { width: 'auto', maxWidth: '100%' },
+        t(O, { theme: a.theme }),
+        r(_, {
           children: [
-            t(k, { theme: i.theme, to: '/projects', text: 'projects' }),
-            t(k, { theme: i.theme, to: '/about', text: 'about me' }),
+            t(k, { theme: a.theme, to: '/projects', text: 'projects' }),
+            t(k, { theme: a.theme, to: '/about', text: 'about me' }),
           ],
         }),
-        t(X, { theme: i.theme, setTheme: i.setTheme }),
+        t(X, { theme: a.theme, setTheme: a.setTheme }),
       ],
     })
   }
 }
-const _ = n.aside`
+const Z = n.aside`
   padding: 10px 0;
   display: flex;
   align-items: flex-start;
@@ -242,7 +260,7 @@ const _ = n.aside`
   }
 `
 function f(e) {
-  return r(_, {
+  return r(Z, {
     children: [
       t(h, {
         theme: e.theme,
@@ -268,24 +286,23 @@ function f(e) {
         href: 'https://twitter.com/HaneenMahdin',
         children: t(E, {}),
       }),
-      t(h, { theme: e.theme, href: '/projects', children: t(y, {}) }),
+      t(h, { theme: e.theme, href: '/projects', children: t(v, {}) }),
       t(h, {
         theme: e.theme,
         target: '_blank',
         href: 'mailto:haneenmahdin@gmail.com',
-        children: t(v, {}),
+        children: t(y, {}),
       }),
     ],
   })
 }
-const Z = n.article`
-    min-height: 90vh;
-    max-width: 100vw;
-    color: ${(e) =>
-      e.theme === 'dark' ? A.dark.textColor : A.light.textColor};
-    padding-top: 100px;
+const ee = n.article`
+  min-height: 90vh;
+  max-width: 100vw;
+  color: ${(e) => (e.theme === 'dark' ? A.dark.textColor : A.light.textColor)};
+  padding-top: 100px;
 `,
-  ee = n.div`
+  te = n.div`
   text-align: left;
   padding: 100px 10%;
 
@@ -303,16 +320,16 @@ const Z = n.article`
     margin: 6px 0;
   }
 `
-class te extends d.exports.Component {
+class Ae extends d.exports.Component {
   constructor(i) {
     super(i)
     this.props = i
   }
   render() {
     const { props: i } = this
-    return t(Z, {
+    return t(ee, {
       theme: i.theme,
-      children: r(ee, {
+      children: r(te, {
         theme: i.theme,
         children: [
           t('h2', { children: "Hi, I'm Haneen \u{1F44B}" }),
@@ -325,7 +342,7 @@ class te extends d.exports.Component {
     })
   }
 }
-const Ae = n.div`
+const ie = n.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -359,14 +376,14 @@ const Ae = n.div`
     margin-bottom: 20px;
   }
 `,
-  ie = n.h4`
+  re = n.h4`
   font-size: 130%;
   font-weight: bold;
   text-align: left;
   color: ${(e) => (e.theme === 'dark' ? A.dark.textColor : A.light.textColor)};
   margin: 0;
 `,
-  re = n.h4`
+  ne = n.h4`
   font-size: 100%;
   font-weight: normal;
   text-align: left;
@@ -375,7 +392,7 @@ const Ae = n.div`
   color: ${(e) => (e.theme === 'dark' ? A.dark.linkColor : A.light.linkColor)};
   margin: 0;
 `,
-  ne = n.div`
+  ae = n.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -408,17 +425,17 @@ const Ae = n.div`
   }
 `
 function c(e) {
-  return r(Ae, {
+  return r(ie, {
     theme: e.theme,
     children: [
       t('img', { src: e.imgSource, alt: 'Preview Image' }),
       r('div', {
         children: [
-          t(ie, { theme: e.theme, children: e.title }),
-          t(re, { theme: e.theme, children: e.description }),
+          t(re, { theme: e.theme, children: e.title }),
+          t(ne, { theme: e.theme, children: e.description }),
         ],
       }),
-      r(ne, {
+      r(ae, {
         children: [
           r(F, {
             target: '_blank',
@@ -438,20 +455,20 @@ function c(e) {
   })
 }
 var oe = '/assets/emoji-plate.b553bc5f.png',
-  ae = '/assets/hashable.a4cc3a72.png',
-  le = '/assets/imagable.d420f47e.png',
-  se =
+  le = '/assets/hashable.a4cc3a72.png',
+  se = '/assets/imagable.d420f47e.png',
+  he =
     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLAAAAHTCAMAAAAApxGuAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEUAAADRTUzdgH7XZGTijY334+Ppqan12dn99/fnqKjUWVjzzs766+vlnJrLODjLODfLOTfLODf///9SLzeHAAAAEXRSTlMA6czYx8fBw9jB4MHLw0nDq34XYU8AAAABYktHRBJ7vGwAAAAAB3RJTUUH4QgJAC4j9dQekgAACeJJREFUeNrt1dkVgkAQRUEQFNyX/IP1B0ygh3Papm4GTPvK7i1Jf1LnCSQBS5KAJQlYkgQsSQKWJGBJErAkCViSgCVJwJIkYEkCliQBS5KAJQlYkgQsSQKWJGBJErAkCViSgCVJwJIkYEkCliQBS5KAJQlYkgQsScCSJGBJErAkAUuSgCVJwJIELEkCliQBSxKwJAlYkgQsScCSJGBJErAkAUuSgCVJwJIELEkCliQBSxKwJAlYkgQsScCSJGBJErAkAUuSgCUJWJIELEkCliRgSRKwJAlYkoAlSUXB6g9a6uOv6RHXhvhjDl6x2j4agDV+tDTGX9Mjrh3jj3n0itX2ASxgAUvAchBgAUvAAhawgAUsYAELWAKWgwALWAIWsIAFLGABC1jAErAcBFjAsg9gAQtYwAIWsIAFLAHLQYAFLPsAFrCABSxgAQtYwBKwHARYwLIPYAELWMACFrCABSwBy0GABSz7ABawgCVgAQtYwBKwHMQjAss+gAUsYAlYwAIWsAQsYAELWPYBLGABS8ASsIAlYAELWMCyD2ABC1gCloMAC1gCFrCABSxgAQtYwBKwHARYwBKwgAUsYAELWMACloDlIMACloAFLGABC1jAAhawBCwHARaw7ANYwAIWsIAFLGABS8ByEGAByz6ABSxgAQtYwAIWsAQsBwEWsOwDWMACFrCABSxgAUvAchBgAcs+gAUsYAlYwAIWsAQsYAlY9gEsYAFLwAIWsIAlYAELWMCyD2ABC1gCloAFLAELWMACln0AC1jAErAcBFjAErCABSxgAQtYwAKWgOUgwAKWgAUsYAELWMACFrAELAcBFrAELGABC1jAAhawgCVgbdkp3ASstSn+msBam+OPOdtHObBSfEcVsFJ8RxWwcnxHlX0AC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgActBgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMCyD2ABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgOQiwgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGDZB7CABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawHARYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrDsA1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYDgIsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1j2ASxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jA2gFY50s4YAELWMDaUcACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSz7ABawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLEMHFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGD5DmABC1jAAhawHARUwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLPsAFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsQwcWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSwHARawgAUsYAHLdwALWMACFrCABSwBC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhaw7ANYwAIWsIAFLGABC1jAAhawgAUsYAELWMDaD1jDNUMpvmMoAtYtw0Xv8ce8+45q+2gAllqWAqzRHZQzYAELWAKWgCUBC1jAErAELGAJWAKWBCxgAUvAErCAJWAJWBKwgAUsAUvAkoAlYEnAAhawBCwBSwKWgCUBC1jAErAELAlYApYELGABS8ASsCRgCVgSsIAFLAFLwJKABSxgScACFrAELAFLAhawgCUBC1jAErAELAlYwAKWgOUJgAUsAUvAkoAFLGAJWAIWsAQsAUsCFrCAJWAJWO4gYAlYErCABSwBS8CSgCVgScACFrAELAFLApaAJQELWMASsAQsCVgClgQsYAFLwBKwJGABC1gSsIAFLAFLwJKABSxgScACFrAELAFLAhawgCUBC1jAErAELAlYwAKWgCVgAUvAErAkYAELWAKWgAUsAUvAkoAFLGAJWAKWlBOsh9r1jB/kkKE+/h1+DNqiTg17+Qf8/RNKAhawJAELWBKwgCUJWMCSBCxgScACliRgAUsSsIAlAQtYkoAFLEnAApYELGBJAhawJAELWBKwgCUJWMCSBCxgScACliRgAUsSsIAlAQtYkoAFLEnAApYELGBJAhawJGAJWBKwgCUJWMCSgAUsScACliRgAUsCFrAkAQtYkoAFLAlYwJIELGBJAhawJGABSxKwgCUJWMCSgAUsScACliRgAUsCFrAkAQtYkoAFLAlYwJIELGBJAhawJGABSxKwgCUJWMCSgAUsScAClgQsAUsCFrAkAQtYErCAJQlYwJIELGBJwAKWJGABSxKwgCUBC1iSgAUs7aUvda6964aXmagAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTctMDgtMDlUMDA6NDY6MzUrMDA6MDCqCllVAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE3LTA4LTA5VDAwOjQ2OjM1KzAwOjAw21fh6QAAAABJRU5ErkJggg==',
-  he = '/assets/apple-colors.324fed04.jpeg',
-  ce = '/assets/python-icon.976ee9a0.png'
-const de = n.article`
+  ce = '/assets/apple-colors.324fed04.jpeg',
+  de = '/assets/python-icon.976ee9a0.png'
+const ge = n.article`
   min-height: 100vh;
   max-width: 100vw;
   padding: 50px 10%;
   background: ${(e) => (e.theme === 'dark' ? A.dark.mainBg : A.light.mainBg)};
   color: ${(e) => (e.theme === 'dark' ? A.dark.textColor : A.light.textColor)};
 `,
-  ge = n.div`
+  me = n.div`
   text-align: left;
 
   * {
@@ -472,31 +489,31 @@ const de = n.article`
     font-weight: 600;
   }
 `,
-  me = n.div`
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    margin: 50px 0;
+  Ce = n.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 50px 0;
 `,
-  Ce = n(x)`
-    ${m}
-    color: #166edc;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-weight: bold;
+  pe = n(x)`
+  ${m}
+  color: #166edc;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
 
-    &:hover {
-        color: #2989ff;
-        background: #2989ff20;
-    }
+  &:hover {
+    color: #2989ff;
+    background: #2989ff20;
+  }
 `
 function I(e) {
   const [i] = w()
-  return r(de, {
+  return r(ge, {
     theme: i,
     children: [
-      r(ge, {
+      r(me, {
         theme: i,
         children: [
           t('h2', { children: 'Projects \u{1F47E}' }),
@@ -506,14 +523,14 @@ function I(e) {
           }),
         ],
       }),
-      r(me, {
+      r(Ce, {
         children: [
           t(c, {
             theme: i,
             title: 'Imagable',
             description:
               'A Utility to resize and optimize your icons for all platforms instanly with one click \u{1F92F}!',
-            imgSource: le,
+            imgSource: se,
             projectLink: 'https://imagable.vercel.app',
             githubUrl: 'https://github.com/imagable/imagable',
           }),
@@ -530,7 +547,7 @@ function I(e) {
             title: 'Hashable',
             description:
               'An API to access high-level crypto functions inside your browser \u2620\uFE0F!',
-            imgSource: ae,
+            imgSource: le,
             projectLink: 'https://hashable.space',
             githubUrl: 'https://github.com/haneenmahd/hashable',
           }),
@@ -542,7 +559,7 @@ function I(e) {
                   title: 'typeinstall',
                   description:
                     'Automatically installs types for your typescript project',
-                  imgSource: se,
+                  imgSource: he,
                   projectLink: 'https://www.npmjs.com/package/typeinstall',
                   githubUrl: 'https://github.com/haneenmahd/typeinstall',
                 }),
@@ -551,7 +568,7 @@ function I(e) {
                   title: 'apple-colors',
                   description:
                     'A Package for using Colors in your User Interace with colors used by apple\u{1F34E}',
-                  imgSource: he,
+                  imgSource: ce,
                   projectLink: 'https://www.npmjs.com/package/typeinstall',
                   githubUrl: 'https://github.com/haneenmahd/typeinstall',
                 }),
@@ -559,7 +576,7 @@ function I(e) {
                   theme: i,
                   title: 'blobby',
                   description: 'Convert Image Files into Supported Pdf Format',
-                  imgSource: ce,
+                  imgSource: de,
                   projectLink: 'https://www.npmjs.com/package/typeinstall',
                   githubUrl: 'https://github.com/haneenmahd/typeinstall',
                 }),
@@ -568,12 +585,12 @@ function I(e) {
         ],
       }),
       e.showMoreLinks &&
-        t(Ce, { to: '/projects', children: '> View all projects' }),
+        t(pe, { to: '/projects', children: '> View all projects' }),
     ],
   })
 }
-var pe = '/assets/pfp.b19ad75d.png'
-const xe = n.div`
+var xe = '/assets/pfp.b19ad75d.png'
+const we = n.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -590,7 +607,7 @@ const xe = n.div`
     align-items: flex-start;
   }
 `,
-  we = B`
+  ue = B`
     0% {
         opacity: 0.2;
     }
@@ -603,7 +620,7 @@ const xe = n.div`
         opacity: 0.2;
     }
 `,
-  ue = B`
+  Be = B`
     0% {
         box-shadow: 0 20px 20px 0 #7722cc76, 0 20px 20px 0 #2222cc76;
     }
@@ -628,7 +645,7 @@ const xe = n.div`
         box-shadow: 0 20px 20px 0 #7722cc76, 0 20px 20px 0 #2222cc76
     }
 `,
-  Be = n.aside`
+  ke = n.aside`
   text-align: left;
   padding: 20px;
   max-width: 100%;
@@ -645,7 +662,7 @@ const xe = n.div`
     color: ${(e) =>
       e.theme === 'dark' ? A.dark.lightText : A.light.lightText};
     font-weight: 600;
-    animation: ${we} 3s ease-in infinite 1.2s;
+    animation: ${ue} 3s ease-in infinite 1.2s;
   }
 
   img {
@@ -653,7 +670,7 @@ const xe = n.div`
     width: 400px;
     margin: 20px 0;
     box-shadow: 0 20px 20px 0 #7722cc76, 0 20px 20px 0 #2222cc76;
-    animation: ${ue} 5s linear infinite;
+    animation: ${Be} 5s linear infinite;
     user-select: none;
 
     @media screen and (max-width: 600px) {
@@ -667,7 +684,7 @@ const xe = n.div`
     top: 100px;
   }
 `,
-  ke = n.aside`
+  Le = n.aside`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -712,17 +729,17 @@ const xe = n.div`
 `
 function b(e) {
   const [i] = w()
-  return r(xe, {
+  return r(we, {
     theme: i,
     children: [
-      r(Be, {
+      r(ke, {
         theme: i,
         children: [
           t('h2', { children: 'About Me' }),
-          t('img', { src: pe, alt: 'My Pic' }),
+          t('img', { src: xe, alt: 'My Pic' }),
         ],
       }),
-      r(ke, {
+      r(Le, {
         children: [
           r(C, {
             theme: i,
@@ -801,7 +818,7 @@ function b(e) {
                   '.',
                 ],
               }),
-              t(f, {}),
+              t(f, { theme: i }),
             ],
           }),
         ],
@@ -809,7 +826,7 @@ function b(e) {
     ],
   })
 }
-const Le = n.div`
+const fe = n.div`
   min-height: 100vh;
   max-width: 100vw;
   text-align: center;
@@ -821,29 +838,29 @@ const Le = n.div`
     padding-top: 80px;
   }
 `
-function fe(e) {
-  const [i, l] = w()
-  return r(Le, {
+function Fe(e) {
+  const [i, a] = w()
+  return r(fe, {
     theme: i,
     children: [
-      t(L, { theme: i, setTheme: (s) => l(s) }),
-      t(te, { theme: i }),
+      t(L, { theme: i, setTheme: (s) => a(s) }),
+      t(Ae, { theme: i }),
       t(I, { theme: i, showMoreLinks: !0 }),
       t(b, { theme: i }),
     ],
   })
 }
 G.polyfill()
-function Fe() {
+function Ie() {
   const [e, i] = d.exports.useState('light'),
-    l = K()
+    a = K()
   return (
     d.exports.useEffect(() => {
       window.scrollTo(0, 0)
-    }, [l.pathname]),
+    }, [a.pathname]),
     r('div', {
       style: {
-        paddingTop: l.pathname !== '/' ? 85 : 0,
+        paddingTop: a.pathname !== '/' ? 85 : 0,
         backgroundColor: e === 'dark' ? A.dark.mainBg : A.light.mainBg,
       },
       children: [
@@ -859,9 +876,9 @@ J.render(
       children: t(D, {
         children: r(g, {
           path: '/',
-          element: t(Fe, {}),
+          element: t(Ie, {}),
           children: [
-            t(g, { index: !0, element: t(fe, {}) }),
+            t(g, { index: !0, element: t(Fe, {}) }),
             t(g, { path: 'projects', element: t(I, {}) }),
             t(g, { path: 'about', element: t(b, {}) }),
           ],
