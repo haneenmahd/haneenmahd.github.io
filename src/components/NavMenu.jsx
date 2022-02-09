@@ -20,6 +20,10 @@ const Container = styled.div`
     background-color: ${(props) =>
       props.theme === 'dark' ? theme.dark.textColor : theme.light.textColor};
   }
+
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
 `
 
 const Ham = styled.span`

@@ -56,10 +56,12 @@ export default class NavBar extends Component {
       <Container theme={props.theme}>
         <Logo theme={props.theme} />
 
-        <NavLinks>
-          <NavLink theme={props.theme} to="/projects" text="projects" />
-          <NavLink theme={props.theme} to="/about" text="about me" />
-        </NavLinks>
+        {state.toggled && (
+          <NavLinks>
+            <NavLink theme={props.theme} to="/projects" text="projects" />
+            <NavLink theme={props.theme} to="/about" text="about me" />
+          </NavLinks>
+        )}
 
         <NavMenu
           toggled={state.toggled}
