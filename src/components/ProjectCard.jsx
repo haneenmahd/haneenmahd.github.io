@@ -1,7 +1,7 @@
-import React from 'react';
-import { GitHub, Link } from 'react-feather';
-import styled from 'styled-components';
-import theme from '../theme/theme';
+import React from 'react'
+import { GitHub, Link } from 'react-feather'
+import styled from 'styled-components'
+import theme from '../theme/theme'
 
 const Card = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ const Card = styled.div`
   min-height: 300px;
   width: 300px;
   background: ${(props) =>
-    props.theme === "dark"
+    props.theme === 'dark'
       ? theme.dark.cardBackground
       : theme.light.cardBackground};
   border-radius: 10px;
@@ -38,18 +38,16 @@ const Card = styled.div`
   button {
     margin-bottom: 20px;
   }
-`;
+`
 
 const ProjectTitle = styled.h4`
   font-size: 130%;
   font-weight: bold;
   text-align: left;
   color: ${(props) =>
-    props.theme === "dark"
-      ? theme.dark.textColor
-      : theme.light.textColor};
+    props.theme === 'dark' ? theme.dark.textColor : theme.light.textColor};
   margin: 0;
-`;
+`
 
 const ProjectDescription = styled.h4`
   font-size: 100%;
@@ -58,17 +56,15 @@ const ProjectDescription = styled.h4`
   padding: 7px 0;
   padding-right: 10px;
   color: ${(props) =>
-    props.theme === "dark"
-      ? theme.dark.linkColor
-      : theme.light.linkColor};
+    props.theme === 'dark' ? theme.dark.linkColor : theme.light.linkColor};
   margin: 0;
-`;
+`
 
 const Actions = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-`;
+`
 
 const ProjectLinkButton = styled.a`
   display: flex;
@@ -78,10 +74,7 @@ const ProjectLinkButton = styled.a`
   margin: 12px;
   text-decoration: none;
   max-width: 90px;
-  background: ${(p) =>
-    p.secondary
-      ? "#4d4d4d"
-      : "#166edc"};
+  background: ${(p) => (p.secondary ? '#4d4d4d' : '#166edc')};
   border: none;
   border-radius: 10px;
   font-size: 15px;
@@ -99,10 +92,10 @@ const ProjectLinkButton = styled.a`
   :active {
     transform: translateY(5px);
   }
-`;
+`
 
 /**
- * 
+ *
  * @param {{
  *   imgSource: string;
  *   title: string;
@@ -110,8 +103,8 @@ const ProjectLinkButton = styled.a`
  *   projectLink: string;
  *   githubUrl: string;
  *   theme: "dark" | "light";
- * }} props 
- * @returns 
+ * }} props
+ * @returns
  */
 export default function ProjectCard(props) {
   return (
@@ -136,5 +129,5 @@ export default function ProjectCard(props) {
         )}
       </Actions>
     </Card>
-  );
+  )
 }

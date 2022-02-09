@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import Products from '../store/Products.json';
-import { useParams } from 'react-router-dom';
-import WavedPreview from '../assets/img/waved_preview.png';
-import fileDownload from 'js-file-download';
-import theme from '../theme/theme';
+import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
+import Products from '../store/Products.json'
+import { useParams } from 'react-router-dom'
+import WavedPreview from '../assets/img/waved_preview.png'
+import fileDownload from 'js-file-download'
+import theme from '../theme/theme'
 
 const ProductCard = styled.div`
   min-height: 100px;
@@ -22,7 +22,10 @@ const ProductCard = styled.div`
   }
 
   h4 {
-    color: ${props => props.theme === "dark" ? theme.dark.secondaryColor : theme.light.secondaryColor};
+    color: ${(props) =>
+      props.theme === 'dark'
+        ? theme.dark.secondaryColor
+        : theme.light.secondaryColor};
   }
 
   img {
@@ -42,55 +45,60 @@ const ProductCard = styled.div`
     font-weight: bold;
     cursor: pointer;
     color: #fafafa;
-    transition: all .3s;
+    transition: all 0.3s;
 
     :hover {
-        filter: opacity(0.9);
+      filter: opacity(0.9);
     }
 
     :active {
-        transform: translateY(5px);
+      transform: translateY(5px);
     }
   }
-`;
+`
 
 /**
- * 
+ *
  * @param {{
  *   theme: "dark" | "light";
- * }} props 
- * @returns 
+ * }} props
+ * @returns
  */
 export default function Product(props) {
-  const { productName } = useParams();
-  const [productResult, setProductResult] = useState({ productName: "", productDescription: "", previewImageSource: "", price: "" });
+  const { productName } = useParams()
+  const [productResult, setProductResult] = useState({
+    productName: '',
+    productDescription: '',
+    previewImageSource: '',
+    price: '',
+  })
 
   const findProduct = (name) => {
     Products.map((product) => {
-        if (product.productName === name) {
-            setProductResult(product);
-        }
-    });
+      if (product.productName === name) {
+        setProductResult(product)
+      }
+    })
   }
 
   useEffect(() => {
-    findProduct(productName);
-  }, []);
+    findProduct(productName)
+  }, [])
 
   return (
     <ProductCard theme={props.theme}>
       <h1>{productResult.productName}</h1>
       <h4>{productResult.productDescription}</h4>
 
-      <img src={productResult.productName === "waved" ? WavedPreview : ""} />
+      <img src={productResult.productName === 'waved' ? WavedPreview : ''} />
 
       <button
         onClick={() =>
-          fileDownload(String(WavedPreview), productResult.productName + ".png")
+          fileDownload(String(WavedPreview), productResult.productName + '.png')
         }
       >
         Get for {productResult.price}
       </button>
     </ProductCard>
-  );
+  )
 }

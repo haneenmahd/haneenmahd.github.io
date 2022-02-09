@@ -1,14 +1,21 @@
-import React from 'react';
-import styled from "styled-components";
-import CommonLink from "../components/CommonLink";
-import { GitHub, Compass, Dribbble, Instagram, Twitter, Mail } from "react-feather";
-import theme from '../theme/theme';
+import React from 'react'
+import styled from 'styled-components'
+import CommonLink from '../components/CommonLink'
+import {
+  GitHub,
+  Compass,
+  Dribbble,
+  Instagram,
+  Twitter,
+  Mail,
+} from 'react-feather'
+import theme from '../theme/theme'
 
 const LinksStyle = styled.aside`
   padding: 10px 0;
   display: flex;
   align-items: flex-start;
-`;
+`
 
 const Link = styled.a`
   ${CommonLink}
@@ -18,25 +25,31 @@ const Link = styled.a`
   margin-right: 2.7%;
 
   svg {
-    stroke: ${props => props.theme === "dark" ? theme.dark.linkColor : theme.light.linkColor};
-    fill: ${props => props.theme === "dark" ? theme.dark.iconAccent : theme.light.iconAccent};
+    stroke: ${(props) =>
+      props.theme === 'dark' ? theme.dark.linkColor : theme.light.linkColor};
+    fill: ${(props) =>
+      props.theme === 'dark' ? theme.dark.iconAccent : theme.light.iconAccent};
     transition: 0.3s cubic-bezier(0.35, 0.07, 0.38, 1.01);
   }
 
   &:hover svg,
   :focus svg {
-    stroke: ${props => props.theme === "dark" ? theme.dark.darkIconAccent : theme.light.darkIconAccent};
-    fill: ${props => props.theme === "dark" ? theme.dark.iconFill : theme.light.iconFill};
+    stroke: ${(props) =>
+      props.theme === 'dark'
+        ? theme.dark.darkIconAccent
+        : theme.light.darkIconAccent};
+    fill: ${(props) =>
+      props.theme === 'dark' ? theme.dark.iconFill : theme.light.iconFill};
     transform: scale(1.2);
   }
-`;
+`
 
 /**
- * 
+ *
  * @param {{
  *   theme: "dark" | "light";
- * }} props 
- * @returns 
+ * }} props
+ * @returns
  */
 export default function Links(props) {
   return (
@@ -80,5 +93,5 @@ export default function Links(props) {
         <Mail />
       </Link>
     </LinksStyle>
-  );
+  )
 }

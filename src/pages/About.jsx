@@ -1,8 +1,8 @@
-import { useOutletContext } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
-import ProfileImage from "../assets/img/pfp.png";
-import Links from "../components/Links";
-import theme from "../theme/theme";
+import { useOutletContext } from 'react-router-dom'
+import styled, { keyframes } from 'styled-components'
+import ProfileImage from '../assets/img/pfp.png'
+import Links from '../components/Links'
+import theme from '../theme/theme'
 
 const Container = styled.div`
   display: flex;
@@ -13,16 +13,16 @@ const Container = styled.div`
   max-width: 100vw;
   padding: 50px 7%;
   background: ${(props) =>
-    props.theme === "dark" ? theme.dark.mainBg : theme.light.mainBg};
+    props.theme === 'dark' ? theme.dark.mainBg : theme.light.mainBg};
   color: ${(props) =>
-    props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
+    props.theme === 'dark' ? theme.dark.textColor : theme.light.textColor};
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
   }
-`;
+`
 
 const TextAnimation = keyframes`
     0% {
@@ -36,7 +36,7 @@ const TextAnimation = keyframes`
     100% {
         opacity: 0.2;
     }
-`;
+`
 
 const ImageShadowAnimation = keyframes`
     0% {
@@ -62,7 +62,7 @@ const ImageShadowAnimation = keyframes`
     100% {
         box-shadow: 0 20px 20px 0 #7722cc76, 0 20px 20px 0 #2222cc76
     }
-`;
+`
 
 const Intro = styled.aside`
   text-align: left;
@@ -78,7 +78,8 @@ const Intro = styled.aside`
   }
 
   h4 {
-    color: ${props => props.theme === "dark" ? theme.dark.lightText : theme.light.lightText};
+    color: ${(props) =>
+      props.theme === 'dark' ? theme.dark.lightText : theme.light.lightText};
     font-weight: 600;
     animation: ${TextAnimation} 3s ease-in infinite 1.2s;
   }
@@ -101,7 +102,7 @@ const Intro = styled.aside`
     position: -webkit-sticky;
     top: 100px;
   }
-`;
+`
 
 const InfoGroup = styled.aside`
   display: flex;
@@ -111,16 +112,17 @@ const InfoGroup = styled.aside`
   @media screen and (min-width: 700px) {
     margin-left: 20px;
   }
-`;
+`
 
 const Info = styled.div`
   text-align: left;
   max-width: 100%;
-  color: ${props => props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
+  color: ${(props) =>
+    props.theme === 'dark' ? theme.dark.textColor : theme.light.textColor};
 
   p {
     color: ${(props) =>
-      props.theme === "dark"
+      props.theme === 'dark'
         ? theme.dark.lightTextVariant
         : theme.light.lightTextVariant};
     line-height: 1.45rem;
@@ -130,7 +132,7 @@ const Info = styled.div`
 
     b {
       color: ${(props) =>
-        props.theme === "dark"
+        props.theme === 'dark'
           ? theme.dark.lightTextBold
           : theme.light.lightTextBold};
 
@@ -144,7 +146,7 @@ const Info = styled.div`
   ul {
     padding-left: 20px;
     color: ${(props) =>
-      props.theme === "dark"
+      props.theme === 'dark'
         ? theme.dark.lightTextVariant
         : theme.light.lightTextVariant};
     line-height: 1.45rem;
@@ -152,10 +154,10 @@ const Info = styled.div`
     margin: 20px 0;
     max-width: 90%;
   }
-`;
+`
 
 export default function About(props) {
-  const [theme] = useOutletContext();
+  const [theme] = useOutletContext()
 
   return (
     <Container theme={theme}>
@@ -178,13 +180,13 @@ export default function About(props) {
           <p>
             I was 12 years-old when i first got to code a cool website in HTML
             and CSS from a FreeCodeCamp.org's crash course. I was really
-            interested in design at first.{" "}
+            interested in design at first.{' '}
             <b>I believed in that good design can make a product better</b>. I
-            started to learn web development deeply by creating websites using{" "}
+            started to learn web development deeply by creating websites using{' '}
             <b>React</b>. I learned <b>UI/UX</b> Design later that year. Then I
-            moved on to learning Backend Development with <b>Node.js</b> with{" "}
+            moved on to learning Backend Development with <b>Node.js</b> with{' '}
             <b>MongoDB</b>. Tried building my own APIs, failed a lot, but never
-            gave up 💪🏻. I learned to build apps using <b>React Native</b> and{" "}
+            gave up 💪🏻. I learned to build apps using <b>React Native</b> and{' '}
             <b>Expo</b> afterwards. I started re-searching about new and latest
             technologies and still continue to learn new things😃!
           </p>
@@ -208,12 +210,12 @@ export default function About(props) {
           <p>
             I love to get to know more people in this Tech Community and am
             interested to join in your project or team or company. If you are
-            interested to have a nice talk or something you can text me on{" "}
+            interested to have a nice talk or something you can text me on{' '}
             <i>Instagram</i>, <i>Twitter</i> or get me a <i>Mail</i>.
           </p>
           <Links theme={theme} />
         </Info>
       </InfoGroup>
     </Container>
-  );
+  )
 }
