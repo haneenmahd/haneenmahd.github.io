@@ -1,5 +1,6 @@
 import React, { Component, useState } from 'react'
 import styled from 'styled-components'
+import { css } from 'styled-components'
 import Logo from '../assets/jsx/Logo'
 import theme from '../theme/theme'
 import NavLink from './NavLink'
@@ -27,6 +28,15 @@ const Container = styled.nav`
 const NavLinks = styled.div`
   width: auto;
   max-width: 100%;
+  transition: all 0.3s;
+
+  ${(props) =>
+    props.toggled &&
+    css`
+      opacity: 0;
+      transform: scale(0.4);
+      width: 0;
+    `}
 `
 
 export default class NavBar extends Component {
@@ -56,12 +66,10 @@ export default class NavBar extends Component {
       <Container theme={props.theme}>
         <Logo theme={props.theme} />
 
-        {state.toggled && (
-          <NavLinks>
-            <NavLink theme={props.theme} to="/projects" text="projects" />
-            <NavLink theme={props.theme} to="/about" text="about me" />
-          </NavLinks>
-        )}
+        <NavLinks toggled={state.toggled}>
+          <NavLink theme={props.theme} to="/projects" text="projects" />
+          <NavLink theme={props.theme} to="/about" text="about me" />
+        </NavLinks>
 
         <NavMenu
           toggled={state.toggled}
