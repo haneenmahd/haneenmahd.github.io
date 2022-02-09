@@ -464,12 +464,13 @@ var oe = '/assets/emoji-plate.b553bc5f.png',
 const ge = n.article`
   min-height: 100vh;
   max-width: 100vw;
-  padding: 50px 10%;
+  padding: 50px 2%;
   background: ${(e) => (e.theme === 'dark' ? A.dark.mainBg : A.light.mainBg)};
   color: ${(e) => (e.theme === 'dark' ? A.dark.textColor : A.light.textColor)};
 `,
   me = n.div`
   text-align: left;
+  padding: 0 30px;
 
   * {
     margin: 6px 0;
