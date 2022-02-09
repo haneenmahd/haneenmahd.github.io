@@ -6,7 +6,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postbuild": "sh scripts/postbuild.sh"
   },
   "dependencies": {
     "jest": "^27.4.7",
