@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import theme from '../theme/theme'
 
@@ -35,11 +35,14 @@ const Ham = styled.span`
  *
  * @param {{
  *   theme: "dark" | "light";
+ *   toggled: boolean;
+ *   setToggle: (state) => void;
  * }} props
  * @returns
  */
 export default function NavMenu(props) {
-  const [toggled, setToggle] = useState(false)
+  const toggled = props.toggled,
+    setToggle = props.setToggle
 
   return (
     <Container

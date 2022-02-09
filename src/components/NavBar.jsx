@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import styled from 'styled-components'
 import Logo from '../assets/jsx/Logo'
 import theme from '../theme/theme'
@@ -24,25 +24,48 @@ const Container = styled.nav`
   z-index: 1000;
 `
 
+const NavLinks = styled.div`
+  width: auto;
+  max-width: 100%;
+`
+
 export default class NavBar extends Component {
   constructor(props) {
     super(props)
     this.props = props
+
+    this.state = {
+      toggled: false,
+    }
+
+    this.setToggle = this.setToggle.bind(this)
+  }
+
+  /**
+   * Toggles the nav menu's toggle state
+   * @param {boolean} value
+   */
+  setToggle(value) {
+    this.setState({ toggled: value })
   }
 
   render() {
-    const { props } = this
+    const { state, props } = this
 
     return (
       <Container theme={props.theme}>
         <Logo theme={props.theme} />
 
-        <div style={{ width: 'auto', maxWidth: '100%' }}>
+        <NavLinks>
           <NavLink theme={props.theme} to="/projects" text="projects" />
           <NavLink theme={props.theme} to="/about" text="about me" />
-        </div>
+        </NavLinks>
 
-        <NavMenu theme={props.theme} />
+        <NavMenu
+          toggled={state.toggled}
+          setToggle={this.setToggle}
+          theme={props.theme}
+        />
 
         <ThemeSwitch theme={props.theme} setTheme={props.setTheme} />
       </Container>
