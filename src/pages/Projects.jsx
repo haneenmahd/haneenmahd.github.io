@@ -23,6 +23,7 @@ const Container = styled.article`
 
 const Intro = styled.div`
   text-align: left;
+  padding: 0 30px;
 
   * {
     margin: 6px 0;
