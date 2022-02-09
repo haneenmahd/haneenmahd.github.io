@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import theme from '../theme/theme'
 
@@ -12,6 +12,9 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  border-radius: 10px;
+  background-color: ${(props) => (props.toggled ? '#d3d3d330' : 'transparent')};
+  transition: all 0.3s;
 
   &:hover span {
     background-color: ${(props) =>
@@ -36,8 +39,10 @@ const Ham = styled.span`
  * @returns
  */
 export default function NavMenu(props) {
+  const [toggled, setToggle] = useState(false)
+
   return (
-    <Container>
+    <Container toggled={toggled} onClick={() => setToggle(!toggled)}>
       <Ham theme={props.theme} />
       <Ham theme={props.theme} />
       <Ham theme={props.theme} />
