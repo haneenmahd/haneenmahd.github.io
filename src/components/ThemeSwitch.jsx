@@ -19,6 +19,10 @@ const Switch = styled.button`
     stroke: ${(props) =>
       props.theme === 'dark' ? theme.dark.textColor : theme.light.textColor};
   }
+
+  @media screen and (max-width: 700px) {
+    margin-right: 10px;
+  }
 `
 
 /**
