@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Logo from '../assets/jsx/Logo'
 import theme from '../theme/theme'
 import NavLink from './NavLink'
+import NavMenu from './NavMenu'
 import ThemeSwitch from './ThemeSwitch'
 
 const Container = styled.nav`
@@ -40,6 +41,8 @@ export default class NavBar extends Component {
           <NavLink theme={props.theme} to="/projects" text="projects" />
           <NavLink theme={props.theme} to="/about" text="about me" />
         </div>
+
+        <NavMenu />
 
         <ThemeSwitch theme={props.theme} setTheme={props.setTheme} />
       </Container>
