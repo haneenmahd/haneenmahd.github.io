@@ -1,17 +1,120 @@
-import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I as j,T as E,b as y,c as v,d as M,u as w,F as Q,U as B,e as G,R as J,f as T,B as $,g as D,h as g,i as K,O as R}from"./vendor.d377c6ad.js";const P=function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))s(o);new MutationObserver(o=>{for(const a of o)if(a.type==="childList")for(const p of a.addedNodes)p.tagName==="LINK"&&p.rel==="modulepreload"&&s(p)}).observe(document,{childList:!0,subtree:!0});function l(o){const a={};return o.integrity&&(a.integrity=o.integrity),o.referrerpolicy&&(a.referrerPolicy=o.referrerpolicy),o.crossorigin==="use-credentials"?a.credentials="include":o.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function s(o){if(o.ep)return;o.ep=!0;const a=l(o);fetch(o.href,a)}};P();var A={light:{textColor:"#111",lightText:"#666",lightTextVariant:"#666666",lightTextBold:"#707070",navBackground:"rgba(255, 255, 255, 0.5)",cardBackground:" #e6e6e6",linkColor:"#2a2a2a",iconAccent:"#00000037",darkIconAccent:"#f9f9f9",secondaryColor:"#ededed",iconFill:"#111",linkUnderLineColor:"#1b1b1b",mainBg:"#f4f4f4"},dark:{textColor:"#fafafa",lightText:"#c1c1c1",lightTextVariant:"#c6c6c6",lightTextBold:"#d2d2d2",navBackground:"rgba(0, 0, 0, 0.5)",cardBackground:"#222",linkColor:"#d1d1d1",iconAccent:"#ffffff37",darkIconAccent:"#a9a9a9",secondaryColor:"#bdbdbd",iconFill:"#fff",linkUnderLineColor:"#eee",mainBg:"#040404"}};const m=Y`
+import {
+  C as Y,
+  s as n,
+  L as x,
+  j as t,
+  M as S,
+  S as W,
+  r as d,
+  a as r,
+  G as u,
+  D as U,
+  I as j,
+  T as E,
+  b as y,
+  c as v,
+  d as M,
+  u as w,
+  F as Q,
+  U as B,
+  e as G,
+  R as J,
+  f as T,
+  B as $,
+  g as D,
+  h as g,
+  i as K,
+  O as R,
+} from './vendor.d377c6ad.js'
+const P = function () {
+  const i = document.createElement('link').relList
+  if (i && i.supports && i.supports('modulepreload')) return
+  for (const o of document.querySelectorAll('link[rel="modulepreload"]')) s(o)
+  new MutationObserver((o) => {
+    for (const a of o)
+      if (a.type === 'childList')
+        for (const p of a.addedNodes)
+          p.tagName === 'LINK' && p.rel === 'modulepreload' && s(p)
+  }).observe(document, { childList: !0, subtree: !0 })
+  function l(o) {
+    const a = {}
+    return (
+      o.integrity && (a.integrity = o.integrity),
+      o.referrerpolicy && (a.referrerPolicy = o.referrerpolicy),
+      o.crossorigin === 'use-credentials'
+        ? (a.credentials = 'include')
+        : o.crossorigin === 'anonymous'
+        ? (a.credentials = 'omit')
+        : (a.credentials = 'same-origin'),
+      a
+    )
+  }
+  function s(o) {
+    if (o.ep) return
+    o.ep = !0
+    const a = l(o)
+    fetch(o.href, a)
+  }
+}
+P()
+var A = {
+  light: {
+    textColor: '#111',
+    lightText: '#666',
+    lightTextVariant: '#666666',
+    lightTextBold: '#707070',
+    navBackground: 'rgba(255, 255, 255, 0.5)',
+    cardBackground: ' #e6e6e6',
+    linkColor: '#2a2a2a',
+    iconAccent: '#00000037',
+    darkIconAccent: '#f9f9f9',
+    secondaryColor: '#ededed',
+    iconFill: '#111',
+    linkUnderLineColor: '#1b1b1b',
+    mainBg: '#f4f4f4',
+  },
+  dark: {
+    textColor: '#fafafa',
+    lightText: '#c1c1c1',
+    lightTextVariant: '#c6c6c6',
+    lightTextBold: '#d2d2d2',
+    navBackground: 'rgba(0, 0, 0, 0.5)',
+    cardBackground: '#222',
+    linkColor: '#d1d1d1',
+    iconAccent: '#ffffff37',
+    darkIconAccent: '#a9a9a9',
+    secondaryColor: '#bdbdbd',
+    iconFill: '#fff',
+    linkUnderLineColor: '#eee',
+    mainBg: '#040404',
+  },
+}
+const m = Y`
   position: relative;
-  color: ${e=>e.theme==="dark"?A.dark.linkColor:A.light.linkColor};
+  color: ${(e) => (e.theme === 'dark' ? A.dark.linkColor : A.light.linkColor)};
   text-decoration: none;
   margin: 0 8px;
   padding: 4px 8px;
   transition: 0.3s cubic-bezier(0.98, 0.07, 0.47, 0.74);
-`,H=n.div`
+`,
+  H = n.div`
   padding: 10px;
-`,V=n(x)`
+`,
+  V = n(x)`
   ${m}
-  color: ${e=>e.theme==="dark"?A.dark.textColor:A.light.textColor};
+  color: ${(e) => (e.theme === 'dark' ? A.dark.textColor : A.light.textColor)};
   text-align: center;
-`;function O(e){return t(H,{children:t(V,{theme:e.theme,to:"/",children:t("h3",{children:"haneen mahdin"})})})}const z=n(x)`
+`
+function O(e) {
+  return t(H, {
+    children: t(V, {
+      theme: e.theme,
+      to: '/',
+      children: t('h3', { children: 'haneen mahdin' }),
+    }),
+  })
+}
+const z = n(x)`
   ${m}
 
   &::before {
@@ -20,7 +123,10 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
     bottom: -5px;
     height: 2px;
     width: 0%;
-    background: ${e=>e.theme==="dark"?A.dark.linkUnderLineColor:A.light.linkUnderLineColor};
+    background: ${(e) =>
+      e.theme === 'dark'
+        ? A.dark.linkUnderLineColor
+        : A.light.linkUnderLineColor};
     transition: 0.3s cubic-bezier(0.98, 0.07, 0.47, 0.74);
   }
 
@@ -31,22 +137,46 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
 
   &:hover,
   :active {
-    color: ${e=>e.theme==="dark"?A.dark.linkUnderLineColor:A.light.linkUnderLineColor};
+    color: ${(e) =>
+      e.theme === 'dark'
+        ? A.dark.linkUnderLineColor
+        : A.light.linkUnderLineColor};
   }
-`;function k(e){return t(z,{theme:e.theme,to:e.to,"aria-label":`Link to ${e.href} page`,children:e.text})}const N=n.button`
+`
+function k(e) {
+  return t(z, {
+    theme: e.theme,
+    to: e.to,
+    'aria-label': `Link to ${e.href} page`,
+    children: e.text,
+  })
+}
+const N = n.button`
   height: 40px;
   width: 40px;
   background: transparent;
   border: none;
   outline: none;
   cursor: pointer;
-  color: ${e=>e.theme==="dark"?A.dark.textColor:A.light.textColor};
+  color: ${(e) => (e.theme === 'dark' ? A.dark.textColor : A.light.textColor)};
 
   svg {
-    fill: ${e=>e.theme==="dark"?A.dark.textColor:A.light.textColor};
-    stroke: ${e=>e.theme==="dark"?A.dark.textColor:A.light.textColor};
+    fill: ${(e) => (e.theme === 'dark' ? A.dark.textColor : A.light.textColor)};
+    stroke: ${(e) =>
+      e.theme === 'dark' ? A.dark.textColor : A.light.textColor};
   }
-`;function X(e){const{theme:i,setTheme:l}=e;return t(N,{theme:e.theme,onClick:()=>{l(i==="dark"?"light":"dark")},children:i==="dark"?t(S,{}):t(W,{})})}const q=n.nav`
+`
+function X(e) {
+  const { theme: i, setTheme: l } = e
+  return t(N, {
+    theme: e.theme,
+    onClick: () => {
+      l(i === 'dark' ? 'light' : 'dark')
+    },
+    children: i === 'dark' ? t(S, {}) : t(W, {}),
+  })
+}
+const q = n.nav`
   height: 100px;
   width: 100vw;
   display: flex;
@@ -54,15 +184,41 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
   justify-content: space-around;
   padding: 0;
   position: fixed; top: 0;
-  background-color: ${e=>e.theme==="dark"?A.dark.navBackground:A.light.navBackground};
+  background-color: ${(e) =>
+    e.theme === 'dark' ? A.dark.navBackground : A.light.navBackground};
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 1000;
-`;class L extends d.exports.Component{constructor(i){super(i);this.props=i}render(){const{props:i}=this;return r(q,{theme:i.theme,children:[t(O,{theme:i.theme}),r("div",{style:{width:"auto",maxWidth:"100%"},children:[t(k,{theme:i.theme,to:"/projects",text:"projects"}),t(k,{theme:i.theme,to:"/about",text:"about me"})]}),t(X,{theme:i.theme,setTheme:i.setTheme})]})}}const _=n.aside`
+`
+class L extends d.exports.Component {
+  constructor(i) {
+    super(i)
+    this.props = i
+  }
+  render() {
+    const { props: i } = this
+    return r(q, {
+      theme: i.theme,
+      children: [
+        t(O, { theme: i.theme }),
+        r('div', {
+          style: { width: 'auto', maxWidth: '100%' },
+          children: [
+            t(k, { theme: i.theme, to: '/projects', text: 'projects' }),
+            t(k, { theme: i.theme, to: '/about', text: 'about me' }),
+          ],
+        }),
+        t(X, { theme: i.theme, setTheme: i.setTheme }),
+      ],
+    })
+  }
+}
+const _ = n.aside`
   padding: 10px 0;
   display: flex;
   align-items: flex-start;
-`,h=n.a`
+`,
+  h = n.a`
   ${m}
   text-align: left;
   font-size: 24px;
@@ -70,23 +226,66 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
   margin-right: 2.7%;
 
   svg {
-    stroke: ${e=>e.theme==="dark"?A.dark.linkColor:A.light.linkColor};
-    fill: ${e=>e.theme==="dark"?A.dark.iconAccent:A.light.iconAccent};
+    stroke: ${(e) =>
+      e.theme === 'dark' ? A.dark.linkColor : A.light.linkColor};
+    fill: ${(e) =>
+      e.theme === 'dark' ? A.dark.iconAccent : A.light.iconAccent};
     transition: 0.3s cubic-bezier(0.35, 0.07, 0.38, 1.01);
   }
 
   &:hover svg,
   :focus svg {
-    stroke: ${e=>e.theme==="dark"?A.dark.darkIconAccent:A.light.darkIconAccent};
-    fill: ${e=>e.theme==="dark"?A.dark.iconFill:A.light.iconFill};
+    stroke: ${(e) =>
+      e.theme === 'dark' ? A.dark.darkIconAccent : A.light.darkIconAccent};
+    fill: ${(e) => (e.theme === 'dark' ? A.dark.iconFill : A.light.iconFill)};
     transform: scale(1.2);
   }
-`;function f(e){return r(_,{children:[t(h,{theme:e.theme,target:"_blank",href:"https://github.com/haneenmahd",children:t(u,{})}),t(h,{theme:e.theme,target:"_blank",href:"https://dribbble.com/haneenmahdin",children:t(U,{})}),t(h,{theme:e.theme,target:"_blank",href:"https://instagram.com/haneenmahdin",children:t(j,{})}),t(h,{theme:e.theme,target:"_blank",href:"https://twitter.com/HaneenMahdin",children:t(E,{})}),t(h,{theme:e.theme,href:"/projects",children:t(y,{})}),t(h,{theme:e.theme,target:"_blank",href:"mailto:haneenmahdin@gmail.com",children:t(v,{})})]})}const Z=n.article`
+`
+function f(e) {
+  return r(_, {
+    children: [
+      t(h, {
+        theme: e.theme,
+        target: '_blank',
+        href: 'https://github.com/haneenmahd',
+        children: t(u, {}),
+      }),
+      t(h, {
+        theme: e.theme,
+        target: '_blank',
+        href: 'https://dribbble.com/haneenmahdin',
+        children: t(U, {}),
+      }),
+      t(h, {
+        theme: e.theme,
+        target: '_blank',
+        href: 'https://instagram.com/haneenmahdin',
+        children: t(j, {}),
+      }),
+      t(h, {
+        theme: e.theme,
+        target: '_blank',
+        href: 'https://twitter.com/HaneenMahdin',
+        children: t(E, {}),
+      }),
+      t(h, { theme: e.theme, href: '/projects', children: t(y, {}) }),
+      t(h, {
+        theme: e.theme,
+        target: '_blank',
+        href: 'mailto:haneenmahdin@gmail.com',
+        children: t(v, {}),
+      }),
+    ],
+  })
+}
+const Z = n.article`
     min-height: 90vh;
     max-width: 100vw;
-    color: ${e=>e.theme==="dark"?A.dark.textColor:A.light.textColor};
+    color: ${(e) =>
+      e.theme === 'dark' ? A.dark.textColor : A.light.textColor};
     padding-top: 100px;
-`,ee=n.div`
+`,
+  ee = n.div`
   text-align: left;
   padding: 100px 10%;
 
@@ -98,18 +297,43 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
 
   h4 {
     font-size: 120%;
-    color: ${e=>e.theme==="dark"?A.dark.lightText:A.light.lightText};
+    color: ${(e) =>
+      e.theme === 'dark' ? A.dark.lightText : A.light.lightText};
     font-weight: 600;
     margin: 6px 0;
   }
-`;class te extends d.exports.Component{constructor(i){super(i);this.props=i}render(){const{props:i}=this;return t(Z,{theme:i.theme,children:r(ee,{theme:i.theme,children:[t("h2",{children:"Hi, I'm Haneen \u{1F44B}"}),t("h4",{children:"An aspiring full-stack developer and a UI/UX Designer."}),t(f,{theme:i.theme})]})})}}const Ae=n.div`
+`
+class te extends d.exports.Component {
+  constructor(i) {
+    super(i)
+    this.props = i
+  }
+  render() {
+    const { props: i } = this
+    return t(Z, {
+      theme: i.theme,
+      children: r(ee, {
+        theme: i.theme,
+        children: [
+          t('h2', { children: "Hi, I'm Haneen \u{1F44B}" }),
+          t('h4', {
+            children: 'An aspiring full-stack developer and a UI/UX Designer.',
+          }),
+          t(f, { theme: i.theme }),
+        ],
+      }),
+    })
+  }
+}
+const Ae = n.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 300px;
   width: 300px;
-  background: ${e=>e.theme==="dark"?A.dark.cardBackground:A.light.cardBackground};
+  background: ${(e) =>
+    e.theme === 'dark' ? A.dark.cardBackground : A.light.cardBackground};
   border-radius: 10px;
   box-shadow: 0;
   margin: 20px;
@@ -134,25 +358,29 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
   button {
     margin-bottom: 20px;
   }
-`,ie=n.h4`
+`,
+  ie = n.h4`
   font-size: 130%;
   font-weight: bold;
   text-align: left;
-  color: ${e=>e.theme==="dark"?A.dark.textColor:A.light.textColor};
+  color: ${(e) => (e.theme === 'dark' ? A.dark.textColor : A.light.textColor)};
   margin: 0;
-`,re=n.h4`
+`,
+  re = n.h4`
   font-size: 100%;
   font-weight: normal;
   text-align: left;
   padding: 7px 0;
   padding-right: 10px;
-  color: ${e=>e.theme==="dark"?A.dark.linkColor:A.light.linkColor};
+  color: ${(e) => (e.theme === 'dark' ? A.dark.linkColor : A.light.linkColor)};
   margin: 0;
-`,ne=n.div`
+`,
+  ne = n.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-`,F=n.a`
+`,
+  F = n.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,7 +388,7 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
   margin: 12px;
   text-decoration: none;
   max-width: 90px;
-  background: ${e=>e.secondary?"#4d4d4d":"#166edc"};
+  background: ${(e) => (e.secondary ? '#4d4d4d' : '#166edc')};
   border: none;
   border-radius: 10px;
   font-size: 15px;
@@ -178,13 +406,52 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
   :active {
     transform: translateY(5px);
   }
-`;function c(e){return r(Ae,{theme:e.theme,children:[t("img",{src:e.imgSource,alt:"Preview Image"}),r("div",{children:[t(ie,{theme:e.theme,children:e.title}),t(re,{theme:e.theme,children:e.description})]}),r(ne,{children:[r(F,{target:"_blank",href:e.projectLink,children:[t(M,{})," View"]}),e.githubUrl&&r(F,{target:"_blank",href:e.githubUrl,secondary:!0,children:[t(u,{})," GitHub"]})]})]})}var oe="/assets/emoji-plate.b553bc5f.png",ae="/assets/hashable.a4cc3a72.png",le="/assets/imagable.d420f47e.png",se="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLAAAAHTCAMAAAAApxGuAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEUAAADRTUzdgH7XZGTijY334+Ppqan12dn99/fnqKjUWVjzzs766+vlnJrLODjLODfLOTfLODf///9SLzeHAAAAEXRSTlMA6czYx8fBw9jB4MHLw0nDq34XYU8AAAABYktHRBJ7vGwAAAAAB3RJTUUH4QgJAC4j9dQekgAACeJJREFUeNrt1dkVgkAQRUEQFNyX/IP1B0ygh3Papm4GTPvK7i1Jf1LnCSQBS5KAJQlYkgQsSQKWJGBJErAkCViSgCVJwJIkYEkCliQBS5KAJQlYkgQsSQKWJGBJErAkCViSgCVJwJIkYEkCliQBS5KAJQlYkgQsScCSJGBJErAkAUuSgCVJwJIELEkCliQBSxKwJAlYkgQsScCSJGBJErAkAUuSgCVJwJIELEkCliQBSxKwJAlYkgQsScCSJGBJErAkAUuSgCUJWJIELEkCliRgSRKwJAlYkoAlSUXB6g9a6uOv6RHXhvhjDl6x2j4agDV+tDTGX9Mjrh3jj3n0itX2ASxgAUvAchBgAUvAAhawgAUsYAELWAKWgwALWAIWsIAFLGABC1jAErAcBFjAsg9gAQtYwAIWsIAFLAHLQYAFLPsAFrCABSxgAQtYwBKwHARYwLIPYAELWMACFrCABSwBy0GABSz7ABawgCVgAQtYwBKwHMQjAss+gAUsYAlYwAIWsAQsYAELWPYBLGABS8ASsIAlYAELWMCyD2ABC1gCloMAC1gCFrCABSxgAQtYwBKwHARYwBKwgAUsYAELWMACloDlIMACloAFLGABC1jAAhawBCwHARaw7ANYwAIWsIAFLGABS8ByEGAByz6ABSxgAQtYwAIWsAQsBwEWsOwDWMACFrCABSxgAUvAchBgAcs+gAUsYAlYwAIWsAQsYAlY9gEsYAFLwAIWsIAlYAELWMCyD2ABC1gCloAFLAELWMACln0AC1jAErAcBFjAErCABSxgAQtYwAKWgOUgwAKWgAUsYAELWMACFrAELAcBFrAELGABC1jAAhawgCVgbdkp3ASstSn+msBam+OPOdtHObBSfEcVsFJ8RxWwcnxHlX0AC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgActBgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMCyD2ABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgOQiwgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGDZB7CABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawHARYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrDsA1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYDgIsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1j2ASxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jA2gFY50s4YAELWMDaUcACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSz7ABawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLEMHFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGD5DmABC1jAAhawHARUwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLPsAFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsQwcWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSwHARawgAUsYAHLdwALWMACFrCABSwBC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhaw7ANYwAIWsIAFLGABC1jAAhawgAUsYAELWMDaD1jDNUMpvmMoAtYtw0Xv8ce8+45q+2gAllqWAqzRHZQzYAELWAKWgCUBC1jAErAELGAJWAKWBCxgAUvAErCAJWAJWBKwgAUsAUvAkoAlYEnAAhawBCwBSwKWgCUBC1jAErAELAlYApYELGABS8ASsCRgCVgSsIAFLAFLwJKABSxgScACFrAELAFLAhawgCUBC1jAErAELAlYwAKWgOUJgAUsAUvAkoAFLGAJWAIWsAQsAUsCFrCAJWAJWO4gYAlYErCABSwBS8CSgCVgScACFrAELAFLApaAJQELWMASsAQsCVgClgQsYAFLwBKwJGABC1gSsIAFLAFLwJKABSxgScACFrAELAFLAhawgCUBC1jAErAELAlYwAKWgCVgAUvAErAkYAELWAKWgAUsAUvAkoAFLGAJWAKWlBOsh9r1jB/kkKE+/h1+DNqiTg17+Qf8/RNKAhawJAELWBKwgCUJWMCSBCxgScACliRgAUsSsIAlAQtYkoAFLEnAApYELGBJAhawJAELWBKwgCUJWMCSBCxgScACliRgAUsSsIAlAQtYkoAFLEnAApYELGBJAhawJGAJWBKwgCUJWMCSgAUsScACliRgAUsCFrAkAQtYkoAFLAlYwJIELGBJAhawJGABSxKwgCUJWMCSgAUsScACliRgAUsCFrAkAQtYkoAFLAlYwJIELGBJAhawJGABSxKwgCUJWMCSgAUsScAClgQsAUsCFrAkAQtYErCAJQlYwJIELGBJwAKWJGABSxKwgCUBC1iSgAUs7aUvda6964aXmagAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTctMDgtMDlUMDA6NDY6MzUrMDA6MDCqCllVAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE3LTA4LTA5VDAwOjQ2OjM1KzAwOjAw21fh6QAAAABJRU5ErkJggg==",he="/assets/apple-colors.324fed04.jpeg",ce="/assets/python-icon.976ee9a0.png";const de=n.article`
+`
+function c(e) {
+  return r(Ae, {
+    theme: e.theme,
+    children: [
+      t('img', { src: e.imgSource, alt: 'Preview Image' }),
+      r('div', {
+        children: [
+          t(ie, { theme: e.theme, children: e.title }),
+          t(re, { theme: e.theme, children: e.description }),
+        ],
+      }),
+      r(ne, {
+        children: [
+          r(F, {
+            target: '_blank',
+            href: e.projectLink,
+            children: [t(M, {}), ' View'],
+          }),
+          e.githubUrl &&
+            r(F, {
+              target: '_blank',
+              href: e.githubUrl,
+              secondary: !0,
+              children: [t(u, {}), ' GitHub'],
+            }),
+        ],
+      }),
+    ],
+  })
+}
+var oe = '/assets/emoji-plate.b553bc5f.png',
+  ae = '/assets/hashable.a4cc3a72.png',
+  le = '/assets/imagable.d420f47e.png',
+  se =
+    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLAAAAHTCAMAAAAApxGuAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEUAAADRTUzdgH7XZGTijY334+Ppqan12dn99/fnqKjUWVjzzs766+vlnJrLODjLODfLOTfLODf///9SLzeHAAAAEXRSTlMA6czYx8fBw9jB4MHLw0nDq34XYU8AAAABYktHRBJ7vGwAAAAAB3RJTUUH4QgJAC4j9dQekgAACeJJREFUeNrt1dkVgkAQRUEQFNyX/IP1B0ygh3Papm4GTPvK7i1Jf1LnCSQBS5KAJQlYkgQsSQKWJGBJErAkCViSgCVJwJIkYEkCliQBS5KAJQlYkgQsSQKWJGBJErAkCViSgCVJwJIkYEkCliQBS5KAJQlYkgQsScCSJGBJErAkAUuSgCVJwJIELEkCliQBSxKwJAlYkgQsScCSJGBJErAkAUuSgCVJwJIELEkCliQBSxKwJAlYkgQsScCSJGBJErAkAUuSgCUJWJIELEkCliRgSRKwJAlYkoAlSUXB6g9a6uOv6RHXhvhjDl6x2j4agDV+tDTGX9Mjrh3jj3n0itX2ASxgAUvAchBgAUvAAhawgAUsYAELWAKWgwALWAIWsIAFLGABC1jAErAcBFjAsg9gAQtYwAIWsIAFLAHLQYAFLPsAFrCABSxgAQtYwBKwHARYwLIPYAELWMACFrCABSwBy0GABSz7ABawgCVgAQtYwBKwHMQjAss+gAUsYAlYwAIWsAQsYAELWPYBLGABS8ASsIAlYAELWMCyD2ABC1gCloMAC1gCFrCABSxgAQtYwBKwHARYwBKwgAUsYAELWMACloDlIMACloAFLGABC1jAAhawBCwHARaw7ANYwAIWsIAFLGABS8ByEGAByz6ABSxgAQtYwAIWsAQsBwEWsOwDWMACFrCABSxgAUvAchBgAcs+gAUsYAlYwAIWsAQsYAlY9gEsYAFLwAIWsIAlYAELWMCyD2ABC1gCloAFLAELWMACln0AC1jAErAcBFjAErCABSxgAQtYwAKWgOUgwAKWgAUsYAELWMACFrAELAcBFrAELGABC1jAAhawgCVgbdkp3ASstSn+msBam+OPOdtHObBSfEcVsFJ8RxWwcnxHlX0AC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgActBgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMCyD2ABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgOQiwgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGDZB7CABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawHARYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrDsA1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYDgIsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1j2ASxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jA2gFY50s4YAELWMDaUcACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSz7ABawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLEMHFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGD5DmABC1jAAhawHARUwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLPsAFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsQwcWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSwHARawgAUsYAHLdwALWMACFrCABSwBC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhaw7ANYwAIWsIAFLGABC1jAAhawgAUsYAELWMDaD1jDNUMpvmMoAtYtw0Xv8ce8+45q+2gAllqWAqzRHZQzYAELWAKWgCUBC1jAErAELGAJWAKWBCxgAUvAErCAJWAJWBKwgAUsAUvAkoAlYEnAAhawBCwBSwKWgCUBC1jAErAELAlYApYELGABS8ASsCRgCVgSsIAFLAFLwJKABSxgScACFrAELAFLAhawgCUBC1jAErAELAlYwAKWgOUJgAUsAUvAkoAFLGAJWAIWsAQsAUsCFrCAJWAJWO4gYAlYErCABSwBS8CSgCVgScACFrAELAFLApaAJQELWMASsAQsCVgClgQsYAFLwBKwJGABC1gSsIAFLAFLwJKABSxgScACFrAELAFLAhawgCUBC1jAErAELAlYwAKWgCVgAUvAErAkYAELWAKWgAUsAUvAkoAFLGAJWAKWlBOsh9r1jB/kkKE+/h1+DNqiTg17+Qf8/RNKAhawJAELWBKwgCUJWMCSBCxgScACliRgAUsSsIAlAQtYkoAFLEnAApYELGBJAhawJAELWBKwgCUJWMCSBCxgScACliRgAUsSsIAlAQtYkoAFLEnAApYELGBJAhawJGAJWBKwgCUJWMCSgAUsScACliRgAUsCFrAkAQtYkoAFLAlYwJIELGBJAhawJGABSxKwgCUJWMCSgAUsScACliRgAUsCFrAkAQtYkoAFLAlYwJIELGBJAhawJGABSxKwgCUJWMCSgAUsScAClgQsAUsCFrAkAQtYErCAJQlYwJIELGBJwAKWJGABSxKwgCUBC1iSgAUs7aUvda6964aXmagAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTctMDgtMDlUMDA6NDY6MzUrMDA6MDCqCllVAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE3LTA4LTA5VDAwOjQ2OjM1KzAwOjAw21fh6QAAAABJRU5ErkJggg==',
+  he = '/assets/apple-colors.324fed04.jpeg',
+  ce = '/assets/python-icon.976ee9a0.png'
+const de = n.article`
   min-height: 100vh;
   max-width: 100vw;
   padding: 50px 10%;
-  background: ${e=>e.theme==="dark"?A.dark.mainBg:A.light.mainBg};
-  color: ${e=>e.theme==="dark"?A.dark.textColor:A.light.textColor};
-`,ge=n.div`
+  background: ${(e) => (e.theme === 'dark' ? A.dark.mainBg : A.light.mainBg)};
+  color: ${(e) => (e.theme === 'dark' ? A.dark.textColor : A.light.textColor)};
+`,
+  ge = n.div`
   text-align: left;
 
   * {
@@ -194,21 +461,25 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
   h2 {
     font-size: 300%;
     font-weight: 800;
-    color: ${e=>e.theme==="dark"?A.dark.textColor:A.light.textColor};
+    color: ${(e) =>
+      e.theme === 'dark' ? A.dark.textColor : A.light.textColor};
   }
 
   h4 {
     font-size: 120%;
-    color: ${e=>e.theme==="dark"?A.dark.lightText:A.light.lightText};
+    color: ${(e) =>
+      e.theme === 'dark' ? A.dark.lightText : A.light.lightText};
     font-weight: 600;
   }
-`,me=n.div`
+`,
+  me = n.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     margin: 50px 0;
-`,Ce=n(x)`
+`,
+  Ce = n(x)`
     ${m}
     color: #166edc;
     border-radius: 10px;
@@ -219,7 +490,90 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
         color: #2989ff;
         background: #2989ff20;
     }
-`;function I(e){const[i]=w();return r(de,{theme:i,children:[r(ge,{theme:i,children:[t("h2",{children:"Projects \u{1F47E}"}),t("h4",{children:"Here are some of my works that i have put up my time, skills, and effort into \u{1F4AA}\u{1F3FB}."})]}),r(me,{children:[t(c,{theme:i,title:"Imagable",description:"A Utility to resize and optimize your icons for all platforms instanly with one click \u{1F92F}!",imgSource:le,projectLink:"https://imagable.vercel.app",githubUrl:"https://github.com/imagable/imagable"}),t(c,{theme:i,title:"Emoji Plate",description:"A collection of textual emojis and symbols",imgSource:oe,projectLink:"https://emoji-plate.netlify.app",githubUrl:"https://github.com/emoji-plate/client"}),t(c,{theme:i,title:"Hashable",description:"An API to access high-level crypto functions inside your browser \u2620\uFE0F!",imgSource:ae,projectLink:"https://hashable.space",githubUrl:"https://github.com/haneenmahd/hashable"}),e.showMoreLinks||r(Q,{children:[t(c,{theme:i,title:"typeinstall",description:"Automatically installs types for your typescript project",imgSource:se,projectLink:"https://www.npmjs.com/package/typeinstall",githubUrl:"https://github.com/haneenmahd/typeinstall"}),t(c,{theme:i,title:"apple-colors",description:"A Package for using Colors in your User Interace with colors used by apple\u{1F34E}",imgSource:he,projectLink:"https://www.npmjs.com/package/typeinstall",githubUrl:"https://github.com/haneenmahd/typeinstall"}),t(c,{theme:i,title:"blobby",description:"Convert Image Files into Supported Pdf Format",imgSource:ce,projectLink:"https://www.npmjs.com/package/typeinstall",githubUrl:"https://github.com/haneenmahd/typeinstall"})]})]}),e.showMoreLinks&&t(Ce,{to:"/projects",children:"> View all projects"})]})}var pe="/assets/pfp.b19ad75d.png";const xe=n.div`
+`
+function I(e) {
+  const [i] = w()
+  return r(de, {
+    theme: i,
+    children: [
+      r(ge, {
+        theme: i,
+        children: [
+          t('h2', { children: 'Projects \u{1F47E}' }),
+          t('h4', {
+            children:
+              'Here are some of my works that i have put up my time, skills, and effort into \u{1F4AA}\u{1F3FB}.',
+          }),
+        ],
+      }),
+      r(me, {
+        children: [
+          t(c, {
+            theme: i,
+            title: 'Imagable',
+            description:
+              'A Utility to resize and optimize your icons for all platforms instanly with one click \u{1F92F}!',
+            imgSource: le,
+            projectLink: 'https://imagable.vercel.app',
+            githubUrl: 'https://github.com/imagable/imagable',
+          }),
+          t(c, {
+            theme: i,
+            title: 'Emoji Plate',
+            description: 'A collection of textual emojis and symbols',
+            imgSource: oe,
+            projectLink: 'https://emoji-plate.netlify.app',
+            githubUrl: 'https://github.com/emoji-plate/client',
+          }),
+          t(c, {
+            theme: i,
+            title: 'Hashable',
+            description:
+              'An API to access high-level crypto functions inside your browser \u2620\uFE0F!',
+            imgSource: ae,
+            projectLink: 'https://hashable.space',
+            githubUrl: 'https://github.com/haneenmahd/hashable',
+          }),
+          e.showMoreLinks ||
+            r(Q, {
+              children: [
+                t(c, {
+                  theme: i,
+                  title: 'typeinstall',
+                  description:
+                    'Automatically installs types for your typescript project',
+                  imgSource: se,
+                  projectLink: 'https://www.npmjs.com/package/typeinstall',
+                  githubUrl: 'https://github.com/haneenmahd/typeinstall',
+                }),
+                t(c, {
+                  theme: i,
+                  title: 'apple-colors',
+                  description:
+                    'A Package for using Colors in your User Interace with colors used by apple\u{1F34E}',
+                  imgSource: he,
+                  projectLink: 'https://www.npmjs.com/package/typeinstall',
+                  githubUrl: 'https://github.com/haneenmahd/typeinstall',
+                }),
+                t(c, {
+                  theme: i,
+                  title: 'blobby',
+                  description: 'Convert Image Files into Supported Pdf Format',
+                  imgSource: ce,
+                  projectLink: 'https://www.npmjs.com/package/typeinstall',
+                  githubUrl: 'https://github.com/haneenmahd/typeinstall',
+                }),
+              ],
+            }),
+        ],
+      }),
+      e.showMoreLinks &&
+        t(Ce, { to: '/projects', children: '> View all projects' }),
+    ],
+  })
+}
+var pe = '/assets/pfp.b19ad75d.png'
+const xe = n.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -227,15 +581,16 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
   min-height: 100vh;
   max-width: 100vw;
   padding: 50px 7%;
-  background: ${e=>e.theme==="dark"?A.dark.mainBg:A.light.mainBg};
-  color: ${e=>e.theme==="dark"?A.dark.textColor:A.light.textColor};
+  background: ${(e) => (e.theme === 'dark' ? A.dark.mainBg : A.light.mainBg)};
+  color: ${(e) => (e.theme === 'dark' ? A.dark.textColor : A.light.textColor)};
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
   }
-`,we=B`
+`,
+  we = B`
     0% {
         opacity: 0.2;
     }
@@ -247,7 +602,8 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
     100% {
         opacity: 0.2;
     }
-`,ue=B`
+`,
+  ue = B`
     0% {
         box-shadow: 0 20px 20px 0 #7722cc76, 0 20px 20px 0 #2222cc76;
     }
@@ -271,7 +627,8 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
     100% {
         box-shadow: 0 20px 20px 0 #7722cc76, 0 20px 20px 0 #2222cc76
     }
-`,Be=n.aside`
+`,
+  Be = n.aside`
   text-align: left;
   padding: 20px;
   max-width: 100%;
@@ -285,7 +642,8 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
   }
 
   h4 {
-    color: ${e=>e.theme==="dark"?A.dark.lightText:A.light.lightText};
+    color: ${(e) =>
+      e.theme === 'dark' ? A.dark.lightText : A.light.lightText};
     font-weight: 600;
     animation: ${we} 3s ease-in infinite 1.2s;
   }
@@ -308,7 +666,8 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
     position: -webkit-sticky;
     top: 100px;
   }
-`,ke=n.aside`
+`,
+  ke = n.aside`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -316,20 +675,23 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
   @media screen and (min-width: 700px) {
     margin-left: 20px;
   }
-`,C=n.div`
+`,
+  C = n.div`
   text-align: left;
   max-width: 100%;
-  color: ${e=>e.theme==="dark"?A.dark.textColor:A.light.textColor};
+  color: ${(e) => (e.theme === 'dark' ? A.dark.textColor : A.light.textColor)};
 
   p {
-    color: ${e=>e.theme==="dark"?A.dark.lightTextVariant:A.light.lightTextVariant};
+    color: ${(e) =>
+      e.theme === 'dark' ? A.dark.lightTextVariant : A.light.lightTextVariant};
     line-height: 1.45rem;
     font-weight: 600;
     margin: 10px 0;
     max-width: 90%;
 
     b {
-      color: ${e=>e.theme==="dark"?A.dark.lightTextBold:A.light.lightTextBold};
+      color: ${(e) =>
+        e.theme === 'dark' ? A.dark.lightTextBold : A.light.lightTextBold};
 
       ::before,
       ::after {
@@ -340,20 +702,172 @@ import{C as Y,s as n,L as x,j as t,M as S,S as W,r as d,a as r,G as u,D as U,I a
 
   ul {
     padding-left: 20px;
-    color: ${e=>e.theme==="dark"?A.dark.lightTextVariant:A.light.lightTextVariant};
+    color: ${(e) =>
+      e.theme === 'dark' ? A.dark.lightTextVariant : A.light.lightTextVariant};
     line-height: 1.45rem;
     font-weight: 600;
     margin: 20px 0;
     max-width: 90%;
   }
-`;function b(e){const[i]=w();return r(xe,{theme:i,children:[r(Be,{theme:i,children:[t("h2",{children:"About Me"}),t("img",{src:pe,alt:"My Pic"})]}),r(ke,{children:[r(C,{theme:i,children:[t("h3",{children:"Intro"}),t("p",{children:"Hello, I am Haneen Mahdin, an 14 year-old aspiring Full-stack Developer building awesome And cool things."})]}),r(C,{theme:i,children:[t("h3",{children:"Journey"}),r("p",{children:["I was 12 years-old when i first got to code a cool website in HTML and CSS from a FreeCodeCamp.org's crash course. I was really interested in design at first."," ",t("b",{children:"I believed in that good design can make a product better"}),". I started to learn web development deeply by creating websites using"," ",t("b",{children:"React"}),". I learned ",t("b",{children:"UI/UX"})," Design later that year. Then I moved on to learning Backend Development with ",t("b",{children:"Node.js"})," with"," ",t("b",{children:"MongoDB"}),". Tried building my own APIs, failed a lot, but never gave up \u{1F4AA}\u{1F3FB}. I learned to build apps using ",t("b",{children:"React Native"})," and"," ",t("b",{children:"Expo"})," afterwards. I started re-searching about new and latest technologies and still continue to learn new things\u{1F603}!"]})]}),r(C,{theme:i,children:[t("h3",{children:"Technologies I use \u{1F680}"}),r("ul",{children:[t("li",{children:"HTML, CSS, Javascript"}),t("li",{children:"React, Vite, Next.js, Styled Components, Sass"}),t("li",{children:"React Native, Expo"}),t("li",{children:"Node.js, MongoDB, Express"}),t("li",{children:"Python, C, C++"}),t("li",{children:"Swift (learning \u{1F60B})"}),t("li",{children:"VSCode, Git, GitHub"})]})]}),r(C,{theme:i,children:[t("h3",{children:"Keep in touch \u{1F940}"}),r("p",{children:["I love to get to know more people in this Tech Community and am interested to join in your project or team or company. If you are interested to have a nice talk or something you can text me on"," ",t("i",{children:"Instagram"}),", ",t("i",{children:"Twitter"})," or get me a ",t("i",{children:"Mail"}),"."]}),t(f,{})]})]})]})}const Le=n.div`
+`
+function b(e) {
+  const [i] = w()
+  return r(xe, {
+    theme: i,
+    children: [
+      r(Be, {
+        theme: i,
+        children: [
+          t('h2', { children: 'About Me' }),
+          t('img', { src: pe, alt: 'My Pic' }),
+        ],
+      }),
+      r(ke, {
+        children: [
+          r(C, {
+            theme: i,
+            children: [
+              t('h3', { children: 'Intro' }),
+              t('p', {
+                children:
+                  'Hello, I am Haneen Mahdin, an 14 year-old aspiring Full-stack Developer building awesome And cool things.',
+              }),
+            ],
+          }),
+          r(C, {
+            theme: i,
+            children: [
+              t('h3', { children: 'Journey' }),
+              r('p', {
+                children: [
+                  "I was 12 years-old when i first got to code a cool website in HTML and CSS from a FreeCodeCamp.org's crash course. I was really interested in design at first.",
+                  ' ',
+                  t('b', {
+                    children:
+                      'I believed in that good design can make a product better',
+                  }),
+                  '. I started to learn web development deeply by creating websites using',
+                  ' ',
+                  t('b', { children: 'React' }),
+                  '. I learned ',
+                  t('b', { children: 'UI/UX' }),
+                  ' Design later that year. Then I moved on to learning Backend Development with ',
+                  t('b', { children: 'Node.js' }),
+                  ' with',
+                  ' ',
+                  t('b', { children: 'MongoDB' }),
+                  '. Tried building my own APIs, failed a lot, but never gave up \u{1F4AA}\u{1F3FB}. I learned to build apps using ',
+                  t('b', { children: 'React Native' }),
+                  ' and',
+                  ' ',
+                  t('b', { children: 'Expo' }),
+                  ' afterwards. I started re-searching about new and latest technologies and still continue to learn new things\u{1F603}!',
+                ],
+              }),
+            ],
+          }),
+          r(C, {
+            theme: i,
+            children: [
+              t('h3', { children: 'Technologies I use \u{1F680}' }),
+              r('ul', {
+                children: [
+                  t('li', { children: 'HTML, CSS, Javascript' }),
+                  t('li', {
+                    children: 'React, Vite, Next.js, Styled Components, Sass',
+                  }),
+                  t('li', { children: 'React Native, Expo' }),
+                  t('li', { children: 'Node.js, MongoDB, Express' }),
+                  t('li', { children: 'Python, C, C++' }),
+                  t('li', { children: 'Swift (learning \u{1F60B})' }),
+                  t('li', { children: 'VSCode, Git, GitHub' }),
+                ],
+              }),
+            ],
+          }),
+          r(C, {
+            theme: i,
+            children: [
+              t('h3', { children: 'Keep in touch \u{1F940}' }),
+              r('p', {
+                children: [
+                  'I love to get to know more people in this Tech Community and am interested to join in your project or team or company. If you are interested to have a nice talk or something you can text me on',
+                  ' ',
+                  t('i', { children: 'Instagram' }),
+                  ', ',
+                  t('i', { children: 'Twitter' }),
+                  ' or get me a ',
+                  t('i', { children: 'Mail' }),
+                  '.',
+                ],
+              }),
+              t(f, {}),
+            ],
+          }),
+        ],
+      }),
+    ],
+  })
+}
+const Le = n.div`
   min-height: 100vh;
   max-width: 100vw;
   text-align: center;
-  background-color: ${e=>e.theme==="dark"?A.dark.mainBg:A.light.mainBg};
-  color: ${e=>e.theme==="dark"?A.dark.textColor:A.light.textColor};
+  background-color: ${(e) =>
+    e.theme === 'dark' ? A.dark.mainBg : A.light.mainBg};
+  color: ${(e) => (e.theme === 'dark' ? A.dark.textColor : A.light.textColor)};
 
   &.page {
     padding-top: 80px;
   }
-`;function fe(e){const[i,l]=w();return r(Le,{theme:i,children:[t(L,{theme:i,setTheme:s=>l(s)}),t(te,{theme:i}),t(I,{theme:i,showMoreLinks:!0}),t(b,{theme:i})]})}G.polyfill();function Fe(){const[e,i]=d.exports.useState("light"),l=K();return d.exports.useEffect(()=>{window.scrollTo(0,0)},[l.pathname]),r("div",{style:{paddingTop:l.pathname!=="/"?85:0,backgroundColor:e==="dark"?A.dark.mainBg:A.light.mainBg},children:[t(L,{theme:e,setTheme:s=>i(s)}),t(R,{context:[e,i]})]})}J.render(t(T.StrictMode,{children:t($,{children:t(D,{children:r(g,{path:"/",element:t(Fe,{}),children:[t(g,{index:!0,element:t(fe,{})}),t(g,{path:"projects",element:t(I,{})}),t(g,{path:"about",element:t(b,{})})]})})})}),document.getElementById("root"));
+`
+function fe(e) {
+  const [i, l] = w()
+  return r(Le, {
+    theme: i,
+    children: [
+      t(L, { theme: i, setTheme: (s) => l(s) }),
+      t(te, { theme: i }),
+      t(I, { theme: i, showMoreLinks: !0 }),
+      t(b, { theme: i }),
+    ],
+  })
+}
+G.polyfill()
+function Fe() {
+  const [e, i] = d.exports.useState('light'),
+    l = K()
+  return (
+    d.exports.useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [l.pathname]),
+    r('div', {
+      style: {
+        paddingTop: l.pathname !== '/' ? 85 : 0,
+        backgroundColor: e === 'dark' ? A.dark.mainBg : A.light.mainBg,
+      },
+      children: [
+        t(L, { theme: e, setTheme: (s) => i(s) }),
+        t(R, { context: [e, i] }),
+      ],
+    })
+  )
+}
+J.render(
+  t(T.StrictMode, {
+    children: t($, {
+      children: t(D, {
+        children: r(g, {
+          path: '/',
+          element: t(Fe, {}),
+          children: [
+            t(g, { index: !0, element: t(fe, {}) }),
+            t(g, { path: 'projects', element: t(I, {}) }),
+            t(g, { path: 'about', element: t(b, {}) }),
+          ],
+        }),
+      }),
+    }),
+  }),
+  document.getElementById('root')
+)

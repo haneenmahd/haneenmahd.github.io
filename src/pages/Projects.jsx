@@ -1,25 +1,25 @@
-import React from 'react';
-import styled from 'styled-components';
-import ProjectCard from '../components/ProjectCard';
-import ProjectEmojiPlate from '../assets/img/emoji-plate.png';
-import ProjectHashable from '../assets/img/hashable.png';
-import ProjectImagable from '../assets/img/imagable.png';
-import ProjectTypeInstall from '../assets/img/npm-logo.png';
-import ProjectAppleColors from "../assets/img/apple-colors.jpeg";
-import ProjectBlobby from '../assets/img/python-icon.png';
-import CommonLink from '../components/CommonLink';
-import { Link, useOutletContext } from 'react-router-dom';
-import theme from '../theme/theme';
+import React from 'react'
+import styled from 'styled-components'
+import ProjectCard from '../components/ProjectCard'
+import ProjectEmojiPlate from '../assets/img/emoji-plate.png'
+import ProjectHashable from '../assets/img/hashable.png'
+import ProjectImagable from '../assets/img/imagable.png'
+import ProjectTypeInstall from '../assets/img/npm-logo.png'
+import ProjectAppleColors from '../assets/img/apple-colors.jpeg'
+import ProjectBlobby from '../assets/img/python-icon.png'
+import CommonLink from '../components/CommonLink'
+import { Link, useOutletContext } from 'react-router-dom'
+import theme from '../theme/theme'
 
 const Container = styled.article`
   min-height: 100vh;
   max-width: 100vw;
   padding: 50px 10%;
   background: ${(props) =>
-    props.theme === "dark" ? theme.dark.mainBg : theme.light.mainBg};
+    props.theme === 'dark' ? theme.dark.mainBg : theme.light.mainBg};
   color: ${(props) =>
-    props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
-`;
+    props.theme === 'dark' ? theme.dark.textColor : theme.light.textColor};
+`
 
 const Intro = styled.div`
   text-align: left;
@@ -32,40 +32,40 @@ const Intro = styled.div`
     font-size: 300%;
     font-weight: 800;
     color: ${(props) =>
-      props.theme === "dark" ? theme.dark.textColor : theme.light.textColor};
+      props.theme === 'dark' ? theme.dark.textColor : theme.light.textColor};
   }
 
   h4 {
     font-size: 120%;
     color: ${(props) =>
-      props.theme === "dark" ? theme.dark.lightText : theme.light.lightText};
+      props.theme === 'dark' ? theme.dark.lightText : theme.light.lightText};
     font-weight: 600;
   }
-`;
+`
 
 const ProjectContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    margin: 50px 0;
-`;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 50px 0;
+`
 
 const AllProjectsLink = styled(Link)`
-    ${CommonLink}
-    color: #166edc;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-weight: bold;
+  ${CommonLink}
+  color: #166edc;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
 
-    &:hover {
-        color: #2989ff;
-        background: #2989ff20;
-    }
-`;
+  &:hover {
+    color: #2989ff;
+    background: #2989ff20;
+  }
+`
 
 export default function Projects(props) {
-  const [theme] = useOutletContext();
+  const [theme] = useOutletContext()
 
   return (
     <Container theme={theme}>
@@ -136,5 +136,5 @@ export default function Projects(props) {
         <AllProjectsLink to="/projects">&gt; View all projects</AllProjectsLink>
       )}
     </Container>
-  );
+  )
 }
