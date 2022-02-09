@@ -14,7 +14,7 @@ import theme from '../theme/theme'
 const Container = styled.article`
   min-height: 100vh;
   max-width: 100vw;
-  padding: 50px 10%;
+  padding: 50px 2%;
   background: ${(props) =>
     props.theme === 'dark' ? theme.dark.mainBg : theme.light.mainBg};
   color: ${(props) =>
