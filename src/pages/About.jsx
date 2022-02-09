@@ -211,7 +211,7 @@ export default function About(props) {
             interested to have a nice talk or something you can text me on{" "}
             <i>Instagram</i>, <i>Twitter</i> or get me a <i>Mail</i>.
           </p>
-          <Links />
+          <Links theme={theme} />
         </Info>
       </InfoGroup>
     </Container>
