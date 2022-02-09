@@ -42,7 +42,7 @@ export default class NavBar extends Component {
           <NavLink theme={props.theme} to="/about" text="about me" />
         </div>
 
-        <NavMenu />
+        <NavMenu theme={props.theme} />
 
         <ThemeSwitch theme={props.theme} setTheme={props.setTheme} />
       </Container>

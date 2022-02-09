@@ -42,7 +42,11 @@ export default function NavMenu(props) {
   const [toggled, setToggle] = useState(false)
 
   return (
-    <Container toggled={toggled} onClick={() => setToggle(!toggled)}>
+    <Container
+      theme={props.theme}
+      toggled={toggled}
+      onClick={() => setToggle(!toggled)}
+    >
       <Ham theme={props.theme} />
       <Ham theme={props.theme} />
       <Ham theme={props.theme} />
