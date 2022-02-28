@@ -14,11 +14,12 @@ import {
 } from 'react-router-dom'
 import smoothscroll from 'smoothscroll-polyfill'
 import _theme from './theme/theme'
+import { detectTheme } from './theme/detectTheme'
 
 smoothscroll.polyfill()
 
 function RenderingApp() {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState(detectTheme())
   const location = useLocation()
 
   useEffect(() => {
