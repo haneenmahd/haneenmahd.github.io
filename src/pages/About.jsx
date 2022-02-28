@@ -99,7 +99,7 @@ const Intro = styled.aside`
   }
 
   @media screen and (min-width: 820px) {
-    position: -webkit-sticky;
+    position: sticky;
     top: 100px;
   }
 `
