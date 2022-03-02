@@ -334,7 +334,7 @@ class Ae extends d.exports.Component {
         children: [
           t('h2', { children: "Hi, I'm Haneen \u{1F44B}" }),
           t('h4', {
-            children: 'An aspiring full-stack developer and a UI/UX Designer.',
+            children: 'A full-stack developer and a UI/UX Designer building awesome stuff 🤩!',
           }),
           t(L, { theme: i.theme }),
         ],
