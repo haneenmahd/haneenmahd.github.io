@@ -17,7 +17,6 @@ Hi 👋 , I am **Haneen Mahdin**, a full-stack software developer 👨‍💻. <
 <hr />
 
 I have been working on these projects lately, so feel free to check them out😃!
-
 - [Linked ✨](https://github.com/haneenmahd/linked) A beautiful and elegant template for building your link tree
 - [Hashable 🔑](https://github.com/haneenmahd/hashable): A Client-Side Gateway for users to interact play and test with cryptography.
 - [EmojiPlate 😃](https://github.com/emoji-plate/client): Emoji plate is simple micro-service to help people get emojis that they cannot get from their keyboards.

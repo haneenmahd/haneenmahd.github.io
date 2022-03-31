@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import styled, { keyframes } from 'styled-components'
 import ProfileImage from '../assets/img/pfp.png'
 import Heading from '../components/Heading'
 import Links from '../components/Links'
 import theme from '../theme'
+=======
+import { useOutletContext } from 'react-router-dom'
+import styled, { keyframes } from 'styled-components'
+import ProfileImage from '../assets/img/pfp.png'
+import Links from '../components/Links'
+import theme from '../theme/theme'
+>>>>>>> 9a65a9ba8c4b127b32c9500c6e89d06e7e61df3a
 
 const Container = styled.div`
   display: flex;
@@ -11,9 +19,17 @@ const Container = styled.div`
   justify-content: space-evenly;
   min-height: 100vh;
   max-width: 100vw;
+<<<<<<< HEAD
   padding: 20px 7%;
   background: ${theme.light.mainBg};
   color: ${theme.light.textColor};
+=======
+  padding: 50px 7%;
+  background: ${(props) =>
+    props.theme === 'dark' ? theme.dark.mainBg : theme.light.mainBg};
+  color: ${(props) =>
+    props.theme === 'dark' ? theme.dark.textColor : theme.light.textColor};
+>>>>>>> 9a65a9ba8c4b127b32c9500c6e89d06e7e61df3a
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
@@ -76,7 +92,12 @@ const Intro = styled.aside`
   }
 
   h4 {
+<<<<<<< HEAD
     color: ${theme.light.lightText};
+=======
+    color: ${(props) =>
+      props.theme === 'dark' ? theme.dark.lightText : theme.light.lightText};
+>>>>>>> 9a65a9ba8c4b127b32c9500c6e89d06e7e61df3a
     font-weight: 600;
     animation: ${TextAnimation} 3s ease-in infinite 1.2s;
   }
@@ -114,17 +135,35 @@ const InfoGroup = styled.aside`
 const Info = styled.div`
   text-align: left;
   max-width: 100%;
+<<<<<<< HEAD
   color: ${theme.light.textColor};
 
   p {
     color: ${theme.light.lightTextVariant};
+=======
+  color: ${(props) =>
+    props.theme === 'dark' ? theme.dark.textColor : theme.light.textColor};
+
+  p {
+    color: ${(props) =>
+      props.theme === 'dark'
+        ? theme.dark.lightTextVariant
+        : theme.light.lightTextVariant};
+>>>>>>> 9a65a9ba8c4b127b32c9500c6e89d06e7e61df3a
     line-height: 1.45rem;
     font-weight: 600;
     margin: 10px 0;
     max-width: 90%;
 
     b {
+<<<<<<< HEAD
       color: ${theme.light.lightTextBold};
+=======
+      color: ${(props) =>
+        props.theme === 'dark'
+          ? theme.dark.lightTextBold
+          : theme.light.lightTextBold};
+>>>>>>> 9a65a9ba8c4b127b32c9500c6e89d06e7e61df3a
 
       ::before,
       ::after {
@@ -146,25 +185,46 @@ const Info = styled.div`
   }
 `
 
+<<<<<<< HEAD
 export default function About() {
   return (
     <Container theme={theme}>
       <Intro theme={theme}>
         <Heading>About Me</Heading>
+=======
+export default function About(props) {
+  const [theme] = useOutletContext()
+
+  return (
+    <Container theme={theme}>
+      <Intro theme={theme}>
+        <h2>About Me</h2>
+>>>>>>> 9a65a9ba8c4b127b32c9500c6e89d06e7e61df3a
         <img src={ProfileImage} alt="My Pic" />
       </Intro>
 
       <InfoGroup>
         <Info theme={theme}>
+<<<<<<< HEAD
           <Heading style={{ fontSize: 30 }}>Intro</Heading>
           <p>
             Hello, I am Haneen Mahdin, an 14 year-old Full-stack Developer
             building awesome And cool things.
+=======
+          <h3>Intro</h3>
+          <p>
+            Hello, I am Haneen Mahdin, an 14 year-old aspiring Full-stack
+            Developer building awesome And cool things.
+>>>>>>> 9a65a9ba8c4b127b32c9500c6e89d06e7e61df3a
           </p>
         </Info>
 
         <Info theme={theme}>
+<<<<<<< HEAD
           <Heading style={{ fontSize: 30 }}>Journey</Heading>
+=======
+          <h3>Journey</h3>
+>>>>>>> 9a65a9ba8c4b127b32c9500c6e89d06e7e61df3a
           <p>
             I was 12 years-old when i first got to code a cool website in HTML
             and CSS from a FreeCodeCamp.org's crash course. I was really
@@ -181,7 +241,11 @@ export default function About() {
         </Info>
 
         <Info theme={theme}>
+<<<<<<< HEAD
           <Heading style={{ fontSize: 30 }}>Technologies I use 🚀</Heading>
+=======
+          <h3>Technologies I use 🚀</h3>
+>>>>>>> 9a65a9ba8c4b127b32c9500c6e89d06e7e61df3a
           <ul>
             <li>HTML, CSS, Javascript</li>
             <li>React, Vite, Next.js, Styled Components, Sass</li>
@@ -194,7 +258,11 @@ export default function About() {
         </Info>
 
         <Info theme={theme}>
+<<<<<<< HEAD
           <Heading style={{ fontSize: 30 }}>Keep in touch 🥀</Heading>
+=======
+          <h3>Keep in touch 🥀</h3>
+>>>>>>> 9a65a9ba8c4b127b32c9500c6e89d06e7e61df3a
           <p>
             I love to get to know more people in this Tech Community and am
             interested to join in your project or team or company. If you are
