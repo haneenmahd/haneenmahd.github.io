@@ -12,6 +12,9 @@ import {
 } from 'react-router-dom'
 import theme from './theme'
 import Work from './pages/Work'
+import Blog from './pages/Blog'
+import Store from './pages/Store'
+import HireMe from './pages/HireMe'
 
 function RenderingApp() {
   const location = useLocation()
@@ -41,6 +44,9 @@ ReactDOM.render(
         <Route path="/" element={<RenderingApp />}>
           <Route index element={<App />} />
           <Route path="work" element={<Work />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="store" element={<Store />} />
+          <Route path="hire-me" element={<HireMe />} />
         </Route>
       </Routes>
     </BrowserRouter>
