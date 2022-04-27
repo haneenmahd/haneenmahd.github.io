@@ -3,5 +3,10 @@
     "name": "component",
     "rootDir": "./src/components",
     "files": [{ "name": "<name>.jsx" }]
+  },
+  {
+    "name": "page",
+    "rootDir": "./src/pages",
+    "files": [{ "name": "<name>.jsx" }]
   }
 ]
