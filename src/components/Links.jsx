@@ -21,7 +21,7 @@ const Link = styled.a`
   ${CommonLink}
   font-size: 24px;
   margin: 0;
-  margin-right: 2.7%;
+  margin-right: 15px;
 
   svg {
     stroke: ${theme.light.linkColor};
@@ -47,42 +47,22 @@ const Link = styled.a`
 export default function Links(props) {
   return (
     <LinksStyle>
-      <Link
-        theme={props.theme}
-        target="_blank"
-        href="https://github.com/haneenmahd"
-      >
+      <Link target="_blank" href="https://github.com/haneenmahd">
         <GitHub />
       </Link>
-      <Link
-        theme={props.theme}
-        target="_blank"
-        href="https://dribbble.com/haneenmahdin"
-      >
+      <Link target="_blank" href="https://dribbble.com/haneenmahdin">
         <Dribbble />
       </Link>
-      <Link
-        theme={props.theme}
-        target="_blank"
-        href="https://instagram.com/haneenmahdin"
-      >
+      <Link target="_blank" href="https://instagram.com/haneenmahdin">
         <Instagram />
       </Link>
-      <Link
-        theme={props.theme}
-        target="_blank"
-        href="https://twitter.com/HaneenMahdin"
-      >
+      <Link target="_blank" href="https://twitter.com/HaneenMahdin">
         <Twitter />
       </Link>
-      <Link theme={props.theme} href="/projects">
+      <Link href="/projects">
         <Compass />
       </Link>
-      <Link
-        theme={props.theme}
-        target="_blank"
-        href="mailto:haneenmahdin@gmail.com"
-      >
+      <Link target="_blank" href="mailto:haneenmahdin@gmail.com">
         <Mail />
       </Link>
     </LinksStyle>
