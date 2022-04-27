@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import TextField from './TextField'
 import theme from '../theme'
 import Links from './Links'
 import Image from './Image'
@@ -39,8 +38,6 @@ const Main = () => {
           in creating, designing, and building new things independenlty. I also
           love reading books and writing articles.
         </LandingParagraph>
-
-        <TextField />
         <Links />
       </Intro>
     </MainStyle>
