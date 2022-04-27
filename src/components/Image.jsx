@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const ImageStyle = styled.img`
   height: ${(p) => p.height};
   width: ${(p) => p.width};
-  border-radius: ${(p) => (p.rounded ? '100%' : '0%')};
+  border-radius: ${(p) => (p.rounded ? '20px' : '0%')};
   max-width: 100%;
 `
 
