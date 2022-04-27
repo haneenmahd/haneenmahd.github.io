@@ -1,0 +1,7 @@
+[
+  {
+    "name": "component",
+    "rootDir": "./src/components",
+    "files": [{ "name": "<name>.jsx" }]
+  }
+]
