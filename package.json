@@ -1,0 +1,28 @@
+{
+  "name": "my-portfolio",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "prepare": "husky install",
+    "build:publish": "sh scripts/build.sh"
+  },
+  "dependencies": {
+    "jest": "^27.4.7",
+    "js-file-download": "^0.4.12",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-feather": "^2.0.9",
+    "react-router-dom": "^6.2.1",
+    "smoothscroll-polyfill": "^0.4.4",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^1.0.7",
+    "prettier": "^2.5.1",
+    "vite": "^2.7.2",
+    "husky": "^7.0.0"
+  }
+}
