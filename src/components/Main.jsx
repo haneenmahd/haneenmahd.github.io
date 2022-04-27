@@ -5,7 +5,7 @@ import theme from '../theme'
 import Links from './Links'
 import Image from './Image'
 import { LandingParagraph } from './Text'
-import Avatar from '../assets/img/profile_pic.jpg';
+import Avatar from '../assets/img/profile_pic.jpg'
 
 const MainStyle = styled.article`
   position: relative;
@@ -29,23 +29,22 @@ const Intro = styled.div`
 `
 
 const Main = () => {
-    return (
-      <MainStyle>
-        <Intro>
-          <Image src={Avatar} alt="My Avatar" width="20vmin" rounded />
-          <LandingParagraph>
-            I'm Haneen — a developer and designer based in India. I started off
-            my career as a web designer, but later I found out that my interest
-            was in creating, designing, and building new things independenlty. I
-            also love reading books and writing articles.
-          </LandingParagraph>
+  return (
+    <MainStyle>
+      <Intro>
+        <Image src={Avatar} alt="My Avatar" width="20vmin" rounded />
+        <LandingParagraph>
+          I'm Haneen — a developer and designer based in India. I started off my
+          career as a web designer, but later I found out that my interest was
+          in creating, designing, and building new things independenlty. I also
+          love reading books and writing articles.
+        </LandingParagraph>
 
+        <TextField />
+        <Links />
+      </Intro>
+    </MainStyle>
+  )
+}
 
-          <TextField />
-          <Links />
-        </Intro>
-      </MainStyle>
-    )
-};
-
-export default Main;
+export default Main
