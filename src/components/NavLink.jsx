@@ -7,28 +7,16 @@ import theme from '../theme'
 const NavLinkStyle = styled(Link)`
   ${CommonLink}
   font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: #656d78;
 
-  &::before {
-    content: ' ';
-    position: absolute;
-    bottom: -5px;
-    height: 2px;
-    width: 0%;
-    background: ${(props) =>
-      props.theme === 'dark'
-        ? theme.dark.linkUnderLineColor
-        : theme.light.linkUnderLineColor};
-    transition: 0.3s cubic-bezier(0.98, 0.07, 0.47, 0.74);
+  &:hover {
+    color: #38393a;
   }
 
-  &:hover::before,
-  &:active::before {
-    width: 80%;
-  }
-
-  @media screen and (max-width: 700px) {
-    margin: 0 5px;
-    padding: 0 5px;
+  &:active {
+    color: #38393a;
   }
 `
 
@@ -40,10 +28,10 @@ const NavLinkStyle = styled(Link)`
  * }} props
  * @returns
  */
-export default function NavLink(props) {
+export default function NavLink({ to, text }) {
   return (
-    <NavLinkStyle to={props.to} aria-label={`Link to ${props.href} page`}>
-      {props.text}
+    <NavLinkStyle to={to} aria-label={`Link to ${to} page`}>
+      {text}
     </NavLinkStyle>
   )
 }
