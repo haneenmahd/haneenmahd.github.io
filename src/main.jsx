@@ -11,7 +11,7 @@ import {
   useLocation,
 } from 'react-router-dom'
 import theme from './theme'
-import Wallpapers from './pages/Wallpapers'
+import Work from './pages/Work'
 
 function RenderingApp() {
   const location = useLocation()
@@ -40,7 +40,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<RenderingApp />}>
           <Route index element={<App />} />
-          <Route path="wallpapers" element={<Wallpapers />} />
+          <Route path="work" element={<Work />} />
         </Route>
       </Routes>
     </BrowserRouter>
