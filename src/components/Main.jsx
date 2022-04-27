@@ -36,9 +36,9 @@ export default class Main extends Component {
           <Image src={Avatar} alt="My Avatar" width="20vmin" rounded />
           <LandingParagraph>
             I'm Haneen — a developer and designer based in India. I started off
-            my career as a web designer, but later i found out that my interest
-            was in creating, designing, and building new things. I also love
-            reading books and writing articles.
+            my career as a web designer, but later I found out that my interest
+            was in creating, designing, and building new things independenlty. I
+            also love reading books and writing articles.
           </LandingParagraph>
 
           <Links />
