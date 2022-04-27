@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import Image from './Image'
-import Text, { Heading, LandingParagraph, Paragraph } from '../components/Text'
+import { LandingParagraph } from '../components/Text'
 import theme from '../theme'
 import Links from './Links'
 import Avatar from '../assets/img/profile_pic.jpg'
@@ -29,16 +29,10 @@ const Intro = styled.div`
 `
 
 export default class Main extends Component {
-  constructor(props) {
-    super(props)
-    this.props = props
-  }
-
   render() {
-    const { props } = this
     return (
-      <MainStyle theme={props.theme}>
-        <Intro theme={props.theme}>
+      <MainStyle>
+        <Intro>
           <Image src={Avatar} alt="My Avatar" width="20vmin" rounded />
           <LandingParagraph>
             I'm Haneen — a developer and designer based in India. I started off
@@ -47,7 +41,7 @@ export default class Main extends Component {
             reading books and writing articles.
           </LandingParagraph>
 
-          <Links theme={props.theme} />
+          <Links />
         </Intro>
       </MainStyle>
     )
