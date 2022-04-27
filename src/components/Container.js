@@ -4,7 +4,7 @@ import theme from '../theme'
 const Container = styled.article`
   min-height: 100vh;
   max-width: 100vw;
-  padding: ${(props) => props.padding || `10%`};
+  padding: ${(props) => props.padding || `5%`};
   background: ${theme.light.mainBg};
   color: ${theme.light.textColor};
 `

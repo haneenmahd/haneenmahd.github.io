@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+const LargeHeading = styled.h1`
+  font-size: 35px;
+  font-weight: bold;
+`
+
 const Heading = styled.h1`
   font-size: 20px;
   font-weight: bold;
@@ -23,5 +28,5 @@ const Text = styled.h1`
   font-size: 16px;
 `
 
-export { Heading, SecondaryHeading, Paragraph, LandingParagraph }
+export { LargeHeading, Heading, SecondaryHeading, Paragraph, LandingParagraph }
 export default Text

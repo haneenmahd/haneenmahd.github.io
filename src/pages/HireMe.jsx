@@ -1,6 +1,11 @@
 import React from 'react'
 import Container from '../components/Container'
+import { Heading, LargeHeading } from '../components/Text'
 
 export default function HireMe() {
-  return <Container>Hire me.</Container>
+  return (
+    <Container>
+      <LargeHeading>Hire Me.</LargeHeading>
+    </Container>
+  )
 }
