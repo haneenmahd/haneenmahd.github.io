@@ -1,7 +1,6 @@
 import React, { Component, useState } from 'react'
 import styled from 'styled-components'
 import Logo from '../assets/jsx/Logo'
-import theme from '../theme'
 import NavLink from './NavLink'
 
 const Container = styled.nav`
@@ -13,21 +12,17 @@ const Container = styled.nav`
   z-index: 1000;
 `
 
-export default class NavBar extends Component {
-  constructor(props) {
-    super(props)
-    this.props = props
-  }
+const NavBar = () => {
+  return (
+    <Container>
+      <Logo />
 
-  render() {
-    const { state, props } = this
-
-    return (
-      <Container theme={props.theme}>
-        <Logo theme={props.theme} />
-
-        <NavLink theme={props.theme} to="/wallpapers" text="wallpapers" />
-      </Container>
-    )
-  }
+      <NavLink to="/work" text="Work" />
+      <NavLink to="/blog" text="Blog" />
+      <NavLink to="/store" text="Store" />
+      <NavLink to="/hire-me" text="Hire me" />
+    </Container>
+  )
 }
+
+export default NavBar
