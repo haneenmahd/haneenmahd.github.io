@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import NavBar from './components/NavBar'
-import About from './pages/About'
 import {
   BrowserRouter,
   Routes,
@@ -42,7 +41,6 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<RenderingApp />}>
           <Route index element={<App />} />
-          <Route path="about" element={<About />} />
           <Route path="wallpapers" element={<Wallpapers />} />
         </Route>
       </Routes>

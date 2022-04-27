@@ -1,6 +1,5 @@
 import NavBar from './components/NavBar'
 import Main from './components/Main'
-import About from './pages/About'
 import styled from 'styled-components'
 import theme from './theme'
 
@@ -20,7 +19,6 @@ function App(props) {
     <AppStyle>
       <NavBar />
       <Main />
-      <About />
     </AppStyle>
   )
 }

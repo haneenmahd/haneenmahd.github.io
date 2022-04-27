@@ -35,7 +35,6 @@ export default class NavBar extends Component {
         <Logo theme={props.theme} />
 
         <NavLink theme={props.theme} to="/wallpapers" text="wallpapers" />
-        <NavLink theme={props.theme} to="/about" text="about me" />
       </Container>
     )
   }
