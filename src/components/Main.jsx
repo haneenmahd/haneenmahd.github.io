@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
-import { keyframes } from 'styled-components'
+import Image from './Image'
 import theme from '../theme'
 import Links from './Links'
+import Avatar from '../assets/img/avatar.svg'
 
 const MainStyle = styled.article`
   position: relative;
   min-height: 90vh;
   max-width: 100vw;
-  align-items: center;
+  display: flex;
   color: ${theme.light.textColor};
   padding-top: 100px;
   z-index: 3;
@@ -16,15 +17,9 @@ const MainStyle = styled.article`
 `
 
 const Intro = styled.div`
-  text-align: left;
   padding: 100px 10%;
   display: flex;
-  align-items: center;
   flex-direction: column;
-
-  * {
-    text-align: center;
-  }
 
   h2 {
     font-size: 350%;
@@ -51,6 +46,7 @@ export default class Main extends Component {
     return (
       <MainStyle theme={props.theme}>
         <Intro theme={props.theme}>
+          <Image src={Avatar} alt="My Avatar" width="20vmin" rounded />
           <h2>Hi, I'm Haneen 👋</h2>
           <h4>
             An full-stack developer and a UI/UX Designer working on awesome

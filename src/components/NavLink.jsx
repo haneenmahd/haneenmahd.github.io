@@ -22,16 +22,8 @@ const NavLinkStyle = styled(Link)`
   }
 
   &:hover::before,
-  :active::before {
+  &:active::before {
     width: 80%;
-  }
-
-  &:hover,
-  :active {
-    color: ${(props) =>
-      props.theme === 'dark'
-        ? theme.dark.linkUnderLineColor
-        : theme.light.linkUnderLineColor};
   }
 
   @media screen and (max-width: 700px) {
@@ -45,17 +37,12 @@ const NavLinkStyle = styled(Link)`
  * @param {{
  *   to: string;
  *   text: string;
- *   theme: "dark" | "light";
  * }} props
  * @returns
  */
 export default function NavLink(props) {
   return (
-    <NavLinkStyle
-      theme={props.theme}
-      to={props.to}
-      aria-label={`Link to ${props.href} page`}
-    >
+    <NavLinkStyle to={props.to} aria-label={`Link to ${props.href} page`}>
       {props.text}
     </NavLinkStyle>
   )

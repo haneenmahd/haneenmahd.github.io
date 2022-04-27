@@ -19,7 +19,6 @@ const LinksStyle = styled.aside`
 
 const Link = styled.a`
   ${CommonLink}
-  text-align: left;
   font-size: 24px;
   margin: 0;
   margin-right: 2.7%;

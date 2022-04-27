@@ -17,7 +17,6 @@ const Container = styled.div`
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
   }
 `
@@ -63,7 +62,6 @@ const ImageShadowAnimation = keyframes`
 `
 
 const Intro = styled.aside`
-  text-align: left;
   padding: 20px;
   max-width: 100%;
 
@@ -112,7 +110,6 @@ const InfoGroup = styled.aside`
 `
 
 const Info = styled.div`
-  text-align: left;
   max-width: 100%;
   color: ${theme.light.textColor};
 

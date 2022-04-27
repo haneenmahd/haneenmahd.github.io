@@ -7,7 +7,6 @@ import theme from './theme'
 const AppStyle = styled.div`
   min-height: 100vh;
   max-width: 100vw;
-  text-align: center;
   background-color: ${theme.light.mainBg};
   color: ${theme.light.textColor};
 

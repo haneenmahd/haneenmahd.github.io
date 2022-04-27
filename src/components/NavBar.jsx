@@ -11,7 +11,6 @@ const Container = styled.nav`
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   padding: 0;
   position: fixed;
   top: 0;
