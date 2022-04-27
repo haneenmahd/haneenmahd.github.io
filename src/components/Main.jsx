@@ -1,24 +1,24 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import Image from './Image'
-import { LandingParagraph } from '../components/Text'
+import TextField from './TextField'
 import theme from '../theme'
 import Links from './Links'
-import Avatar from '../assets/img/profile_pic.jpg'
+import Image from './Image'
+import { LandingParagraph } from './Text'
+import Avatar from '../assets/img/profile_pic.jpg';
 
 const MainStyle = styled.article`
   position: relative;
   min-height: 90vh;
   max-width: 100vw;
   display: flex;
-  color: '${theme.light.textColor}';
-  padding-top: 100px;
+  color: ${theme.light.textColor};
   z-index: 3;
   overflow: hidden;
 `
 
 const Intro = styled.div`
-  padding: 100px 10%;
+  padding: 10%;
   display: flex;
   flex-direction: column;
   max-width: 850px;
@@ -28,8 +28,7 @@ const Intro = styled.div`
   }
 `
 
-export default class Main extends Component {
-  render() {
+const Main = () => {
     return (
       <MainStyle>
         <Intro>
@@ -41,9 +40,12 @@ export default class Main extends Component {
             also love reading books and writing articles.
           </LandingParagraph>
 
+
+          <TextField />
           <Links />
         </Intro>
       </MainStyle>
     )
-  }
-}
+};
+
+export default Main;

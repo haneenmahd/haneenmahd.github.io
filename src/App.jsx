@@ -9,15 +9,14 @@ const AppStyle = styled.div`
   background-color: ${theme.light.mainBg};
   color: ${theme.light.textColor};
 
-  &.page {
-    padding-top: 80px;
+  &:first-child {
+    padding-top: 50px;
   }
 `
 
-function App(props) {
+function App() {
   return (
     <AppStyle>
-      <NavBar />
       <Main />
     </AppStyle>
   )

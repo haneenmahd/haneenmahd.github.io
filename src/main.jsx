@@ -23,7 +23,6 @@ function RenderingApp() {
   return (
     <div
       style={{
-        paddingTop: location.pathname !== '/' ? 85 : 0,
         backgroundColor: theme.light.mainBg,
       }}
     >

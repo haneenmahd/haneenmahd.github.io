@@ -1,9 +1,7 @@
 import React, { Component, useState } from 'react'
 import styled from 'styled-components'
-import { css } from 'styled-components'
 import Logo from '../assets/jsx/Logo'
 import theme from '../theme'
-import Links from './Links'
 import NavLink from './NavLink'
 
 const Container = styled.nav`
@@ -12,12 +10,6 @@ const Container = styled.nav`
   display: flex;
   align-items: center;
   padding: 0;
-  position: fixed;
-  top: 0;
-  padding: 0 4%;
-  background-color: ${theme.light.navBackground};
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   z-index: 1000;
 `
 
