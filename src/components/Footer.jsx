@@ -11,9 +11,9 @@ const FooterStyle = styled.footer`
 `
 
 const CustomisedParagraph = styled(Paragraph)`
-    color: #c3c3c3;
-    font-size: 16px;
-    font-weight: 500;
+  color: #c3c3c3;
+  font-size: 16px;
+  font-weight: 500;
 `
 
 export default function Footer() {
