@@ -44,7 +44,7 @@ const Form = styled.div`
 `
 
 export default function HireMe() {
-  const [name, setName] = useState('');
+  const [name, setName] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
 
@@ -52,13 +52,15 @@ export default function HireMe() {
     cb(e.target.value)
   }
 
-  const sendHireEmail = e => {
-    let link = document.createElement("a");
-    link.href = `mailto:haneenmahdin@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`
-    
-    link.click();
+  const sendHireEmail = (e) => {
+    let link = document.createElement('a')
+    link.href = `mailto:haneenmahdin@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(message)}`
+
+    link.click()
   }
-  
+
   return (
     <CustomisedContainer padding="0">
       <LargeHeading>Hire Me.</LargeHeading>
@@ -72,7 +74,9 @@ export default function HireMe() {
           <ListItem>Product Design</ListItem>
           <ListItem>UI / UX Design</ListItem>
           <ListItem>Web designing &amp; development</ListItem>
-          <ListItem>Backend development (Node.js, MongoDB, Docker, Typescript)</ListItem>
+          <ListItem>
+            Backend development (Node.js, MongoDB, Docker, Typescript)
+          </ListItem>
           <ListItem>Video Editing</ListItem>
           <ListItem>Content Creation</ListItem>
         </List>

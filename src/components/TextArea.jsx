@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const TextAreaStyle = styled.textarea`
   min-height: 230px;
@@ -12,14 +12,15 @@ const TextAreaStyle = styled.textarea`
 `
 
 export default function TextArea({
-    placeholder = "Your Textarea here",
-    value,
-    onChange
+  placeholder = 'Your Textarea here',
+  value,
+  onChange,
 }) {
   return (
-    <TextAreaStyle 
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}></TextAreaStyle>
+    <TextAreaStyle
+      value={value}
+      onChange={onChange}
+      placeholder={placeholder}
+    ></TextAreaStyle>
   )
 }

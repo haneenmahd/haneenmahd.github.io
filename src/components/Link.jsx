@@ -15,6 +15,6 @@ export default function Link({ href, text, highlighted }) {
       target="_blank"
     >
       {text}
-    </ LinkStyle>
+    </LinkStyle>
   )
 }
