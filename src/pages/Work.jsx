@@ -120,8 +120,8 @@ export default function Work() {
           <Heading>Linked</Heading>
           <Paragraph>
             A beautifully built template for displaying all your personal links.
-            Made with <b>React.js</b>, <b>Styled Components</b>. Configure and
-            create a website with just using a <b>JSON</b> file!
+            Made with React.js, Styled Components. Configure and
+            create a website with just using a JSON file!
           </Paragraph>
 
           <div>
