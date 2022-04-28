@@ -5,7 +5,7 @@ const TextFieldStyle = styled.input`
   font-size: 16px;
   border-radius: 5px;
   border: 1px solid #d3d3d3;
-  padding: 10px 20px;
+  padding: 5px 15px;
   width: min-content;
   max-width: 100%;
 `

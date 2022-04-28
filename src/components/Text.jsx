@@ -16,6 +16,7 @@ const SecondaryHeading = styled.h3`
 
 const Paragraph = styled.p`
   font-size: 16px;
+  line-height: 1.7rem;
 `
 
 const LandingParagraph = styled.p`
@@ -31,7 +32,7 @@ const Text = styled.h1`
 const SubHeading = styled.h3`
   font-size: 20px;
   font-weight: 600;
-  color: #595959;
+  color: #383838;
 `
 
 export {

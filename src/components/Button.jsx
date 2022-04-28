@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const ButtonStyle = styled.button`
-  height: 50px;
+  height: 40px;
   font-size: 16px;
   font-weight: 600;
   line-height: 1;
@@ -11,7 +11,7 @@ const ButtonStyle = styled.button`
   border: 1px solid #d3d3d3;
   color: #fafafa;
   background-color: #111;
-  padding: 10px 20px;
+  padding: 5px 15px;
   width: max-content;
   max-width: 100%;
   cursor: pointer;
@@ -22,8 +22,11 @@ const ButtonStyle = styled.button`
   }
 `
 
-const Button = ({ children = 'Button' }) => {
-  return <ButtonStyle tabIndex={0}>{children}</ButtonStyle>
+const Button = ({ 
+  action,
+  children = 'Button'
+}) => {
+  return <ButtonStyle onClick={action}>{children}</ButtonStyle>
 }
 
 export default Button

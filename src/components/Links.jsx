@@ -21,7 +21,7 @@ const Link = styled.a`
   ${CommonLink}
   font-size: 24px;
   margin: 0;
-  margin-right: 15px;
+  margin-right: 4%;
 
   svg {
     stroke: ${theme.light.linkColor};
