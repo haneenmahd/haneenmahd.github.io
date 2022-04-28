@@ -34,5 +34,12 @@ const SubHeading = styled.h3`
   color: #595959;
 `
 
-export { LargeHeading, Heading, SecondaryHeading, Paragraph, LandingParagraph, SubHeading }
+export {
+  LargeHeading,
+  Heading,
+  SecondaryHeading,
+  Paragraph,
+  LandingParagraph,
+  SubHeading,
+}
 export default Text
