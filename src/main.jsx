@@ -15,6 +15,7 @@ import Work from './pages/Work'
 import Blog from './pages/Blog'
 import Store from './pages/Store'
 import HireMe from './pages/HireMe'
+import Footer from './components/Footer'
 
 function RenderingApp() {
   const location = useLocation()
@@ -33,6 +34,8 @@ function RenderingApp() {
 
       {/* React Router renderings */}
       <Outlet />
+
+      <Footer />
     </div>
   )
 }
