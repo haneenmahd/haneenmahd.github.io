@@ -6,7 +6,7 @@ const LargeHeading = styled.h1`
 `
 
 const Heading = styled.h1`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 `
 
@@ -28,5 +28,11 @@ const Text = styled.h1`
   font-size: 16px;
 `
 
-export { LargeHeading, Heading, SecondaryHeading, Paragraph, LandingParagraph }
+const SubHeading = styled.h3`
+  font-size: 20px;
+  font-weight: 600;
+  color: #595959;
+`
+
+export { LargeHeading, Heading, SecondaryHeading, Paragraph, LandingParagraph, SubHeading }
 export default Text
