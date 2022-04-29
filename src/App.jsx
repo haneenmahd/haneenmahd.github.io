@@ -1,7 +1,7 @@
-import NavBar from './components/NavBar'
-import Main from './components/Main'
 import styled from 'styled-components'
+import Main from './components/Main'
 import theme from './theme'
+import FadeInAnimation from './animations/FadeIn'
 
 const AppStyle = styled.div`
   min-height: 100vh;
@@ -11,6 +11,10 @@ const AppStyle = styled.div`
 
   &:first-child {
     padding-top: 50px;
+  }
+
+  > * {
+    animation: ${FadeInAnimation} 0.8s;
   }
 `
 

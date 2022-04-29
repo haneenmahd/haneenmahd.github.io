@@ -10,6 +10,7 @@ import {
   Outlet,
   useLocation,
 } from 'react-router-dom'
+import styled from 'styled-components'
 import theme from './theme'
 import Work from './pages/Work'
 import Blog from './pages/Blog'
@@ -17,7 +18,6 @@ import Store from './pages/Store'
 import HireMe from './pages/HireMe'
 import Footer from './components/Footer'
 import Menu from './components/Menu'
-import ActiveRipple from './components/ActiveRipple'
 
 function RenderingApp() {
   const location = useLocation()

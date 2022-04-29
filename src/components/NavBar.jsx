@@ -29,7 +29,7 @@ const Links = styled.div`
 `
 
 const HireMeWrapper = styled.span`
-  margin: 0 10px;
+  margin: 0 15px;
   /* Adjust the spacing */
   * {
     margin-right: 5px;
