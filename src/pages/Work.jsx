@@ -51,8 +51,8 @@ const HireMeButton = styled(RouterLink)`
 `
 
 export default function Work() {
-  const [menuOpen, setMenuOpen] = useOutletContext();
-  
+  const [menuOpen, setMenuOpen] = useOutletContext()
+
   return (
     <Container>
       <LargeHeading>My work</LargeHeading>

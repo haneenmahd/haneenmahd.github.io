@@ -27,9 +27,11 @@ function RenderingApp() {
   }, [location.pathname, location.state])
 
   return (
-    <div style={{
+    <div
+      style={{
         backgroundColor: theme.light.mainBg,
-      }}>
+      }}
+    >
       <NavBar />
 
       <Menu />

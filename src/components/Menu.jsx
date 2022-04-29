@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import NavLink from "./NavLink";
-import { Heading, Paragraph } from "./Text";
-import { X as XIcon } from "react-feather";
+import styled from 'styled-components'
+import NavLink from './NavLink'
+import { Heading, Paragraph } from './Text'
+import { X as XIcon } from 'react-feather'
 
 const MenuStyle = styled.div`
   position: absolute;
@@ -52,15 +52,13 @@ const CloseButton = styled.button`
   cursor: pointer;
   transition: 0.3s ease;
 
-  &:focus, :active {
+  &:focus,
+  :active {
     background-color: #d3d3d350;
   }
 `
 
-export default function Menu({
-  open,
-  setOpen
-}) {
+export default function Menu({ open, setOpen }) {
   return (
     <MenuStyle open={open}>
       <HeaderContainer>
