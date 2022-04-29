@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 import NavLink from './NavLink'
-import { Heading, Paragraph } from './Text'
+import { Heading } from './Text'
 import { X as XIcon } from 'react-feather'
 
 const MenuStyle = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: ${(p) => (p.open ? `0` : '-100%')};
   padding: 30px;
-  width: 300px;
+  min-width: 180px;
+  max-width: 300px;
   height: 100vh;
   background-color: #ffffffb5;
   border-right: 1px solid #d3d3d3;

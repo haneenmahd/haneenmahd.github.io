@@ -32,9 +32,9 @@ function RenderingApp() {
         backgroundColor: theme.light.mainBg,
       }}
     >
-      <NavBar />
+      <NavBar setMenuOpen={setMenuOpen} />
 
-      <Menu />
+      <Menu open={menuOpen} setOpen={setMenuOpen} />
 
       {/* React Router renderings */}
       <Outlet context={[menuOpen, setMenuOpen]} />
