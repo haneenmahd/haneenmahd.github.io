@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Container from '../components/Container'
 import Image from '../components/Image'
-import { Link as RouterLink } from 'react-router-dom'
+import { Link as RouterLink, useOutletContext } from 'react-router-dom'
 import Text, { Heading, LargeHeading, Paragraph } from '../components/Text'
 import NavLink from '../components/NavLink'
 import Link from '../components/Link'
@@ -51,6 +51,8 @@ const HireMeButton = styled(RouterLink)`
 `
 
 export default function Work() {
+  const [menuOpen, setMenuOpen] = useOutletContext();
+  
   return (
     <Container>
       <LargeHeading>My work</LargeHeading>
@@ -120,8 +122,8 @@ export default function Work() {
           <Heading>Linked</Heading>
           <Paragraph>
             A beautifully built template for displaying all your personal links.
-            Made with React.js, Styled Components. Configure and
-            create a website with just using a JSON file!
+            Made with React.js, Styled Components. Configure and create a
+            website with just using a JSON file!
           </Paragraph>
 
           <div>

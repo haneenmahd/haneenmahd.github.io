@@ -16,24 +16,26 @@ import Blog from './pages/Blog'
 import Store from './pages/Store'
 import HireMe from './pages/HireMe'
 import Footer from './components/Footer'
+import Menu from './components/Menu'
 
 function RenderingApp() {
   const location = useLocation()
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [location.pathname, location.state])
 
   return (
-    <div
-      style={{
+    <div style={{
         backgroundColor: theme.light.mainBg,
-      }}
-    >
+      }}>
       <NavBar />
 
+      <Menu />
+
       {/* React Router renderings */}
-      <Outlet />
+      <Outlet context={[menuOpen, setMenuOpen]} />
 
       <Footer />
     </div>
