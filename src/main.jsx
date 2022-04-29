@@ -17,6 +17,7 @@ import Store from './pages/Store'
 import HireMe from './pages/HireMe'
 import Footer from './components/Footer'
 import Menu from './components/Menu'
+import ActiveRipple from './components/ActiveRipple'
 
 function RenderingApp() {
   const location = useLocation()
