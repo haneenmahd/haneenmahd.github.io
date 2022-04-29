@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import CommonLink from '../../components/CommonLink'
 import theme from '../../theme'
-import theme from '../../theme'
-import theme from '../../theme/theme'
 
 const LogoContainer = styled.div`
   padding: 10px;
