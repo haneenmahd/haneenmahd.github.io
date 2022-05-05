@@ -15,12 +15,13 @@ const NavLinkStyle = styled(Link)`
  * }} props
  * @returns
  */
-export default function NavLink({ to, text, highlighted }) {
+export default function NavLink({ to, text, highlighted, mode = 'light' }) {
   return (
     <NavLinkStyle
       to={to}
       aria-label={`Link to ${to} page`}
       highlighted={highlighted}
+      mode={mode}
     >
       {text}
     </NavLinkStyle>

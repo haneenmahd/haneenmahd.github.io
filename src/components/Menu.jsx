@@ -8,13 +8,12 @@ const MenuStyle = styled.div`
   top: 0;
   left: ${(p) => (p.open ? `0` : '-100%')};
   padding: 30px;
-  min-width: 180px;
+  min-width: 200px;
   max-width: 300px;
   height: 100vh;
-  background-color: #ffffffb5;
+  color: #fafafa;
+  background-color: #1c1c1c;
   border-right: 1px solid #d3d3d3;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   z-index: 100;
   transition: 0.3s ease;
 
@@ -49,6 +48,8 @@ const CloseButton = styled.span`
   border-radius: 100%;
   border: none;
   padding: 5px;
+  height: 25px;
+  width: 25px;
   margin: 0;
   cursor: pointer;
   transition: 0.3s ease;
@@ -70,10 +71,10 @@ export default function Menu({ open, setOpen }) {
       </HeaderContainer>
 
       <LinksContainer>
-        <NavLink to="/work" text="Work" />
-        <NavLink to="/blog" text="Blog" />
-        <NavLink to="/store" text="Store" />
-        <NavLink to="/hire-me" text="Hire me" />
+        <NavLink mode="dark" to="/work" text="Work" />
+        <NavLink mode="dark" to="/blog" text="Blog" />
+        <NavLink mode="dark" to="/store" text="Store" />
+        <NavLink mode="dark" to="/hire-me" text="Hire me" />
       </LinksContainer>
     </MenuStyle>
   )

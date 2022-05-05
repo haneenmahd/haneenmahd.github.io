@@ -34,6 +34,14 @@ const CommonLink = css`
         color: #d3d3d3;
       }
     `}
+
+  ${(p) =>
+    p.mode === 'dark' &&
+    css`
+      &:hover {
+        color: #d3d3d3;
+      }
+    `}
 `
 
 export default CommonLink
