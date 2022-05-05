@@ -55,7 +55,7 @@ const Card = styled.div`
 `
 
 const MoreProjectsCard = styled(Card)`
-  background-color: #e0e0e0;
+  background-color: #ebebeb;
   padding: 20px 30px;
   padding-left: 25px;
   border-radius: 5px;
