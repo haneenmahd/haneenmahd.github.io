@@ -17,7 +17,7 @@ const CustomLink = styled(Link)`
   text-align: center;
   font-size: 20px;
   font-weight: 900;
-  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: ${(props) =>
     props.theme === 'dark' ? theme.dark.textColor : theme.light.textColor};
