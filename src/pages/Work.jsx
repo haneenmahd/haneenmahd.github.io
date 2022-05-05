@@ -252,7 +252,9 @@ export default function Work() {
         </MoreProjectsCard>
       </Grid>
 
-      <HireMeButton to="/hire-me">Hire Me for your next project <ArrowRight size={15} /></HireMeButton>
+      <HireMeButton to="/hire-me">
+        Hire Me for your next project <ArrowRight size={15} />
+      </HireMeButton>
     </Container>
   )
 }
