@@ -8,12 +8,13 @@ const ImageStyle = styled.img`
   box-shadow: none;
   transition: 250ms ease;
 
-  ${p => p.hoverShadow &&
-  css`
-    &:hover {
-      box-shadow: 0 0 0 5px #c4c4c428;
-    }
-  `}
+  ${(p) =>
+    p.hoverShadow &&
+    css`
+      &:hover {
+        box-shadow: 0 0 0 5px #c4c4c428;
+      }
+    `}
 `
 
 const Image = ({
@@ -22,7 +23,7 @@ const Image = ({
   width = 'auto',
   src,
   alt,
-  hoverShadow = false
+  hoverShadow = false,
 }) => {
   return (
     <ImageStyle

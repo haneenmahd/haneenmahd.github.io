@@ -3,8 +3,13 @@ import styled from 'styled-components'
 import Container from '../components/Container'
 import Image from '../components/Image'
 import { Link as RouterLink, useOutletContext } from 'react-router-dom'
-import Links from '../components/Links';
-import  { Heading, LargeHeading, Paragraph, SubHeading } from '../components/Text'
+import Links from '../components/Links'
+import {
+  Heading,
+  LargeHeading,
+  Paragraph,
+  SubHeading,
+} from '../components/Text'
 import NavLink from '../components/NavLink'
 import Link from '../components/Link'
 import MinimWallpaperMobileMockup from '../assets/img/minim-wallpaper-mockup.png'
@@ -211,7 +216,9 @@ export default function Work() {
 
         <Card>
           <Heading>And I have created many more projects....</Heading>
-          <SubHeading>View my projects on GitHub, Dribbble, Behance and more...</SubHeading>
+          <SubHeading>
+            View my projects on GitHub, Dribbble, Behance and more...
+          </SubHeading>
 
           <Links />
         </Card>

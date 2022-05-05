@@ -72,7 +72,7 @@ export default function Links(props) {
       <Link target="_blank" href="mailto:haneenmahdin@gmail.com">
         <Mail />
       </Link>
-      <Link target="_blank" href="mailto:haneenmahdin@gmail.com">
+      <Link target="_blank" href="https://www.behance.net/haneenmahd">
         Bè
       </Link>
     </LinksStyle>
