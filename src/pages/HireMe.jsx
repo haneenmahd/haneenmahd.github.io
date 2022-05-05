@@ -1,13 +1,19 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Container from '../components/Container'
-import { LargeHeading, Paragraph, SubHeading } from '../components/Text'
+import {
+  Heading,
+  LargeHeading,
+  Paragraph,
+  SubHeading,
+} from '../components/Text'
 import List, { ListItem } from '../components/List'
 import TextField from '../components/TextField'
 import CommonLink from '../components/CommonLink'
 import CleanOfficeImage from '../assets/img/clean-and-minimal-office.webp'
 import Button from '../components/Button'
 import TextArea from '../components/TextArea'
+import CVFile from '../assets/img/CV.pdf'
 
 const CustomisedContainer = styled(Container)`
   padding: 0 10%;
@@ -41,6 +47,12 @@ const Form = styled.div`
   display: grid;
   grid-template-rows: 1fr;
   grid-gap: 20px;
+`
+
+const CVContainer = styled.div`
+  margin-top: 10px;
+  padding: 50px 0;
+  padding-top: 0;
 `
 
 export default function HireMe() {
@@ -124,6 +136,27 @@ export default function HireMe() {
         />
         <Button action={sendHireEmail}>Submit</Button>
       </Form>
+
+      <br />
+      <hr />
+      <br />
+
+      <CVContainer>
+        <Heading>Read my CV</Heading>
+        <Paragraph>
+          I have made it so clean and minimal to make it more readable and
+          pretty much straightforward!
+        </Paragraph>
+        <CustomisedLink
+          style={{
+            marginLeft: 0,
+          }}
+          target="_blank"
+          href={CVFile}
+        >
+          Download (CV.pdf)
+        </CustomisedLink>
+      </CVContainer>
     </CustomisedContainer>
   )
 }
