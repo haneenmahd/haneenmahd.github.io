@@ -17,6 +17,7 @@ import NotyUIDesign from '../assets/img/noty-ui-design.png'
 import MindsSoUIDesign from '../assets/img/minds.so-ui.png.webp'
 import LinkedThumbnail from '../assets/img/linked-thumbnail.png'
 import CommonLink from '../components/CommonLink'
+import { ArrowRight } from 'react-feather'
 
 const Grid = styled.div`
   display: grid;
@@ -40,7 +41,11 @@ const Card = styled.div`
 
   a {
     margin: 0;
-    margin-right: 30px;
+    width: 100%;
+  }
+
+  a:not(:first-child) {
+    margin-left: 1rem;
   }
 
   p {
@@ -49,12 +54,34 @@ const Card = styled.div`
   }
 `
 
+const MoreProjectsCard = styled(Card)`
+  background-color: #e0e0e0;
+  padding: 20px 30px;
+  padding-left: 25px;
+  border-radius: 5px;
+`
+
 const HireMeButton = styled(RouterLink)`
   ${CommonLink}
-
+  display: flex;
+  align-items: center;
+  width: fit-content;
   margin: 0;
   padding: 5px 0;
   border-bottom: 1px dotted #989898;
+
+  /* Spacing */
+  * {
+    margin: 0 0.2rem;
+  }
+
+  svg {
+    transition: 250ms ease;
+  }
+
+  &:hover svg {
+    transform: scale(1.3) translateX(2px);
+  }
 `
 
 export default function Work() {
@@ -215,17 +242,19 @@ export default function Work() {
           </div>
         </Card>
 
-        <Card>
+        <MoreProjectsCard>
           <Heading>And I have created many more projects....</Heading>
           <SubHeading>
             View my projects on GitHub, Dribbble, Behance and more...
           </SubHeading>
 
           <Links />
-        </Card>
+        </MoreProjectsCard>
       </Grid>
 
-      <HireMeButton to="/hire-me">Hire Me for your next project</HireMeButton>
+      <HireMeButton to="/hire-me">
+        Hire Me for your next project <ArrowRight size={15} />
+      </HireMeButton>
     </Container>
   )
 }

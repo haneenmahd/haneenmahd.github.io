@@ -6,17 +6,16 @@ import { X as XIcon } from 'react-feather'
 const MenuStyle = styled.div`
   position: fixed;
   top: 0;
-  left: ${(p) => (p.open ? `0` : '-100%')};
+  left: ${(p) => (p.open ? '0' : '-100vw')};
   padding: 30px;
-  min-width: 180px;
+  min-width: 200px;
   max-width: 300px;
   height: 100vh;
-  background-color: #ffffffb5;
-  border-right: 1px solid #d3d3d3;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  color: #fafafa;
+  background-color: #1c1c1c;
   z-index: 100;
-  transition: 0.3s ease;
+  box-shadow: ${(p) => (p.open ? '100px 0 100px 100vw #fafafa40' : 'none')};
+  transition: left 0.3s ease, box-shadow 0.45s ease-in;
 
   @media screen and (min-width: 580px) {
     display: none;
@@ -44,11 +43,13 @@ const LinksContainer = styled.div`
   }
 `
 
-const CloseButton = styled.button`
+const CloseButton = styled.span`
   background-color: transparent;
   border-radius: 100%;
   border: none;
   padding: 5px;
+  height: 25px;
+  width: 25px;
   margin: 0;
   cursor: pointer;
   transition: 0.3s ease;
@@ -70,10 +71,10 @@ export default function Menu({ open, setOpen }) {
       </HeaderContainer>
 
       <LinksContainer>
-        <NavLink to="/work" text="Work" />
-        <NavLink to="/blog" text="Blog" />
-        <NavLink to="/store" text="Store" />
-        <NavLink to="/hire-me" text="Hire me" />
+        <NavLink mode="dark" to="/work" text="Work" />
+        <NavLink mode="dark" to="/blog" text="Blog" />
+        <NavLink mode="dark" to="/store" text="Store" />
+        <NavLink mode="dark" to="/hire-me" text="Hire me" />
       </LinksContainer>
     </MenuStyle>
   )
