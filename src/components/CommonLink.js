@@ -38,6 +38,8 @@ const CommonLink = css`
   ${(p) =>
     p.mode === 'dark' &&
     css`
+      color: #919191;
+
       &:hover {
         color: #d3d3d3;
       }

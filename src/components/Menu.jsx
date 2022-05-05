@@ -6,16 +6,16 @@ import { X as XIcon } from 'react-feather'
 const MenuStyle = styled.div`
   position: fixed;
   top: 0;
-  left: ${(p) => (p.open ? `0` : '-100%')};
+  left: ${(p) => (p.open ? '0' : '-100%')};
   padding: 30px;
   min-width: 200px;
   max-width: 300px;
   height: 100vh;
   color: #fafafa;
   background-color: #1c1c1c;
-  border-right: 1px solid #d3d3d3;
   z-index: 100;
-  transition: 0.3s ease;
+  box-shadow: ${(p) => (p.open ? '100px 0 100px 100vw #fafafa40' : 'none')};
+  transition: left 0.3s ease, box-shadow 0.45s ease-in;
 
   @media screen and (min-width: 580px) {
     display: none;
