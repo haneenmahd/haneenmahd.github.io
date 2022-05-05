@@ -21,7 +21,14 @@ const Link = styled.a`
   ${CommonLink}
   font-size: 24px;
   margin: 0;
+  height: 30px;
+  width: 30px;
   margin-right: 4%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120%;
 
   svg {
     stroke: ${theme.light.linkColor};
@@ -64,6 +71,9 @@ export default function Links(props) {
       </Link>
       <Link target="_blank" href="mailto:haneenmahdin@gmail.com">
         <Mail />
+      </Link>
+      <Link target="_blank" href="https://www.behance.net/haneenmahd">
+        Bè
       </Link>
     </LinksStyle>
   )

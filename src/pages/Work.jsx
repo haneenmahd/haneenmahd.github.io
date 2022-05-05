@@ -3,7 +3,13 @@ import styled from 'styled-components'
 import Container from '../components/Container'
 import Image from '../components/Image'
 import { Link as RouterLink, useOutletContext } from 'react-router-dom'
-import Text, { Heading, LargeHeading, Paragraph } from '../components/Text'
+import Links from '../components/Links'
+import {
+  Heading,
+  LargeHeading,
+  Paragraph,
+  SubHeading,
+} from '../components/Text'
 import NavLink from '../components/NavLink'
 import Link from '../components/Link'
 import MinimWallpaperMobileMockup from '../assets/img/minim-wallpaper-mockup.png'
@@ -134,6 +140,87 @@ export default function Work() {
             />
             <Link href="https://github.com/haneenmahd/linked" text="GitHub" />
           </div>
+        </Card>
+
+        <Card>
+          <Heading>🥁</Heading>
+          <Heading>Typeinstall</Heading>
+          <Paragraph>
+            Automates installing package's type declarations for your Typescript
+            project!
+          </Paragraph>
+
+          <div>
+            <Link
+              href="https://www.npmjs.com/package/typeinstall"
+              text="View on NPM"
+              highlighted
+            />
+            <Link
+              href="https://github.com/haneenmahd/typeinstall#installation"
+              text="Documentation"
+            />
+            <Link href="https://github.com/haneenmahd/linked" text="GitHub" />
+          </div>
+        </Card>
+
+        <Card>
+          <Heading>🤺</Heading>
+          <Heading>Unakki</Heading>
+          <Paragraph>
+            Automate the process of creating re-usable components and modules
+            😵. Have you ever been exhausted and tired of creating the
+            components and new modules in your Javascript project, over and over
+            again?. And then I'm pretty sure that you are on the who should
+            defenitely try out Unakki 🤺.
+          </Paragraph>
+
+          <div>
+            <Link
+              href="https://www.npmjs.com/package/unakki"
+              text="View on NPM"
+              highlighted
+            />
+            <Link
+              href="https://github.com/haneenmahd/unakki#why-unakki-"
+              text="Documentation"
+            />
+            <Link href="https://github.com/haneenmahd/unakki" text="GitHub" />
+          </div>
+        </Card>
+
+        <Card>
+          <Heading>🍎</Heading>
+          <Heading>Apple Colors</Heading>
+          <Paragraph>
+            An NPM Package for using colors in your User Interace with colors
+            used by <b>Apple</b>.
+          </Paragraph>
+
+          <div>
+            <Link
+              href="https://www.npmjs.com/package/apple-colors"
+              text="View on NPM"
+              highlighted
+            />
+            <Link
+              href="https://github.com/haneenmahd/apple-colors#how-to-install"
+              text="Documentation"
+            />
+            <Link
+              href="https://github.com/haneenmahd/apple-colors"
+              text="GitHub"
+            />
+          </div>
+        </Card>
+
+        <Card>
+          <Heading>And I have created many more projects....</Heading>
+          <SubHeading>
+            View my projects on GitHub, Dribbble, Behance and more...
+          </SubHeading>
+
+          <Links />
         </Card>
       </Grid>
 

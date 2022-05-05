@@ -7,7 +7,13 @@ const LargeHeading = styled.h1`
 
 const Heading = styled.h1`
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
+`
+
+const SubHeading = styled.h3`
+  font-size: 16px;
+  font-weight: 600;
+  color: #383838;
 `
 
 const SecondaryHeading = styled.h3`
@@ -27,12 +33,6 @@ const LandingParagraph = styled.p`
 
 const Text = styled.h1`
   font-size: 16px;
-`
-
-const SubHeading = styled.h3`
-  font-size: 20px;
-  font-weight: 600;
-  color: #383838;
 `
 
 export {
