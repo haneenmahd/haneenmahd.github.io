@@ -25,13 +25,14 @@ const Grid = styled.div`
   width: 100%;
   padding: 30px 0;
 
-  @media screen and (max-width: 800px) {
-    grid-template-columns: 1fr;
+  @media screen and (max-width: 850px) {
+    grid-template-columns: 100%;
   }
 `
 
 const Card = styled.div`
   z-index: 2;
+  max-width: max-content;
 
   div {
     padding: 15px 0;
