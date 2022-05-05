@@ -44,7 +44,7 @@ const LinksContainer = styled.div`
   }
 `
 
-const CloseButton = styled.button`
+const CloseButton = styled.span`
   background-color: transparent;
   border-radius: 100%;
   border: none;

@@ -1,7 +1,7 @@
 import { Menu as MenuIcon } from 'react-feather'
 import styled from 'styled-components'
 
-const MenuHamStyle = styled.button`
+const MenuHamStyle = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
