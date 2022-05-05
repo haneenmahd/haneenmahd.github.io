@@ -6,7 +6,7 @@ import { X as XIcon } from 'react-feather'
 const MenuStyle = styled.div`
   position: fixed;
   top: 0;
-  left: ${(p) => (p.open ? '0' : '-100%')};
+  left: ${(p) => (p.open ? '0' : '-100vw')};
   padding: 30px;
   min-width: 200px;
   max-width: 300px;
