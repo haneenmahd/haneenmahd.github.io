@@ -14,13 +14,13 @@ import theme from '../theme'
 const LinksStyle = styled.aside`
   padding: 10px 0;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 `
 
 const Link = styled.a`
   ${CommonLink}
   font-size: 24px;
-  margin: 0;
+  margin: 0 10px;
   height: 30px;
   width: 30px;
   margin-right: 4%;
