@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import theme from '../theme'
 import Links from './Links'
 import Image from './Image'
@@ -31,6 +31,30 @@ const Intro = styled.div`
   }
 `
 
+const ColorfulTextAnimation = keyframes`
+  0% {
+    background-position: -200px;
+  }
+  
+  50% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 200px;
+  }
+`
+
+const ColorfulText = styled.b`
+  color: transparent;
+  background: linear-gradient(45deg, #c4c4c4 -30px, #222);
+  background-clip: text;
+  background-position: -200px;
+  animation: ${ColorfulTextAnimation} 10s linear infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+`
+
 const Main = () => {
   const [showTitle, setShowTitle] = useState(false)
 
@@ -53,13 +77,13 @@ const Main = () => {
           url={Avatar}
           alt="My Avatar"
           rounded
-          rippleAnimation 
         />
         <LandingParagraph>
-          I'm <b>Haneen</b> — a developer and designer based in <i>India</i>. I
-          started off my career as a web designer, but later I found out that my
-          interest was in creating, designing, and building new things
-          independenlty. I also love reading books and writing articles.
+          I'm <ColorfulText>Haneen</ColorfulText> — a developer and designer
+          based in <i>India</i>. I started off my career as a web designer, but
+          later I found out that my interest was in creating, designing, and
+          building new things independenlty. I also love reading books and
+          writing articles.
         </LandingParagraph>
         <Links />
       </Intro>

@@ -29,7 +29,7 @@ const LandingParagraph = styled.p`
   font-size: 22px;
   font-weight: 400;
   line-height: 2rem;
-  color: #222;
+  color: #333;
 `
 
 const Text = styled.h1`
