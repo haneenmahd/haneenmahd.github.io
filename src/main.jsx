@@ -12,7 +12,6 @@ import {
 import styled from 'styled-components'
 import theme from './theme'
 import Work from './pages/Work'
-import HireMe from './pages/HireMe'
 import NavBar from './components/NavBar'
 
 function RenderingApp() {
@@ -42,7 +41,6 @@ ReactDOM.render(
         <Route path="/" element={<RenderingApp />}>
           <Route index element={<App />} />
           <Route path="work" element={<Work />} />
-          <Route path="hire-me" element={<HireMe />} />
         </Route>
       </Routes>
     </BrowserRouter>

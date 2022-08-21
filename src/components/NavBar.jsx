@@ -35,7 +35,7 @@ const Link = styled(NativeLink)`
   color: #fff;
   text-decoration: none;
   border-radius: 0.5rem;
-  transition: 300ms ease;
+  transition: 100ms ease;
 
   &:hover {
     background-color: #555;

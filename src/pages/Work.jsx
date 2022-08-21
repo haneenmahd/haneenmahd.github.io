@@ -1,260 +1,95 @@
 import React from 'react'
 import styled from 'styled-components'
 import Container from '../components/Container'
-import Image from '../components/Image'
-import { Link as RouterLink, useOutletContext } from 'react-router-dom'
-import Links from '../components/Links'
-import {
-  Heading,
-  LargeHeading,
-  Paragraph,
-  SubHeading,
-} from '../components/Text'
-import NavLink from '../components/NavLink'
-import Link from '../components/Link'
-import MinimWallpaperMobileMockup from '../assets/img/minim-wallpaper-mockup.png'
-import NotyUIDesign from '../assets/img/noty-ui-design.png'
-import MindsSoUIDesign from '../assets/img/minds.so-ui.png.webp'
-import LinkedThumbnail from '../assets/img/linked-thumbnail.png'
-import CommonLink from '../components/CommonLink'
-import { ArrowRight } from 'react-feather'
+import { Heading } from '../components/Text'
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 3fr 3fr;
-  grid-gap: 5rem;
-  width: 100%;
-  padding: 30px 0;
-
-  @media screen and (max-width: 850px) {
-    grid-template-columns: 100%;
-  }
-`
-
-const Card = styled.div`
-  z-index: 2;
-  max-width: max-content;
-
-  div {
-    padding: 15px 0;
-  }
-
-  a {
-    margin: 0;
-    width: 100%;
-  }
-
-  a:not(:first-child) {
-    margin-left: 1rem;
-  }
-
-  p {
-    color: #656d78;
-    line-height: 1.7rem;
-  }
-`
-
-const MoreProjectsCard = styled(Card)`
-  background-color: #ebebeb;
-  padding: 20px 30px;
-  padding-left: 25px;
-  border-radius: 5px;
-`
-
-const HireMeButton = styled(RouterLink)`
-  ${CommonLink}
+const SubContainer = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  margin: 0.5rem 0;
+`
+
+const Contribution = styled.div`
+  margin: 0.2rem 0;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  transition: 100ms ease;
+  color: #666;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #c4c4c450;
+  }
+
+  &:active {
+    scale: 0.99;
+  }
+`
+
+const ProjectCard = styled.div`
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
   width: fit-content;
-  margin: 0;
-  padding: 5px 0;
-  border-bottom: 1px dotted #989898;
+  border: 1px solid #c4c4c4;
+  transition: 100ms ease;
 
-  /* Spacing */
-  * {
-    margin: 0 0.2rem;
+  &:hover {
+    background: #c4c4c430;
   }
+`
 
-  svg {
-    transition: 250ms ease;
-  }
+const ProjectTitle = styled(Heading)`
+  font-size: 16px;
+  color: #333;
+`
 
-  &:hover svg {
-    transform: scale(1.3) translateX(2px);
-  }
+const ProjectDescription = styled.p`
+  font-size: 15px;
+  color: #555;
 `
 
 export default function Work() {
-  const [menuOpen, setMenuOpen] = useOutletContext()
-
   return (
     <Container>
-      <LargeHeading>My work</LargeHeading>
-      <Grid>
-        <Card>
-          <Image src={MinimWallpaperMobileMockup} />
-          <Heading>Minim — Wallpaper pack</Heading>
-          <Paragraph>
-            A clean and minimal wallpaper perfect for 4k desktops and mobiles.
-          </Paragraph>
+      <SubContainer>
+        <Heading>💗 Contribution activity</Heading>
+        <Contribution>
+          🛳 Released the first version of Dapper, a blazing fast & powerful
+          state management library
+        </Contribution>
+        <Contribution>
+          😜 Helped in the migration of Material UI components to support theme
+          CSS variables
+        </Contribution>
 
-          <div>
-            <Link
-              href="https://haneenmahdin.gumroad.com/l/minim"
-              text="Purchase"
-              highlighted
-            />
-            <Link
-              href="https://dribbble.com/shots/18125359-Clean-and-Minimal-Wallpaper"
-              text="Dribble"
-            />
-          </div>
-        </Card>
+        <Contribution>
+          🏗 Shipped a Javascript project management system
+        </Contribution>
+        <Contribution>
+          🤓 Updated some docs & fixed an issue in the Vercel repository
+        </Contribution>
+      </SubContainer>
 
-        <Card>
-          <Image src={NotyUIDesign} />
-          <Heading>Noty</Heading>
-          <Paragraph>
-            A simple and minimal app for note taking and productivity purpose.
-            This is also my submission for Swift Student challenge Apple WWDC
-            2022.
-          </Paragraph>
+      <SubContainer>
+        <Heading>🤟 Open source projects</Heading>
+        <ProjectCard>
+          <ProjectTitle>🪩 Dapper</ProjectTitle>
+          <ProjectDescription>
+            Blazing fast & powerful state management library
+          </ProjectDescription>
+        </ProjectCard>
 
-          <div>
-            <NavLink to="/stories/noty" text="Read Story" />
-            <Link
-              href="https://dribbble.com/shots/18062109-Noty-A-Note-Taking-app"
-              text="Dribbble"
-            />
-            <Link href="https://github.com/haneenmahd/Noty" text="GitHub" />
-          </div>
-        </Card>
-
-        <Card>
-          <Image src={MindsSoUIDesign} />
-          <Heading>Minds.so</Heading>
-          <Paragraph>
-            A web app to create and share awesome images of your quotes.
-          </Paragraph>
-
-          <div>
-            <Link
-              href="https://minds-so.vercel.app"
-              text="Open Live site"
-              highlighted
-            />
-            <Link
-              href="https://dribbble.com/shots/17762544-Minds-so-UI"
-              text="Dribbble"
-            />
-            <Link href="https://github.com/haneenmahd/minds.so" text="GitHub" />
-          </div>
-        </Card>
-
-        <Card>
-          <Image src={LinkedThumbnail} />
-          <Heading>Linked</Heading>
-          <Paragraph>
-            A beautifully built template for displaying all your personal links.
-            Made with React.js, Styled Components. Configure and create a
-            website with just using a JSON file!
-          </Paragraph>
-
-          <div>
-            <Link
-              href="https://github.com/haneenmahd/linked#usage-"
-              text="Create yours"
-              highlighted
-            />
-            <Link href="https://github.com/haneenmahd/linked" text="GitHub" />
-          </div>
-        </Card>
-
-        <Card>
-          <Heading>🥁</Heading>
-          <Heading>Typeinstall</Heading>
-          <Paragraph>
-            Automates installing package's type declarations for your Typescript
-            project!
-          </Paragraph>
-
-          <div>
-            <Link
-              href="https://www.npmjs.com/package/typeinstall"
-              text="View on NPM"
-              highlighted
-            />
-            <Link
-              href="https://github.com/haneenmahd/typeinstall#installation"
-              text="Documentation"
-            />
-            <Link href="https://github.com/haneenmahd/linked" text="GitHub" />
-          </div>
-        </Card>
-
-        <Card>
-          <Heading>🤺</Heading>
-          <Heading>Unakki</Heading>
-          <Paragraph>
-            Automate the process of creating re-usable components and modules
-            😵. Have you ever been exhausted and tired of creating the
-            components and new modules in your Javascript project, over and over
-            again?. And then I'm pretty sure that you are on the who should
-            defenitely try out Unakki 🤺.
-          </Paragraph>
-
-          <div>
-            <Link
-              href="https://www.npmjs.com/package/unakki"
-              text="View on NPM"
-              highlighted
-            />
-            <Link
-              href="https://github.com/haneenmahd/unakki#why-unakki-"
-              text="Documentation"
-            />
-            <Link href="https://github.com/haneenmahd/unakki" text="GitHub" />
-          </div>
-        </Card>
-
-        <Card>
-          <Heading>🍎</Heading>
-          <Heading>Apple Colors</Heading>
-          <Paragraph>
-            An NPM Package for using colors in your User Interace with colors
-            used by <b>Apple</b>.
-          </Paragraph>
-
-          <div>
-            <Link
-              href="https://www.npmjs.com/package/apple-colors"
-              text="View on NPM"
-              highlighted
-            />
-            <Link
-              href="https://github.com/haneenmahd/apple-colors#how-to-install"
-              text="Documentation"
-            />
-            <Link
-              href="https://github.com/haneenmahd/apple-colors"
-              text="GitHub"
-            />
-          </div>
-        </Card>
-
-        <MoreProjectsCard>
-          <Heading>And I have created many more projects....</Heading>
-          <SubHeading>
-            View my projects on GitHub, Dribbble, Behance and more...
-          </SubHeading>
-
-          <Links />
-        </MoreProjectsCard>
-      </Grid>
-
-      <HireMeButton to="/hire-me">
-        Hire Me for your next project <ArrowRight size={15} />
-      </HireMeButton>
+        <ProjectCard>
+          <ProjectTitle>🤺 Unakki</ProjectTitle>
+          <ProjectDescription>
+            Simple and lightweight project management CLI tool
+          </ProjectDescription>
+        </ProjectCard>
+      </SubContainer>
     </Container>
   )
 }
