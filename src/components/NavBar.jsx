@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link as NativeLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Container = styled.header`
@@ -28,7 +29,7 @@ const Nav = styled.nav`
   }
 `
 
-const Link = styled.a`
+const Link = styled(NativeLink)`
   margin: 0 0.2rem;
   padding: 0.5rem;
   color: #fff;
@@ -54,14 +55,11 @@ export default function NavBar() {
   return (
     <Container>
       <Nav>
-        <Link tabIndex={1} href="/">
+        <Link tabIndex={1} to="/work">
           Work
         </Link>
-        <Link tabIndex={2} href="/">
+        <Link tabIndex={2} to="/contact">
           Contact
-        </Link>
-        <Link tabIndex={3} href="/">
-          Hire
         </Link>
       </Nav>
     </Container>
