@@ -13,12 +13,10 @@ import styled from 'styled-components'
 import theme from './theme'
 import Work from './pages/Work'
 import HireMe from './pages/HireMe'
-import Footer from './components/Footer'
-import Menu from './components/Menu'
+import NavBar from './components/NavBar'
 
 function RenderingApp() {
   const location = useLocation()
-  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -30,12 +28,9 @@ function RenderingApp() {
         backgroundColor: theme.light.mainBg,
       }}
     >
-      <Menu open={menuOpen} setOpen={setMenuOpen} />
-
+      <NavBar />
       {/* React Router renderings */}
-      <Outlet context={[menuOpen, setMenuOpen]} />
-
-      <Footer />
+      <Outlet />
     </div>
   )
 }

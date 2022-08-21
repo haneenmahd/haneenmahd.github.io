@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import theme from '../theme'
 import Links from './Links'
 import Image from './Image'
@@ -11,6 +11,7 @@ const MainStyle = styled.article`
   min-height: 90vh;
   max-width: 100vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: ${theme.light.textColor};
@@ -19,12 +20,13 @@ const MainStyle = styled.article`
 `
 
 const Intro = styled.div`
-  padding: 10%;
+  position: relative;
+  padding: 5%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  max-width: 850px;
+  justify-content: space-around;
+  max-width: 100vw;
 
   > * {
     margin: 15px 0;
@@ -33,7 +35,7 @@ const Intro = styled.div`
 
 const ColorfulTextAnimation = keyframes`
   0% {
-    background-position: -200px;
+    background-position: -500px;
   }
   
   50% {
@@ -41,7 +43,7 @@ const ColorfulTextAnimation = keyframes`
   }
 
   100% {
-    background-position: 200px;
+    background-position: 500px;
   }
 `
 
@@ -49,43 +51,31 @@ const ColorfulText = styled.b`
   color: transparent;
   background: linear-gradient(45deg, #c4c4c4 -30px, #222);
   background-clip: text;
-  background-position: -200px;
-  animation: ${ColorfulTextAnimation} 10s linear infinite;
+  background-position: -500px;
+  animation: ${ColorfulTextAnimation} 20s linear infinite;
   animation-direction: normal;
   animation-fill-mode: forwards;
 `
 
 const Main = () => {
-  const [showTitle, setShowTitle] = useState(false)
-
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        setShowTitle(true)
-      } else {
-        setShowTitle(false)
-      }
-    })
-  }, [])
-
   return (
     <MainStyle>
       <Intro>
         <Image
-          height="150px"
-          width="150px"
+          height="100px"
+          width="100px"
           url={Avatar}
-          alt="My Avatar"
+          alt="A photo of me"
           rounded
         />
         <LandingParagraph>
-          I'm <ColorfulText>Haneen</ColorfulText> — a developer and designer
-          based in <i>India</i>. I started off my career as a web designer, but
-          later I found out that my interest was in creating, designing, and
-          building new things independenlty. I also love reading books and
-          writing articles.
+          <ColorfulText>Haneen Mahdin</ColorfulText> is a full-stack developer
+          and designer building softwares and tools that improve our day-to-day
+          workflow. He recreates the definition of beautiful with{' '}
+          <b style={{ fontWeight: 500, fontStyle: 'oblique' }}>
+            rich accessibility, aesthetics, rich detail and functionality.
+          </b>
         </LandingParagraph>
-        <Links />
       </Intro>
     </MainStyle>
   )

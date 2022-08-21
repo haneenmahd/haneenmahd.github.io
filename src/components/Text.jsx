@@ -30,6 +30,7 @@ const LandingParagraph = styled.p`
   font-weight: 400;
   line-height: 2rem;
   color: #333;
+  max-width: 70%;
 `
 
 const Text = styled.h1`
