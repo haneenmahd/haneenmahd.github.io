@@ -4,6 +4,7 @@ import theme from '../theme'
 import Links from './Links'
 import Image from './Image'
 import { LandingParagraph, LargeHeading } from './Text'
+import Work from '../pages/Work'
 import Avatar from '../assets/img/profile_pic.jpeg'
 
 const MainStyle = styled.article`
@@ -31,6 +32,10 @@ const Intro = styled.div`
   > * {
     margin: 15px 0;
   }
+
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+  }
 `
 
 const ColorfulTextAnimation = keyframes`
@@ -57,28 +62,28 @@ const ColorfulText = styled.b`
   animation-fill-mode: forwards;
 `
 
-const Main = () => {
-  return (
-    <MainStyle>
-      <Intro>
-        <Image
-          height="100px"
-          width="100px"
-          url={Avatar}
-          alt="A photo of me"
-          rounded
-        />
-        <LandingParagraph>
-          <ColorfulText>Haneen Mahdin</ColorfulText> is a full-stack developer
-          and designer building softwares and tools that improve our day-to-day
-          workflow. He recreates the definition of beautiful with{' '}
-          <b style={{ fontWeight: 500, fontStyle: 'oblique' }}>
-            rich accessibility, aesthetics, rich detail and functionality.
-          </b>
-        </LandingParagraph>
-      </Intro>
-    </MainStyle>
-  )
-}
+const Main = () => (
+  <MainStyle>
+    <Intro>
+      <Image
+        height="200px"
+        width="200px"
+        url={Avatar}
+        alt="A photo of me"
+        blob
+      />
+      <LandingParagraph>
+        <ColorfulText>Haneen Mahdin</ColorfulText> is a full-stack developer and
+        designer building softwares and tools that improve our day-to-day
+        workflow. He recreates the definition of beautiful with{' '}
+        <b style={{ fontWeight: 500, fontStyle: 'oblique' }}>
+          rich accessibility, aesthetics, rich detail and functionality.
+        </b>
+      </LandingParagraph>
+    </Intro>
+
+    <Work />
+  </MainStyle>
+)
 
 export default Main

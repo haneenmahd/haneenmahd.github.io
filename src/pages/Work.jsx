@@ -6,7 +6,7 @@ import { Heading } from '../components/Text'
 const SubContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0.5rem 0;
+  margin: 0.1rem 0;
 `
 
 const Contribution = styled.div`
@@ -54,7 +54,7 @@ const ProjectDescription = styled.p`
 
 export default function Work() {
   return (
-    <Container>
+    <Container id="work">
       <SubContainer>
         <Heading>💗 Contribution activity</Heading>
         <Contribution>
@@ -67,7 +67,7 @@ export default function Work() {
         </Contribution>
 
         <Contribution>
-          🏗 Shipped a Javascript project management system
+          🏗 Shipped a Javascript project management system - Unakki
         </Contribution>
         <Contribution>
           🤓 Updated some docs & fixed an issue in the Vercel repository

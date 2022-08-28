@@ -29,7 +29,7 @@ const Nav = styled.nav`
   }
 `
 
-const Link = styled(NativeLink)`
+const Link = styled.a`
   margin: 0 0.2rem;
   padding: 0.5rem;
   color: #fff;
@@ -55,10 +55,10 @@ export default function NavBar() {
   return (
     <Container>
       <Nav>
-        <Link tabIndex={1} to="/work">
+        <Link tabIndex={1} href="#work">
           Work
         </Link>
-        <Link tabIndex={2} to="/contact">
+        <Link tabIndex={2} href="#contact">
           Contact
         </Link>
       </Nav>
