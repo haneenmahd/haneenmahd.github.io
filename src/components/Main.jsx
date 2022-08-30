@@ -62,28 +62,60 @@ const ColorfulText = styled.b`
   animation-fill-mode: forwards;
 `
 
-const Main = () => (
-  <MainStyle>
-    <Intro>
-      <Image
-        height="200px"
-        width="200px"
-        url={Avatar}
-        alt="A photo of me"
-        blob
-      />
-      <LandingParagraph>
-        <ColorfulText>Haneen Mahdin</ColorfulText> is a full-stack developer and
-        designer building softwares and tools that improve our day-to-day
-        workflow. He recreates the definition of beautiful with{' '}
-        <b style={{ fontWeight: 500, fontStyle: 'oblique' }}>
-          rich accessibility, aesthetics, rich detail and functionality.
-        </b>
-      </LandingParagraph>
-    </Intro>
+const MaskedContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transition: 300ms ease;
 
-    <Work />
-  </MainStyle>
-)
+  ${(p) =>
+    p.focused
+      ? css`
+          filter: grayscale(0);
+        `
+      : css`
+          filter: grayscale(0.6);
+        `}
+`
+
+const Main = () => {
+  const [isWorkFocused, setWorkFocus] = useState(false)
+
+  useEffect(() => {
+    window.onscroll = (e) => {
+      if (window.scrollY > 210 && window.scrollY < 700) {
+        setWorkFocus(true)
+      } else {
+        setWorkFocus(false)
+      }
+    }
+  }, [])
+
+  return (
+    <MainStyle>
+      <Intro>
+        <Image
+          height="200px"
+          width="200px"
+          url={Avatar}
+          alt="A photo of me"
+          blob
+        />
+        <LandingParagraph>
+          <ColorfulText>Haneen Mahdin</ColorfulText> is a full-stack developer
+          and designer building softwares and tools that improve our day-to-day
+          workflow. He recreates the definition of beautiful with{' '}
+          <b style={{ fontWeight: 500, fontStyle: 'oblique' }}>
+            rich accessibility, aesthetics, rich detail and functionality.
+          </b>
+        </LandingParagraph>
+      </Intro>
+
+      <MaskedContainer focused={isWorkFocused}>
+        <Work />
+      </MaskedContainer>
+    </MainStyle>
+  )
+}
 
 export default Main
