@@ -12,15 +12,17 @@ import {
 import theme from '../theme'
 
 const LinksStyle = styled.aside`
-  padding: 10px 0;
+  padding: 10px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 `
 
 const Link = styled.a`
   ${CommonLink}
   font-size: 24px;
-  margin: 0;
+  margin: 0 10px;
   height: 30px;
   width: 30px;
   margin-right: 4%;
@@ -54,6 +56,30 @@ const Link = styled.a`
 export default function Links(props) {
   return (
     <LinksStyle>
+      <Link
+        name="Email Me"
+        target="_blank"
+        href="mailto:haneenmahdin@gmail.com"
+      >
+        <Mail />
+      </Link>
+
+      <Link
+        name="twitter"
+        target="_blank"
+        href="https://twitter.com/HaneenMahdin"
+      >
+        <Twitter />
+      </Link>
+
+      <Link
+        name="instagram"
+        target="_blank"
+        href="https://instagram.com/haneenmahdin"
+      >
+        <Instagram />
+      </Link>
+
       <Link name="github" target="_blank" href="https://github.com/haneenmahd">
         <GitHub />
       </Link>
@@ -63,34 +89,6 @@ export default function Links(props) {
         href="https://dribbble.com/haneenmahdin"
       >
         <Dribbble />
-      </Link>
-      <Link
-        name="instagram"
-        target="_blank"
-        href="https://instagram.com/haneenmahdin"
-      >
-        <Instagram />
-      </Link>
-      <Link
-        name="twitter"
-        target="_blank"
-        href="https://twitter.com/HaneenMahdin"
-      >
-        <Twitter />
-      </Link>
-      <Link
-        name="Email Me"
-        target="_blank"
-        href="mailto:haneenmahdin@gmail.com"
-      >
-        <Mail />
-      </Link>
-      <Link
-        name="Behance"
-        target="_blank"
-        href="https://www.behance.net/haneenmahd"
-      >
-        Bè
       </Link>
     </LinksStyle>
   )

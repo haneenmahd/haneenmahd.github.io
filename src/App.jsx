@@ -2,19 +2,15 @@ import styled from 'styled-components'
 import Main from './components/Main'
 import theme from './theme'
 import FadeInAnimation from './animations/FadeIn'
+import Links from './components/Links'
 
 const AppStyle = styled.div`
-  min-height: 100vh;
   max-width: 100%;
   background-color: ${theme.light.mainBg};
   color: ${theme.light.textColor};
 
-  &:first-child {
-    padding-top: 50px;
-  }
-
   > * {
-    animation: ${FadeInAnimation} 0.8s;
+    animation: ${FadeInAnimation} 1s;
   }
 `
 

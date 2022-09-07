@@ -1,59 +1,67 @@
 import React from 'react'
+import { Link as NativeLink } from 'react-router-dom'
 import styled from 'styled-components'
-import Logo from '../assets/jsx/Logo'
-import ActiveRipple from './ActiveRipple'
-import MenuHam from './MenuHam'
-import NavLink from './NavLink'
 
-const Container = styled.nav`
-  height: 100px;
-  width: 100%;
+const Container = styled.header`
+  max-width: 100vw;
+  padding: 1rem;
   display: flex;
   align-items: center;
-  padding: 0;
-  z-index: 1000;
+  justify-content: flex-end;
 
-  /* The max width should always match the min width used by menu to stop displaying. */
-  @media screen and (max-width: 580px) {
-    justify-content: space-between;
+  @media screen and (max-width: 560px) {
+    justify-content: center;
   }
 `
 
-const Links = styled.div`
-  width: 100%;
+const Nav = styled.nav`
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.5rem;
+  background-color: #111;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 26px 0 #1919191a;
 
-  /* The max width should always match the min width used by menu to stop displaying. */
-  @media screen and (max-width: 580px) {
-    display: none;
+  @media screen and (max-width: 560px) {
+    justify-content: space-around;
+    width: 90%;
   }
 `
 
-const HireMeWrapper = styled.span`
-  margin: 0 15px;
-  /* Adjust the spacing */
-  * {
-    margin-right: 5px;
+const Link = styled.a`
+  margin: 0 0.2rem;
+  padding: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: 100ms ease;
+
+  &:hover {
+    background-color: #555;
+  }
+
+  &:focus {
+    background-color: #555;
+    outline: none;
+  }
+
+  @media screen and (max-width: 560px) {
+    padding: 0.5rem;
   }
 `
 
-const NavBar = ({ setMenuOpen }) => {
+export default function NavBar() {
   return (
     <Container>
-      <Logo />
-
-      <Links>
-        <NavLink to="/work" text="Work" />
-        <NavLink to="/blog" text="Blog" />
-        <NavLink to="/store" text="Store" />
-        <HireMeWrapper>
-          <ActiveRipple />
-          <NavLink to="/hire-me" text="Hire me" />
-        </HireMeWrapper>
-      </Links>
-
-      <MenuHam setMenuOpen={setMenuOpen} />
+      <Nav>
+        <Link tabIndex={1} href="#work">
+          Work
+        </Link>
+        <Link tabIndex={2} href="#contact">
+          Contact
+        </Link>
+      </Nav>
     </Container>
   )
 }
-
-export default NavBar

@@ -19,6 +19,7 @@ const CustomisedParagraph = styled(Paragraph)`
 export default function Footer() {
   return (
     <FooterStyle>
+      Contact me: cans_refits.0h@icloud.com
       <CustomisedParagraph>
         © 2022 Haneen Mahdin. All Rights Reserved.
       </CustomisedParagraph>

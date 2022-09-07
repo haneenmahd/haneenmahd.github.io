@@ -1,45 +1,88 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useEffect, useState } from 'react'
+import styled, { css, keyframes } from 'styled-components'
 import theme from '../theme'
 import Links from './Links'
 import Image from './Image'
-import { LandingParagraph } from './Text'
-import Avatar from '../assets/img/profile_pic.jpg'
+import { LandingParagraph, LargeHeading } from './Text'
+import Avatar from '../assets/img/profile_pic.jpeg'
 
 const MainStyle = styled.article`
   position: relative;
   min-height: 90vh;
   max-width: 100vw;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: ${theme.light.textColor};
   z-index: 3;
   overflow: hidden;
 `
 
 const Intro = styled.div`
-  padding: 10%;
+  position: relative;
+  padding: 5%;
   display: flex;
-  flex-direction: column;
-  max-width: 850px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 100vw;
 
   > * {
-    margin: 15px 0;
+    margin: 15px;
   }
+
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+  }
+`
+
+const ColorfulTextAnimation = keyframes`
+  0% {
+    background-position: -500px;
+  }
+  
+  50% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 500px;
+  }
+`
+
+const ColorfulText = styled.b`
+  color: transparent;
+  background: linear-gradient(45deg, #c4c4c4 -30px, #222);
+  background-clip: text;
+  background-position: -500px;
+  animation: ${ColorfulTextAnimation} 20s linear infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
 `
 
 const Main = () => {
   return (
     <MainStyle>
       <Intro>
-        <Image src={Avatar} alt="My Avatar" width="20vmin" rounded />
+        <Image
+          height="200px"
+          width="200px"
+          url={Avatar}
+          alt="A photo of me"
+          blob
+        />
         <LandingParagraph>
-          I'm Haneen — a developer and designer based in India. I started off my
-          career as a web designer, but later I found out that my interest was
-          in creating, designing, and building new things independenlty. I also
-          love reading books and writing articles.
+          <ColorfulText>Haneen Mahdin</ColorfulText> is a full-stack developer
+          and designer building softwares and tools that improve our day-to-day
+          workflow. He recreates the definition of beautiful with{' '}
+          <b style={{ fontWeight: 500, fontStyle: 'oblique' }}>
+            rich accessibility, aesthetics, rich detail and functionality.
+          </b>
         </LandingParagraph>
-        <Links />
       </Intro>
+
+      <Links />
     </MainStyle>
   )
 }
