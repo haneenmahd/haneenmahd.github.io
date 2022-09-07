@@ -13,6 +13,7 @@ import styled from 'styled-components'
 import theme from './theme'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
+import QuickMenu from './components/QuickMenu'
 
 function RenderingApp() {
   const location = useLocation()
@@ -30,6 +31,8 @@ function RenderingApp() {
     >
       {/* <NavBar /> Display only after the work page is completed. */}
       {/* React Router renderings */}
+
+      <QuickMenu />
       <Outlet />
     </div>
   )
