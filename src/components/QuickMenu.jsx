@@ -44,11 +44,11 @@ const MenuButton = styled.button`
 
 const Menu = styled.div`
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 2%;
+  left: 3%;
   height: 100vh;
   width: 100vw;
+  transform: translate(-50%, -50%);
   background: #166edc;
   opacity: 0;
   scale: 0;
@@ -62,6 +62,8 @@ const Menu = styled.div`
       opacity: 1;
       scale: 1;
       border-radius: 0%;
+      top: 50%;
+      left: 50%;
     `}
 `
 
