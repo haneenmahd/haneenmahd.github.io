@@ -11,8 +11,8 @@ import {
 } from 'react-router-dom'
 import styled from 'styled-components'
 import theme from './theme'
-import Work from './pages/Work'
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 function RenderingApp() {
   const location = useLocation()
@@ -25,9 +25,10 @@ function RenderingApp() {
     <div
       style={{
         backgroundColor: theme.light.mainBg,
+        minHeight: '100vh'
       }}
     >
-      <NavBar />
+      {/* <NavBar /> Display only after the work page is completed. */}
       {/* React Router renderings */}
       <Outlet />
     </div>
@@ -40,7 +41,6 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<RenderingApp />}>
           <Route index element={<App />} />
-          <Route path="work" element={<Work />} />
         </Route>
       </Routes>
     </BrowserRouter>

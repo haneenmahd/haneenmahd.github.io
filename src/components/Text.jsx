@@ -31,6 +31,10 @@ const LandingParagraph = styled.p`
   line-height: 2rem;
   color: #333;
   max-width: 70%;
+
+  @media screen and (max-width: 550px) {
+    max-width: 90%;
+  }
 `
 
 const Text = styled.h1`

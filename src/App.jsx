@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Main from './components/Main'
 import theme from './theme'
 import FadeInAnimation from './animations/FadeIn'
+import Links from './components/Links'
 
 const AppStyle = styled.div`
   max-width: 100%;

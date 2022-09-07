@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Container from '../components/Container'
-import { Heading } from '../components/Text'
+import Container from './Container'
+import { Heading } from './Text'
 
 const SubContainer = styled.div`
   display: flex;
@@ -29,16 +29,27 @@ const Contribution = styled.div`
   }
 `
 
+const ProjectGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`
+
 const ProjectCard = styled.div`
   margin: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
   width: fit-content;
+  background-color: #fff;
   border: 1px solid #c4c4c4;
   transition: 100ms ease;
 
   &:hover {
-    background: #c4c4c430;
+    background: #e5e5e52f;
   }
 `
 
@@ -76,19 +87,35 @@ export default function Work() {
 
       <SubContainer>
         <Heading>🤟 Open source projects</Heading>
-        <ProjectCard>
-          <ProjectTitle>🪩 Dapper</ProjectTitle>
-          <ProjectDescription>
-            Blazing fast & powerful state management library
-          </ProjectDescription>
-        </ProjectCard>
+        <ProjectGrid>
+          <ProjectCard>
+            <ProjectTitle>🪩 Dapper</ProjectTitle>
+            <ProjectDescription>
+              Blazing fast & powerful state management library
+            </ProjectDescription>
+          </ProjectCard>
 
-        <ProjectCard>
-          <ProjectTitle>🤺 Unakki</ProjectTitle>
-          <ProjectDescription>
-            Simple and lightweight project management CLI tool
-          </ProjectDescription>
-        </ProjectCard>
+          <ProjectCard>
+            <ProjectTitle>🤺 Unakki</ProjectTitle>
+            <ProjectDescription>
+              Simple and lightweight project management CLI tool
+            </ProjectDescription>
+          </ProjectCard>
+
+          <ProjectCard>
+            <ProjectTitle>🤏 MetaD</ProjectTitle>
+            <ProjectDescription>
+              CLI tool to get the information about a npm package
+            </ProjectDescription>
+          </ProjectCard>
+
+          <ProjectCard>
+            <ProjectTitle>🎃 TypeInstall</ProjectTitle>
+            <ProjectDescription>
+              Helper tool to Automatically installs types for your typescript project
+            </ProjectDescription>
+          </ProjectCard>
+        </ProjectGrid>
       </SubContainer>
     </Container>
   )

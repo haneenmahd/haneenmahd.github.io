@@ -4,7 +4,6 @@ import theme from '../theme'
 import Links from './Links'
 import Image from './Image'
 import { LandingParagraph, LargeHeading } from './Text'
-import Work from '../pages/Work'
 import Avatar from '../assets/img/profile_pic.jpeg'
 
 const MainStyle = styled.article`
@@ -30,7 +29,7 @@ const Intro = styled.div`
   max-width: 100vw;
 
   > * {
-    margin: 15px 0;
+    margin: 15px;
   }
 
   @media screen and (max-width: 550px) {
@@ -62,35 +61,7 @@ const ColorfulText = styled.b`
   animation-fill-mode: forwards;
 `
 
-const MaskedContainer = styled.section`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  transition: 300ms ease;
-
-  ${(p) =>
-    p.focused
-      ? css`
-          filter: grayscale(0);
-        `
-      : css`
-          filter: grayscale(0.6);
-        `}
-`
-
 const Main = () => {
-  const [isWorkFocused, setWorkFocus] = useState(false)
-
-  useEffect(() => {
-    window.onscroll = (e) => {
-      if (window.scrollY > 210 && window.scrollY < 700) {
-        setWorkFocus(true)
-      } else {
-        setWorkFocus(false)
-      }
-    }
-  }, [])
-
   return (
     <MainStyle>
       <Intro>
@@ -111,9 +82,7 @@ const Main = () => {
         </LandingParagraph>
       </Intro>
 
-      <MaskedContainer focused={isWorkFocused}>
-        <Work />
-      </MaskedContainer>
+      <Links />
     </MainStyle>
   )
 }
