@@ -18,6 +18,7 @@
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
     "babel-plugin-styled-components": "^2.0.7",
+    "browser-detect": "^0.2.28",
     "gatsby": "^5.8.1",
     "gatsby-plugin-image": "^3.8.0",
     "gatsby-plugin-manifest": "^5.8.0",
@@ -35,6 +36,7 @@
     "@types/node": "^18.15.8",
     "@types/react": "^18.0.29",
     "@types/react-dom": "^18.0.11",
+    "@types/styled-components": "^5.1.26",
     "typescript": "^5.0.2"
   }
 }
