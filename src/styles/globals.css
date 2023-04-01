@@ -2,3 +2,7 @@
   font-family: "Inter", sans-serif;
   font-feature-settings: "salt" on;
 }
+
+a {
+  text-decoration: none;
+}
