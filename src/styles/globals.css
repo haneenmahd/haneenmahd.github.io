@@ -1,5 +1,7 @@
+@import url("https://rsms.me/inter/inter.css");
+
 * {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-feature-settings: "salt" on;
 }
 
