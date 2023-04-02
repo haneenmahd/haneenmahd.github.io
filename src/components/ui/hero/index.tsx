@@ -13,6 +13,7 @@ const Wrapper = styled.main`
 
     @media screen and (max-width: 1024px) {
         gap: 30px;
+        width: 90%;
         margin: 0 auto;
     }
 
