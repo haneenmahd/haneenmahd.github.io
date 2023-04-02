@@ -23,7 +23,7 @@ const Link = styled.a.attrs({
 })`
     color: ${colors.black};
     font-weight: 400;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 40px;
     transition: opacity 200ms;
 
