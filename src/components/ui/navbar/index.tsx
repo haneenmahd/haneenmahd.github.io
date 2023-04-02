@@ -12,6 +12,10 @@ const Wrapper = styled.nav`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 600px) {
+        padding: 0 1.5rem;
+    }
 `
 
 const Block = styled.div`
@@ -26,6 +30,10 @@ const Block = styled.div`
         line-height: 22px; 
         letter-spacing: 0em; 
         text-align: left;
+    }
+
+    @media screen and (max-width: 600px) {
+        gap: 8px;
     }
 `
 
@@ -57,6 +65,10 @@ const LinkBlock = styled.div`
         &:hover {
             color: ${colors.secondaryGray};
         }
+    }
+
+    @media screen and (max-width: 600px) {
+        display: none;
     }
 `
 
