@@ -8,7 +8,7 @@ const Wrapper = styled.main`
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     gap: 60px;
 
     @media screen and (max-width: 1024px) {
