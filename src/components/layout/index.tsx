@@ -1,6 +1,5 @@
 import * as React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 import NavBar from "../ui/navbar"
 
 const Wrapper = styled.div`
