@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Instagram",
+        "handle": "haneenmahdin",
+        "url": "https://www.instagram.com/haneenmahdin/"
+    },
+    {
+        "name": "Twitter",
+        "handle": "HaneenMahdin",
+        "url": "https://twitter.com/HaneenMahdin"
+    },
+    {
+        "name": "Mail",
+        "handle": "haneenmahdin@gmail.com",
+        "url": "mailto:haneenmahdin@gmail.com"
+    }
+]
