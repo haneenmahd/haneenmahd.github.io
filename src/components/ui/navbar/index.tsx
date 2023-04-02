@@ -15,6 +15,7 @@ const Wrapper = styled.nav`
     z-index: 2;
 
     @media screen and (max-width: 1024px) {
+        width: 90%;
         margin: 0 auto;
     }
 
