@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import NavBar from "../ui/navbar"
 
 const Wrapper = styled.div`
+    position: relative;
+    height: 100%;
     padding: 0 3.5rem;
     padding-top: 29px;
     max-width: 100vw;
@@ -23,7 +25,7 @@ interface LayoutProps {
     children: ReactChildren;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <Wrapper>
             <NavBar />
