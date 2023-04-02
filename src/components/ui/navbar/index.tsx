@@ -5,13 +5,14 @@ import colors from "../../styles/ColorStyles"
 import Icon from "../../../images/icon.png"
 
 const Wrapper = styled.nav`
-    height: 22px;
-    width: 90%;
+    height: 40px;
+    width: 100%;
     display: flex;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 
     @media screen and (max-width: 1024px) {
         margin: 0 auto;
