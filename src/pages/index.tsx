@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import { H1, H2, P } from "../components/styles/TextStyles"
 import Blob from "../components/blob"
 import Hero from "../components/ui/hero"
+import Projects from "../components/ui/projects/Projects"
 
 const Wrapper = styled.div`
   height: calc(100vh - 100px);
@@ -17,11 +18,12 @@ const Wrapper = styled.div`
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
+      <Blob />
       <Wrapper>
-        <Blob />
 
         <Hero />
       </Wrapper>
+      <Projects />
     </Layout>
   )
 }
