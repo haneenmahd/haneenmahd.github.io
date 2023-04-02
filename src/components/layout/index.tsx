@@ -3,7 +3,6 @@ import styled from "styled-components"
 import NavBar from "../ui/navbar"
 
 const Wrapper = styled.div`
-    position: relative;
     height: 100%;
     padding: 0 3.5rem;
     padding-top: 29px;
