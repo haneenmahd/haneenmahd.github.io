@@ -1,5 +1,5 @@
 import * as React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { H2, P, PageTitle } from "../../styles/TextStyles"
 import Thumbnail from "../../../images/projects/thumbnail-1.png"
 import ColorStyles from "../../styles/ColorStyles"
@@ -66,6 +66,36 @@ const GridItemTitle = styled.div`
 `
 
 const GridItemExtra = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+`
+
+const GridItemPrice = styled.div<{
+    free?: boolean
+}>`
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 0 5px;
+    border-radius: 10px;
+    
+    ${p => p.free ? css`
+        color: ${ColorStyles.blue};
+        background-color: ${ColorStyles.blue}30;
+    ` : css`
+        color: ${ColorStyles.magenta};
+        background-color: ${ColorStyles.magenta}30;
+    `}
+
+    @media screen and (max-width: 600px)  {
+        font-size: 15px;
+        line-height: 25px;
+    }
+`
+
+const GridItemYear = styled.div`
     font-weight: 400;
     font-size: 18px;
     line-height: 35px;
@@ -81,7 +111,7 @@ interface GridData {
     title: string
     description: string
     year?: number
-    price?: string
+    price?: number
 }
 
 interface GridProps {
@@ -92,18 +122,34 @@ interface GridProps {
 const Grid: React.FC<GridProps> = ({
     title, data
 }) => {
+    let sortedData = data.sort((a, b) => {
+        if (a.year && b.year) {
+            return b.year - a.year
+        }
+
+        return 0
+    })
+
     return (
         <Wrapper>
             <PageTitle>{title}</PageTitle>
 
             <GridWrapper>
-                {data.map((item) => (
+                {sortedData.map((item) => (
                     <GridItem>
                         <GridItemImage src={Thumbnail} />
                         <GridContent>
                             <GridItemTitle>
                                 <H2>{item.title}</H2>
-                                <GridItemExtra>✶ {item.year}</GridItemExtra>
+                                <GridItemExtra>
+                                    {item.price ?
+                                        <GridItemPrice>${item.price}</GridItemPrice> :
+                                        item.price === 0 ?
+                                            <GridItemPrice free>Free</GridItemPrice> :
+                                            null}
+
+                                    <GridItemYear>✶ {item.year}</GridItemYear>
+                                </GridItemExtra>
                             </GridItemTitle>
                             <P>{item.description}</P>
                         </GridContent>
