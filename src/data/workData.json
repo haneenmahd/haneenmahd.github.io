@@ -2,21 +2,21 @@
     {
         "title": "Health Profile",
         "description": "Manage and track health profiles of individuals in a minimal and clean dashboard",
-        "year": "2022"
+        "year": 2022
     },
     {
         "title": "Noty",
         "description": "Simple and lightweight note-taking",
-        "year": "2021"
+        "year": 2021
     },
     {
         "title": "TicTacGo",
         "description": "Online multiplayer tic tac toe game",
-        "year": "2023"
+        "year": 2023
     },
     {
         "title": "Portfolio",
         "description": "Handcrafted my own porfolio from scratch",
-        "year": "2022"
+        "year": 2022
     }
 ]

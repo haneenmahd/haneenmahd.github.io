@@ -80,7 +80,7 @@ const GridItemExtra = styled.div`
 interface GridData {
     title: string
     description: string
-    year?: string
+    year?: number
     price?: string
 }
 
