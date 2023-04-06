@@ -1,0 +1,63 @@
+[
+    {
+        "name": "Shop",
+        "route": "/shop",
+        "external": false,
+        "links": [
+            {
+                "name": "Books",
+                "route": "/book"
+            },
+            {
+                "name": "UI Kits",
+                "route": "/ui-kits"
+            },
+            {
+                "name": "Notion Templates",
+                "route": "/notion-templates"
+            },
+            {
+                "name": "Wallpapers",
+                "route": "/wallpapers"
+            }
+        ]
+    },
+    {
+        "name": "Connect",
+        "route": "",
+        "external": true,
+        "links": [
+            {
+                "name": "LinkedIn",
+                "route": "/book"
+            },
+            {
+                "name": "Instagram",
+                "route": "/ui-kits"
+            },
+            {
+                "name": "Twitter",
+                "route": "/notion-templates"
+            },
+            {
+                "name": "GitHub",
+                "route": "/wallpapers"
+            },
+            {
+                "name": "Dribbble",
+                "route": "/wallpapers"
+            }
+        ]
+    },
+    {
+        "name": "Contact",
+        "route": "/contact",
+        "external": false,
+        "links": [
+            {
+                "name": "Collaborate",
+                "route": "/"
+            }
+        ]
+    }
+]

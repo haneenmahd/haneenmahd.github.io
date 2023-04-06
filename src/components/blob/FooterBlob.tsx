@@ -6,8 +6,8 @@ const Wrapper = styled.img.attrs({
     draggable: false
 })`
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 0;
+    left: -200px;
     width: auto;
     max-height: 100%;
     z-index: 0;

@@ -54,10 +54,10 @@ const TextInfo = styled.div`
 const Image = styled.img`
     height: auto;
     width: 100%;
-    border: 1px solid #E0E0E0;
+    border: 1px solid ${ColorStyles.tertiaryGray};
     filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.1));
     border-radius: 15px;
-    border: 1px solid #E0E0E0;
+    border: 1px solid ${ColorStyles.tertiaryGray};
 
     @media screen and (max-width: 1024px) {
         max-width: 100%;

@@ -1,8 +1,11 @@
 import * as React from "react"
 import styled from "styled-components"
 import NavBar from "../ui/navbar"
+import Footer from "../ui/footer";
 
-const Wrapper = styled.div`
+const Wrapper = styled.div``
+
+const SpacedWrapper = styled.div`
     height: 100%;
     padding: 0 3.5rem;
     padding-top: 29px;
@@ -26,9 +29,13 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <Wrapper>
-            <NavBar />
+            <SpacedWrapper>
+                <NavBar />
 
-            {children}
+                {children}
+            </SpacedWrapper>
+
+            <Footer />
         </Wrapper>
     )
 }

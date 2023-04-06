@@ -1,8 +1,8 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import ColorStyles from "../../styles/ColorStyles"
 import Icon from "../../../images/icon.png"
+import Link from "../link"
 
 const Wrapper = styled.nav`
     height: 40px;
@@ -61,17 +61,6 @@ const LinkBlock = styled.div`
     justify-content: center;
     align-items: center;
     gap: 30px;
-
-    > a {
-        color: ${ColorStyles.black};
-        font-size: 18px;
-        font-weight: 400;
-        transition: color 200ms;
-
-        &:hover {
-            color: ${ColorStyles.secondaryGray};
-        }
-    }
 
     @media screen and (max-width: 600px) {
         display: none;
