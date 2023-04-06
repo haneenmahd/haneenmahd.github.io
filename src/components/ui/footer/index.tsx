@@ -45,10 +45,14 @@ const QuoteText = styled.h1`
 
     @media screen and (max-width: 1024px) {
         max-width: 70%;
+        font-size: 25px;
+        line-height: 50px;
     }
     
     @media screen and (max-width: 600px) {
         max-width: 100%;
+        font-size: 20px;
+        line-height: 40px;
     }
 `
 
