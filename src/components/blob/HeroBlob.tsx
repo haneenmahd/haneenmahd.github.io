@@ -2,7 +2,9 @@ import * as React from "react"
 import styled from "styled-components"
 import BlobSVG from "../../images/blobs/hero-blob.svg"
 
-const Wrapper = styled.img`
+const Wrapper = styled.img.attrs({
+    draggable: false
+})`
     max-height: 100%;
     width: 100%;
     position: absolute;

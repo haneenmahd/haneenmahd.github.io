@@ -2,35 +2,19 @@ import * as React from "react"
 import styled from "styled-components"
 import BlobSVG from "../../images/blobs/footer-blob.svg"
 
-const Wrapper = styled.img`
-    max-height: 100%;
-    width: 100%;
+const Wrapper = styled.img.attrs({
+    draggable: false
+})`
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-        z-index: -1;
-
-    @media screen and (max-width: 1024px) {
-        height: 100%;
-        width: 100%;
-    }
-
-    @media screen and (max-width: 600px) {
-        height: 100%;
-        width: 100%;
-    }
+    left: 0;
+    width: auto;
+    max-height: 100%;
 `
 
-interface FooterBlobProps {
-    stickToTop?: boolean
-    grayscale?: boolean
-}
+interface FooterBlobProps { }
 
-const FooterBlob: React.FC<FooterBlobProps> = ({
-    stickToTop,
-    grayscale
-}) => {
+const FooterBlob: React.FC<FooterBlobProps> = (props) => {
     return (
         <Wrapper src={BlobSVG} alt="Blob image rendered from SVG" />
     )
