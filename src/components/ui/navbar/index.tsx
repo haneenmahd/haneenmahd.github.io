@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import colors from "../../styles/ColorStyles"
+import ColorStyles from "../../styles/ColorStyles"
 import Icon from "../../../images/icon.png"
 
 const Wrapper = styled.nav`
@@ -63,13 +63,13 @@ const LinkBlock = styled.div`
     gap: 30px;
 
     > a {
-        color: ${colors.black};
+        color: ${ColorStyles.black};
         font-size: 18px;
         font-weight: 400;
         transition: color 200ms;
 
         &:hover {
-            color: ${colors.secondaryGray};
+            color: ${ColorStyles.secondaryGray};
         }
     }
 

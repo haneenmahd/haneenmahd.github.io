@@ -1,7 +1,5 @@
 import styled from "styled-components"
-import colors from "./ColorStyles"
-
-// NOTE: adjust line height too
+import ColorStyles from "./ColorStyles"
 
 export const PageTitle = styled.h1`
     font-weight: 600;
@@ -13,7 +11,7 @@ export const H1 = styled.h1`
     font-weight: 500;
     font-size: 35px;
     line-height: 50px;
-    color: ${colors.black};
+    color: ${ColorStyles.black};
 
     @media screen and (max-width: 1024px) {
         font-size: 30px;
@@ -30,7 +28,7 @@ export const H2 = styled.h2`
     font-weight: 400;
     font-size: 23px;
     line-height: 36px;
-    color: ${colors.black};
+    color: ${ColorStyles.black};
 
     @media screen and (max-width: 1024px) {
         font-size: 20px;
@@ -47,7 +45,7 @@ export const P = styled.p`
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
-    color: ${colors.gray};
+    color: ${ColorStyles.gray};
 
     @media screen and (max-width: 1024px) {
         font-size: 20px;

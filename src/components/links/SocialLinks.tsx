@@ -1,7 +1,7 @@
 import * as React from "react"
 import styled from "styled-components"
 import data from "../../data/socialData.json"
-import colors from "../styles/ColorStyles"
+import ColorStyles from "../styles/ColorStyles"
 
 const Wrapper = styled.div`
     display: flex;
@@ -21,14 +21,14 @@ const Link = styled.a.attrs({
     target: "_blank",
     rel: "noopener"
 })`
-    color: ${colors.black};
+    color: ${ColorStyles.black};
     font-weight: 400;
     font-size: 20px;
     line-height: 40px;
     transition: opacity 200ms;
 
     &:hover {
-        color: ${colors.gray};
+        color: ${ColorStyles.gray};
     }
 
     @media screen and (max-width: 1024px) {
