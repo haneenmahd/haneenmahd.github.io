@@ -2,7 +2,7 @@ import * as React from "react"
 import styled, { css } from "styled-components"
 import { H2, P } from "../../styles/TextStyles"
 import ColorStyles from "../../styles/ColorStyles"
-import Thumbnail from "../../../images/projects/thumbnail.jpg"
+import Thumbnail from "../../../images/projects/thumbnail-0.jpg"
 
 const Wrapper = styled.div<{
     floatRight: boolean

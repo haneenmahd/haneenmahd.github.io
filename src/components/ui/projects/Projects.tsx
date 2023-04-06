@@ -7,7 +7,8 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 100px;
-    margin: 100px 0;
+    margin-top: 150px;
+    margin-bottom: 100px;
 
     @media screen and (max-width: 1024px) {
         gap: 50px 0;

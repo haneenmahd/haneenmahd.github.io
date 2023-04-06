@@ -5,6 +5,16 @@ export const PageTitle = styled.h1`
     font-weight: 600;
     font-size: 64px;
     line-height: 77px;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 45px;
+        line-height: 56px;
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 40px;
+        line-height: 51px;
+    }
 `
 
 export const H1 = styled.h1`
@@ -12,6 +22,11 @@ export const H1 = styled.h1`
     font-size: 35px;
     line-height: 50px;
     color: ${ColorStyles.black};
+
+    @media screen and (min-width: 1600px) {
+        font-size: 45px;
+        line-height: 65px;
+    }
 
     @media screen and (max-width: 1024px) {
         font-size: 30px;
