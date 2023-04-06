@@ -60,13 +60,13 @@ const QuoteText = styled.h1`
 const LinksGrid = styled.div`
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
 
     @media screen and (max-width: 600px) {
         grid-template-columns: 1fr;
         grid-column-gap: 0;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         grid-row-gap: 30px;
     }
 `

@@ -46,17 +46,10 @@
             {
                 "name": "Dribbble",
                 "route": "/wallpapers"
-            }
-        ]
-    },
-    {
-        "name": "Contact",
-        "route": "/contact",
-        "external": false,
-        "links": [
+            },
             {
                 "name": "Collaborate",
-                "route": "/"
+                "route": "mailto:haneenmahdin@gmail.com"
             }
         ]
     }
