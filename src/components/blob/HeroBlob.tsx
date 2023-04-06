@@ -1,6 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
-import BlobSVG from "../../images/blobs/home-blob.svg"
+import BlobSVG from "../../images/blobs/hero-blob.svg"
 
 const Wrapper = styled.img`
     max-height: 100%;
@@ -9,7 +9,7 @@ const Wrapper = styled.img`
     top: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    z-index: -1;
+        z-index: -1;
 
     @media screen and (max-width: 1024px) {
         height: 100%;
@@ -22,12 +22,12 @@ const Wrapper = styled.img`
     }
 `
 
-interface BlobProps {
+interface HeroBlobProps {
     stickToTop?: boolean
     grayscale?: boolean
 }
 
-const Blob: React.FC<BlobProps> = ({
+const HeroBlob: React.FC<HeroBlobProps> = ({
     stickToTop,
     grayscale
 }) => {
@@ -36,4 +36,4 @@ const Blob: React.FC<BlobProps> = ({
     )
 }
 
-export default Blob
+export default HeroBlob
