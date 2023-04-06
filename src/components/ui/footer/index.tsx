@@ -110,7 +110,7 @@ const Footer: React.FC<FooterProps> = (props) => {
 
             <ContentWrapper>
                 <QuoteText>
-                    I've never designed something so stupidly useful in my life
+                    Beautiful design is good but user centered design is excellent!
                 </QuoteText>
 
                 <LinksGrid>
