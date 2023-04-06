@@ -11,6 +11,11 @@ const Wrapper = styled.img.attrs({
     width: auto;
     max-height: 100%;
     z-index: 0;
+
+    @media screen and (max-width: 600px) {
+        top: 0;
+        transform: rotate(180deg);
+    }
 `
 
 interface FooterBlobProps { }

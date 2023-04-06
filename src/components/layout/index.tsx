@@ -37,7 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </SpacedWrapper>
 
             <GetInTouch />
-            {/* <Footer /> */}
+            <Footer />
         </Wrapper>
     )
 }

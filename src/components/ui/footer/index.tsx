@@ -12,6 +12,7 @@ const Wrapper = styled.footer`
     padding: 40px;
     background: ${ColorStyles.tertiaryGray}50;
     border-top: 1px solid ${ColorStyles.tertiaryGray};
+    overflow: hidden;
 `
 
 const ContentWrapper = styled.div`
@@ -22,6 +23,11 @@ const ContentWrapper = styled.div`
     align-items: center;
     z-index: 1;
     gap: 2rem;
+
+    @media screen and (max-width: 1024px) {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 `
 
 const QuoteText = styled.h1`
@@ -36,6 +42,14 @@ const QuoteText = styled.h1`
     &::after {
         content: "”";
     }
+
+    @media screen and (max-width: 1024px) {
+        max-width: 70%;
+    }
+    
+    @media screen and (max-width: 600px) {
+        max-width: 100%;
+    }
 `
 
 const LinksGrid = styled.div`
@@ -43,6 +57,13 @@ const LinksGrid = styled.div`
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 20px;
+
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-row-gap: 30px;
+    }
 `
 
 const LinksCol = styled.div`
@@ -51,6 +72,10 @@ const LinksCol = styled.div`
     align-items: flex-start;
     padding: 1rem 1rem;
     gap: 15px;
+
+    @media screen and (max-width: 1024px) {
+        padding: 0;
+    }
 `
 
 const LinksColTitle = styled.h4`
