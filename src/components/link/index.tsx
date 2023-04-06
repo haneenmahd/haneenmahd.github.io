@@ -27,15 +27,17 @@ const LinkStyle = styled(GatsbyLink)`
 interface LinkProps {
     to: string
     target?: "_blank" | "_self"
+    noActive?: boolean
     children: ReactChildren
 }
 
 const Link: React.FC<LinkProps> = ({
     to,
     target,
+    noActive,
     children
 }) => (
-    <LinkStyle to={to} target={target} activeClassName="is-active">
+    <LinkStyle to={to} target={target} activeClassName={noActive ? "" : "is-active"}>
         {children}
     </LinkStyle>
 )

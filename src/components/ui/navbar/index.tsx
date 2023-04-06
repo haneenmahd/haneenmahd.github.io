@@ -75,7 +75,9 @@ const NavBar: React.FC<NavBarProps> = ({ }) => {
     return (
         <Wrapper>
             <Block>
-                <Link to="/"><Logo src={Icon} alt="Logo" /></Link>
+                <Link to="/" noActive>
+                    <Logo src={Icon} alt="Logo" />
+                </Link>
                 <div>Haneen Mahdin</div>
             </Block>
 
