@@ -7,14 +7,14 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 100px;
-    margin: 200px 0;
+    margin: 100px 0;
 
     @media screen and (max-width: 1024px) {
-        gap: 80px;
+        gap: 50px 0;
     }
 
     @media screen and (max-width: 600px) {
-        gap: 50px;
+        gap: 20px 0;
     }
 `
 

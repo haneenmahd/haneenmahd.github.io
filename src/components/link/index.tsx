@@ -1,7 +1,7 @@
 import * as React from "react"
 import styled from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
-import ColorStyles from "../../styles/ColorStyles"
+import ColorStyles from "../styles/ColorStyles"
 
 const LinkStyle = styled(GatsbyLink)`
     color: ${ColorStyles.black};

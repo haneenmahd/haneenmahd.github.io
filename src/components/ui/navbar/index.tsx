@@ -2,7 +2,7 @@ import * as React from "react"
 import styled from "styled-components"
 import ColorStyles from "../../styles/ColorStyles"
 import Icon from "../../../images/icon.png"
-import Link from "../link"
+import Link from "../../link"
 
 const Wrapper = styled.nav`
     height: 40px;

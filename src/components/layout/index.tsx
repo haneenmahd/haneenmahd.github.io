@@ -2,6 +2,7 @@ import * as React from "react"
 import styled from "styled-components"
 import NavBar from "../ui/navbar"
 import Footer from "../ui/footer";
+import GetInTouch from "../ui/get-in-touch";
 
 const Wrapper = styled.div``
 
@@ -35,7 +36,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 {children}
             </SpacedWrapper>
 
-            <Footer />
+            <GetInTouch />
+            {/* <Footer /> */}
         </Wrapper>
     )
 }
