@@ -10,6 +10,7 @@ const Wrapper = styled.img.attrs({
     left: 0;
     width: auto;
     max-height: 100%;
+    z-index: 0;
 `
 
 interface FooterBlobProps { }
