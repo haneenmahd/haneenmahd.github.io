@@ -7,10 +7,20 @@ const LinkStyle = styled(GatsbyLink)`
     color: ${ColorStyles.black};
     font-size: 18px;
     font-weight: 400;
-    transition: color 200ms;
+    padding: 3px 8px;
+    transition: color 200ms, background-color 150ms;
 
     &:hover {
        color: ${ColorStyles.secondaryGray};
+    }
+
+    &.is-active {
+        background-color: ${ColorStyles.secondaryGray}30;
+        border-radius: 10px;
+    }
+
+    &.is-active:hover {
+        color: ${ColorStyles.black};
     }
 `
 
@@ -25,7 +35,7 @@ const Link: React.FC<LinkProps> = ({
     target,
     children
 }) => (
-    <LinkStyle to={to} target={target}>
+    <LinkStyle to={to} target={target} activeClassName="is-active">
         {children}
     </LinkStyle>
 )
