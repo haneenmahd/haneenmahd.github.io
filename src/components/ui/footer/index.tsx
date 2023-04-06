@@ -132,13 +132,11 @@ const Footer: React.FC<FooterProps> = (props) => {
                                 }
 
                                 return (
-                                    <>
-                                        <FooterLink
-                                            to={formRoute(link.route)}
-                                            {...linkArgs}>
-                                            {link.name}
-                                        </FooterLink>
-                                    </>
+                                    <FooterLink
+                                        to={formRoute(link.route)}
+                                        {...linkArgs}>
+                                        {link.name}
+                                    </FooterLink>
                                 )
                             })}
                         </LinksCol>
