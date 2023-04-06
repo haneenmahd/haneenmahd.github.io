@@ -19,8 +19,8 @@ const Wrapper = styled.caption`
     }
 
     @media screen and (max-width: 600px) {
-        min-height: 150px;
-        padding: 10px 15px;
+        min-height: 200px;
+        padding: 10px 20px;
     }
 `
 
@@ -31,7 +31,7 @@ const TextMediaQuery = css`
     }
 
     @media screen and (max-width: 600px) {
-        font-size: 20px;
+        font-size: 22px;
         line-height: 28px;
     }
 `
