@@ -3,7 +3,7 @@ import type { HeadFC, PageProps } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import { H1, H2, P } from "../components/styles/TextStyles"
-import Blob from "../components/blob"
+import Blob from "../components/blob/HeroBlob"
 import Hero from "../components/ui/hero"
 import Projects from "../components/ui/projects/Projects"
 
