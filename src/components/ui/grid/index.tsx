@@ -112,6 +112,7 @@ interface GridData {
     description: string
     year?: number
     price?: number
+    image: any
 }
 
 interface GridProps {
@@ -137,7 +138,7 @@ const Grid: React.FC<GridProps> = ({
             <GridWrapper>
                 {sortedData.map((item) => (
                     <GridItem>
-                        <GridItemImage src={Thumbnail} />
+                        <GridItemImage src={item.image} />
                         <GridContent>
                             <GridItemTitle>
                                 <H2>{item.title}</H2>

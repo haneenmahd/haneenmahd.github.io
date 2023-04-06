@@ -3,7 +3,7 @@ import * as React from "react"
 import styled from "styled-components"
 import Grid from "../components/ui/grid"
 import Layout from "../components/layout"
-import data from "../data/shopData.json"
+import data from "../data/shopData"
 
 const ShopPage: React.FC<PageProps> = props => {
     return (
