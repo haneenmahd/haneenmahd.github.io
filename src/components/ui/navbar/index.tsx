@@ -84,7 +84,6 @@ const NavBar: React.FC<NavBarProps> = ({ }) => {
                 <Link to="/shop">Shop</Link>
                 <Link to="/work">Work</Link>
                 <Link to="/about">About</Link>
-                <Link to="/contact">Contact</Link>
             </LinkBlock>
         </Wrapper>
     )

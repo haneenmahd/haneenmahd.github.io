@@ -19,7 +19,6 @@ const IndexPage: React.FC<PageProps> = () => {
     <Layout>
       <Blob />
       <Wrapper>
-
         <Hero />
       </Wrapper>
       <Projects />
