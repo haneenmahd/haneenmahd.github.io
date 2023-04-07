@@ -31,3 +31,14 @@ a:visited,
 a:active {
   outline: none;
 }
+
+.hidden {
+  opacity: 0;
+  transform: translate(0, 50%);
+  transition: opacity 500ms, transform 800ms;
+}
+
+.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
