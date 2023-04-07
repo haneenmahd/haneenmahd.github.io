@@ -88,10 +88,10 @@ const ProjectCard: React.FC<ProjectCard> = ({
         <Wrapper floatRight={floatRight}>
             <Info>
                 <TextInfo>
-                    <H2>{title}</H2>
-                    <P>{description}</P>
+                    <H2 className="hidden">{title}</H2>
+                    <P className="hidden">{description}</P>
                 </TextInfo>
-                <Image src={image} alt={description} />
+                <Image className="hidden" src={image} alt={description} />
             </Info>
         </Wrapper>
     )

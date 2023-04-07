@@ -50,6 +50,7 @@ const Link = styled.a`
     font-size: 40px;
     line-height: 48px;
     color: ${ColorStyles.black};
+    transition-delay: 120ms;
 
     &:hover {
         color: ${ColorStyles.secondaryGray};
@@ -65,8 +66,8 @@ interface GetInTouchProps {
 const GetInTouch: React.FC<GetInTouchProps> = props => {
     return (
         <Wrapper>
-            <Title>Let's get to know each other</Title>
-            <Link href="mailto:haneenmahdin@gmail.com">Get in touch</Link>
+            <Title className="hidden">Let's get to know each other</Title>
+            <Link className="hidden" href="mailto:haneenmahdin@gmail.com">Get in touch</Link>
         </Wrapper>
     )
 }

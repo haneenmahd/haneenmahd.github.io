@@ -41,31 +41,40 @@ const DescriptionBlock = styled.div`
     }
 `
 
+interface HeroPProps {
+    index: number
+}
+
+const HeroP = styled(P) <HeroPProps>`
+    transition-delay: ${p => p.index * 120}ms;
+`
+
 interface AboutHeroProps {
 
 }
 
 const AboutHero: React.FC<AboutHeroProps> = (props) => {
-    const newLine = <><br /><br /></>
-
     return (
         <Wrapper>
-            <H1>My name is Haneen Mahdin, I'm a <i>software developer and designer </i> working and living in India.</H1>
+            <H1 className="hidden">My name is Haneen Mahdin, I'm a <i>software developer and designer </i> working and living in India.</H1>
 
             <DescriptionBlock>
-                <P>
+                <HeroP className="hidden" index={0}>
                     Growing up in India, I was captivated by the world of computers and the internet. As an avid gamer, I couldn't help but wonder about the complex systems behind the video games I played, which ultimately led me to the exciting world of coding.
-                    {newLine}
+                </HeroP>
+                <HeroP className="hidden" index={1}>
                     Learning to code was a pivotal moment in my life, opening the doors to endless possibilities. As I built my projects, I became increasingly amazed by the power of web browsers and how they connected people across the globe. However, I quickly realized that my design and UI skills needed improvement to create more visually stunning and user-friendly interfaces. That's when I decided to hone my skills in UI/UX design.
-                    {newLine}
+                </HeroP>
+                <HeroP className="hidden" index={2}>
                     Continuing my journey, I delved deeper into backend development and mastered various cutting-edge technologies, including NextJS, MongoDB, Prisma, React Native, Expo, SwiftUI, and C/C++. Each new skill I acquired gave me an increased level of confidence to take on more challenging projects and build amazing things.
-                    {newLine}
+                </HeroP>
+                <HeroP className="hidden" index={3}>
                     In addition to coding, I spend my time reading books, writing articles, contributing to open-source projects and exploring videography.
-                </P>
+                </HeroP>
 
                 <SocialLinks />
             </DescriptionBlock>
-        </Wrapper>
+        </Wrapper >
     )
 }
 

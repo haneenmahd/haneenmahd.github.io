@@ -34,8 +34,14 @@ a:active {
 
 .hidden {
   opacity: 0;
-  transform: translate(0, 50%);
+  transform: translate(0, 20%);
   transition: opacity 500ms, transform 800ms;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
 }
 
 .show {

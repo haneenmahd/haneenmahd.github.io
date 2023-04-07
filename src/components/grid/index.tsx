@@ -50,21 +50,27 @@ const GridItem = styled.div`
     gap: 10px;
 `
 
+interface ScrollAnimationProps {
+    index: number
+}
+
 const GridItemImage = styled.img.attrs({
     loading: "lazy"
-})`
+}) <ScrollAnimationProps>`
     max-width: 100%;
     height: auto;
     border: 1px solid #E0E0E0;
     filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.1));
     border-radius: 15px;
+    transition-delay: ${p => p.index * 120}ms;
 `
 
-const GridItemTitle = styled.div`
+const GridItemTitle = styled.div<ScrollAnimationProps>`
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    transition-delay: ${p => p.index * 2 * 120}ms;
 `
 
 const GridItemExtra = styled.div`
@@ -109,6 +115,10 @@ const GridItemYear = styled.div`
     }
 `
 
+const GridItemDescription = styled(P) <ScrollAnimationProps>`
+    transition-delay: ${p => p.index * 3 * 120}ms;
+`
+
 interface GridData {
     title: string
     description: string
@@ -136,16 +146,19 @@ const Grid: React.FC<GridProps> = ({
 
     return (
         <Wrapper>
-            <PageTitle>{title}</PageTitle>
+            <PageTitle className="hidden">{title}</PageTitle>
 
             <GridWrapper>
-                {sortedData.map((item) => (
-                    <GridItem>
-                        {item.image ? <GridItemImage src={item.image} /> : null}
+                {sortedData.map((item, index) => (
+                    <GridItem key={index}>
+                        {item.image ?
+                            <GridItemImage index={index} className="hidden" src={item.image} />
+                            : null
+                        }
                         <GridContent target="_blank" href={item.url}>
-                            <GridItemTitle>
+                            <GridItemTitle className="hidden" index={index}>
                                 <H2>{item.title}</H2>
-                                <GridItemExtra>
+                                <GridItemExtra className="hidden">
                                     {item.price ?
                                         <GridItemPrice>${item.price}</GridItemPrice> :
                                         item.price === 0 ?
@@ -155,7 +168,9 @@ const Grid: React.FC<GridProps> = ({
                                     <GridItemYear>✶ {item.year}</GridItemYear>
                                 </GridItemExtra>
                             </GridItemTitle>
-                            <P>{item.description}</P>
+                            <GridItemDescription className="hidden" index={index}>
+                                {item.description}
+                            </GridItemDescription>
                         </GridContent>
                     </GridItem>
                 ))}
