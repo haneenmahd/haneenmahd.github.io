@@ -5,11 +5,10 @@ import Layout from "../components/layout"
 import AboutHero from "../components/ui/hero/AboutHero"
 
 const Wrapper = styled.div`
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   padding-top: 10rem;
 `
 

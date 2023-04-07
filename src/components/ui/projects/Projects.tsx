@@ -1,6 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
-import data from "../../../data/workData.json"
+import data from "../../../data/workData"
 import ProjectCard from "./ProjectCard"
 
 const Wrapper = styled.div`
@@ -30,7 +30,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
                 <ProjectCard
                     title={project.title}
                     description={project.description}
-                    image={require("../../../images/projects/thumbnail-0.jpg")}
+                    image={project.image}
                     year={project.year}
                     floatRight={index % 2 === 0}
                 />

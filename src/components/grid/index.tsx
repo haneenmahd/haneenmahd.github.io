@@ -50,7 +50,9 @@ const GridItem = styled.div`
     gap: 10px;
 `
 
-const GridItemImage = styled.img`
+const GridItemImage = styled.img.attrs({
+    loading: "lazy"
+})`
     max-width: 100%;
     height: auto;
     border: 1px solid #E0E0E0;
@@ -139,7 +141,7 @@ const Grid: React.FC<GridProps> = ({
             <GridWrapper>
                 {sortedData.map((item) => (
                     <GridItem>
-                        <GridItemImage src={item.image} />
+                        {item.image ? <GridItemImage src={item.image} /> : null}
                         <GridContent target="_blank" href={item.url}>
                             <GridItemTitle>
                                 <H2>{item.title}</H2>

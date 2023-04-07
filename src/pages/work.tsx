@@ -3,7 +3,7 @@ import * as React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import Grid from "../components/grid"
-import data from "../data/workData.json"
+import data from "../data/workData"
 
 const WorkPage: React.FC<PageProps> = props => {
     return (
