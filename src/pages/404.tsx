@@ -28,7 +28,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
     <main style={pageStyles}>
       <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
+        Sorry 😔, we couldn't find what you were looking for.
         <br />
         {process.env.NODE_ENV === "development" ? (
           <>
@@ -44,6 +44,6 @@ const NotFoundPage: React.FC<PageProps> = () => {
   )
 }
 
-export default NotFoundPage
+export const Head: HeadFC = () => <title>404 ✶ Haneen</title>
 
-export const Head: HeadFC = () => <title>Not found</title>
+export default NotFoundPage

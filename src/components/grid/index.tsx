@@ -123,7 +123,7 @@ interface GridData {
     title: string
     description: string
     image: any
-    url: string
+    url?: string
     year?: number
     price?: number
 }
