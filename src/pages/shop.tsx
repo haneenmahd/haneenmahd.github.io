@@ -1,7 +1,7 @@
 import { PageProps } from "gatsby"
 import * as React from "react"
 import styled from "styled-components"
-import Grid from "../components/ui/grid"
+import Grid from "../components/grid"
 import Layout from "../components/layout"
 import data from "../data/shopData"
 

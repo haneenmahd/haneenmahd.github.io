@@ -8,18 +8,17 @@ const Wrapper = styled.main`
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    max-width: 50%;
+    max-width: 70%;
     gap: 60px;
 
     @media screen and (max-width: 1024px) {
         gap: 30px;
-        width: 90%;
-        margin: 0 auto;
+        width: 100%;
+        padding: 0 40px;
     }
 
     @media screen and (max-width: 600px) {
         width: 90%;
-        flex-direction: column;
         gap: 30px;
     }
 `
@@ -47,15 +46,23 @@ interface AboutHeroProps {
 }
 
 const AboutHero: React.FC<AboutHeroProps> = (props) => {
+    const newLine = <><br /><br /></>
+
     return (
         <Wrapper>
             <H1>My name is Haneen Mahdin, I'm a <i>software developer and designer </i> working and living in India.</H1>
 
             <DescriptionBlock>
                 <P>
-                    I was born in India and self-taught software development and UI/UX design. I have worked in web development and web design.
-                    <br /><br />
+                    I was born and am living in India and self-taught software development and UI/UX design. I have worked in web development and web design.
+
+                    {newLine}
+
                     I believe the goal to grow exponentially is to be consistent.
+
+                    {newLine}
+
+
                 </P>
 
                 <SocialLinks />

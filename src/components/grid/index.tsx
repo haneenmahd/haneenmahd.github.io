@@ -1,8 +1,8 @@
 import * as React from "react"
 import styled, { css } from "styled-components"
-import { H2, P, PageTitle } from "../../styles/TextStyles"
+import { H2, P, PageTitle } from "../styles/TextStyles"
 import Thumbnail from "../../../images/projects/thumbnail-1.png"
-import ColorStyles from "../../styles/ColorStyles"
+import ColorStyles from "../styles/ColorStyles"
 
 const Wrapper = styled.div`
     display: flex;
@@ -29,7 +29,7 @@ const GridWrapper = styled.div`
     }
 `
 
-const GridContent = styled.div`
+const GridContent = styled.a`
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -110,9 +110,10 @@ const GridItemYear = styled.div`
 interface GridData {
     title: string
     description: string
+    image: any
+    url: string
     year?: number
     price?: number
-    image: any
 }
 
 interface GridProps {
@@ -139,7 +140,7 @@ const Grid: React.FC<GridProps> = ({
                 {sortedData.map((item) => (
                     <GridItem>
                         <GridItemImage src={item.image} />
-                        <GridContent>
+                        <GridContent target="_blank" href={item.url}>
                             <GridItemTitle>
                                 <H2>{item.title}</H2>
                                 <GridItemExtra>
