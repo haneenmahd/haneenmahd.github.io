@@ -3,7 +3,8 @@ import styled from "styled-components"
 import BlobSVG from "../../images/blobs/hero-blob.svg"
 
 const Wrapper = styled.img.attrs({
-    draggable: false
+    draggable: false,
+    loading: "lazy"
 })`
     max-height: 100%;
     width: 100%;

@@ -31,3 +31,20 @@ a:visited,
 a:active {
   outline: none;
 }
+
+.hidden {
+  opacity: 0;
+  transform: translate(0, 20%);
+  transition: opacity 500ms, transform 800ms;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}

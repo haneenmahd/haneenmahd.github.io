@@ -1,15 +1,14 @@
-import { PageProps } from "gatsby"
+import { HeadFC, PageProps } from "gatsby"
 import * as React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import AboutHero from "../components/ui/hero/AboutHero"
 
 const Wrapper = styled.div`
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   padding-top: 10rem;
 `
 
@@ -22,5 +21,7 @@ const AboutPage: React.FC<PageProps> = props => {
         </Layout>
     )
 }
+
+export const Head: HeadFC = () => <title>About ✶ Haneen</title>
 
 export default AboutPage

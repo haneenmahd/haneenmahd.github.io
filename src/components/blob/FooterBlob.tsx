@@ -3,7 +3,8 @@ import styled from "styled-components"
 import BlobSVG from "../../images/blobs/footer-blob.svg"
 
 const Wrapper = styled.img.attrs({
-    draggable: false
+    draggable: false,
+    loading: "lazy"
 })`
     position: absolute;
     bottom: 0;

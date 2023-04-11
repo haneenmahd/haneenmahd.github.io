@@ -17,15 +17,20 @@ const Wrapper = styled.div`
     }
 `
 
+interface LinkProps {
+    index: number
+}
+
 const Link = styled.a.attrs({
     target: "_blank",
     rel: "noopener"
-})`
+}) <LinkProps>`
     color: ${ColorStyles.black};
     font-weight: 400;
     font-size: 20px;
     line-height: 40px;
-    transition: opacity 200ms;
+    transition: opacity 400ms;
+    transition-delay: ${p => p.index * 120}ms;
 
     &:hover {
         color: ${ColorStyles.gray};
@@ -47,8 +52,12 @@ interface SocialLinksProps {
 const SocialLinks: React.FC<SocialLinksProps> = (props) => {
     return (
         <Wrapper>
-            {data.map(social => (
-                <Link href={social.url}>
+            {data.map((social, index) => (
+                <Link
+                    className="hidden"
+                    href={social.url}
+                    index={index}
+                    key={index}>
                     {social.name}
                 </Link>
             ))}

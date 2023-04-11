@@ -30,6 +30,7 @@ const DescriptionBlock = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition-delay: 120ms;
 
     @media screen and (max-width: 1024px) {
         gap: 30px;
@@ -48,9 +49,9 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = (props) => {
     return (
         <Wrapper>
-            <H1>My name is Haneen Mahdin, I'm a <i>software developer and designer </i> working and living in India.</H1>
+            <H1 className="hidden">My name is Haneen Mahdin, I'm a <i>software developer and designer </i> working and living in India.</H1>
 
-            <DescriptionBlock>
+            <DescriptionBlock className="hidden">
                 <P>I help brands to create memorable experiences through expressive design.</P>
 
                 <SocialLinks />

@@ -1,9 +1,9 @@
-import { PageProps } from "gatsby"
+import { HeadFC, PageProps } from "gatsby"
 import * as React from "react"
 import styled from "styled-components"
-import Grid from "../components/ui/grid"
+import Grid from "../components/grid"
 import Layout from "../components/layout"
-import data from "../data/shopData.json"
+import data from "../data/shopData"
 
 const ShopPage: React.FC<PageProps> = props => {
     return (
@@ -12,5 +12,8 @@ const ShopPage: React.FC<PageProps> = props => {
         </Layout>
     )
 }
+
+
+export const Head: HeadFC = () => <title>Shop ✶ Haneen</title>
 
 export default ShopPage

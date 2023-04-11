@@ -2,7 +2,6 @@ import * as React from "react"
 import styled, { css } from "styled-components"
 import { H2, P } from "../../styles/TextStyles"
 import ColorStyles from "../../styles/ColorStyles"
-import Thumbnail from "../../../images/projects/thumbnail-0.jpg"
 
 const Wrapper = styled.div<{
     floatRight: boolean
@@ -51,7 +50,9 @@ const TextInfo = styled.div`
     }
 `
 
-const Image = styled.img`
+const Image = styled.img.attrs({
+    loading: "lazy"
+})`
     height: auto;
     width: 100%;
     border: 1px solid ${ColorStyles.tertiaryGray};
@@ -87,10 +88,10 @@ const ProjectCard: React.FC<ProjectCard> = ({
         <Wrapper floatRight={floatRight}>
             <Info>
                 <TextInfo>
-                    <H2>{title}</H2>
-                    <P>{description}</P>
+                    <H2 className="hidden">{title}</H2>
+                    <P className="hidden">{description}</P>
                 </TextInfo>
-                <Image src={Thumbnail} alt={description} />
+                <Image className="hidden" src={image} alt={description} />
             </Info>
         </Wrapper>
     )

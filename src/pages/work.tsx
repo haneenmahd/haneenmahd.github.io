@@ -1,9 +1,9 @@
-import { PageProps } from "gatsby"
+import { HeadFC, PageProps } from "gatsby"
 import * as React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import Grid from "../components/ui/grid"
-import data from "../data/workData.json"
+import Grid from "../components/grid"
+import data from "../data/workData"
 
 const WorkPage: React.FC<PageProps> = props => {
     return (
@@ -12,5 +12,7 @@ const WorkPage: React.FC<PageProps> = props => {
         </Layout>
     )
 }
+
+export const Head: HeadFC = () => <title>About ✶ Haneen</title>
 
 export default WorkPage

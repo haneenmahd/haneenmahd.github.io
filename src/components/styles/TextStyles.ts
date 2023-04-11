@@ -59,7 +59,7 @@ export const H2 = styled.h2`
 export const P = styled.p`
     font-weight: 400;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 35px;
     color: ${ColorStyles.gray};
 
     @media screen and (max-width: 1024px) {
