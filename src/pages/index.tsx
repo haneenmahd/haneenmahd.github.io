@@ -5,6 +5,9 @@ import Layout from "../components/layout"
 import Blob from "../components/blob/HeroBlob"
 import Hero from "../components/ui/hero"
 import Projects from "../components/ui/projects/Projects"
+import { inject } from '@vercel/analytics';
+
+inject();
 
 const Wrapper = styled.div`
   height: calc(100vh - 100px);
