@@ -1,7 +1,7 @@
-import HealthAppThumbmail from "../images/projects/health-app-thumbnail.png"
-import TicTacGoThumbnail from "../images/projects/tic-tac-go-thumbnail.png"
-import PortfolioThumbnail from "../images/projects/portfolio-thumbnail.png"
-import NotyThumbnail from "../images/projects/noty-thumbnail.png"
+import HealthAppThumbmail from "../images/projects/health-app-thumbnail.jpeg"
+import TicTacGoThumbnail from "../images/projects/tic-tac-go-thumbnail.jpeg"
+import PortfolioThumbnail from "../images/projects/portfolio-thumbnail.jpeg"
+import NotyThumbnail from "../images/projects/noty-thumbnail.jpeg"
 
 export default [
     {

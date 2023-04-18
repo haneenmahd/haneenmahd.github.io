@@ -1,6 +1,6 @@
-import StudioLightsThumbnail from "../images/shop/studio-lights-cover.png"
-import GraphiikThumbnail from "../images/shop/graphiik-thumbnail.jpg"
-import MyTodoThumbnail from "../images/shop/my-todo-thumbnail.png"
+import StudioLightsThumbnail from "../images/shop/studio-lights-cover.jpeg"
+import GraphiikThumbnail from "../images/shop/graphiik-thumbnail.jpeg"
+import MyTodoThumbnail from "../images/shop/my-todo-thumbnail.jpeg"
 
 export default [
     {

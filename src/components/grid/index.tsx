@@ -1,7 +1,7 @@
 import * as React from "react"
 import styled, { css } from "styled-components"
 import { H2, P, PageTitle } from "../styles/TextStyles"
-import Thumbnail from "../../../images/projects/thumbnail-1.png"
+import Thumbnail from "../../../images/projects/thumbnail-1.jpg"
 import ColorStyles from "../styles/ColorStyles"
 
 const Wrapper = styled.div`

@@ -5,3 +5,4 @@ src/gatsby-types.d.ts
 
 # macOS Finder config files
 *.DS_Store
+.vercel
