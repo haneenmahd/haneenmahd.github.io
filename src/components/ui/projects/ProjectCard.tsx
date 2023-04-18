@@ -65,7 +65,7 @@ const Image = styled.img.attrs({
     }
 
     @media screen and (max-width: 600px) {
-        height: 250px;
+        max-height: 250px;
     }
 `
 
