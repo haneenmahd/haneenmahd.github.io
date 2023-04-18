@@ -31,4 +31,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home ✶ Haneen</title>
+export const Head: HeadFC = () => <>
+  <title>Home ✶ Haneen</title>
+  <meta name="description" content="My name is Haneen Mahdin, I'm a software developer and designer working and living in India. I help brands to create memorable experiences through expressive design." />
+</>
