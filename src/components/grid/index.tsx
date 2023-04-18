@@ -138,7 +138,7 @@ const Grid: React.FC<GridProps> = ({
 }) => {
     let sortedData = data.sort((a, b) => {
         if (a.year && b.year) {
-            return b.year - a.year
+            return b.year - a.year;
         }
 
         return 0

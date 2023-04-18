@@ -1,6 +1,7 @@
 import StudioLightsThumbnail from "../images/shop/studio-lights-cover.jpeg"
 import GraphiikThumbnail from "../images/shop/graphiik-thumbnail.jpeg"
 import MyTodoThumbnail from "../images/shop/my-todo-thumbnail.jpeg"
+import CreativeOS from "../images/shop/creative-os-thumbnail.jpeg";
 
 export default [
     {
@@ -26,5 +27,13 @@ export default [
         price: 0,
         image: MyTodoThumbnail,
         url: "https://haneenmahdin.gumroad.com/l/graphiik"
+    },
+    {
+        title: "CreativeOS",
+        description: "Transform the way you organise and manage your business. Take control of your entire businesses, goals, clients, contracts, invoices and more − all in just one place.",
+        year: 2023,
+        price: 99,
+        image: CreativeOS,
+        url: "https://haneenmahdin.gumroad.com/l/creativeos"
     }
 ]
