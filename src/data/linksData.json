@@ -1,24 +1,23 @@
 [
     {
         "name": "Shop",
-        "route": "/shop",
-        "external": false,
+        "external": true,
         "links": [
             {
-                "name": "Books",
-                "route": "/book"
+                "name": "CreativeOS",
+                "route": "https://haneenmahdin.gumroad.com/l/creativeos"
             },
             {
-                "name": "UI Kits",
-                "route": "/ui-kits"
+                "name": "My Todo",
+                "route": "https://haneenmahdin.gumroad.com/l/todo"
             },
             {
-                "name": "Notion Templates",
-                "route": "/notion-templates"
+                "name": "Studio Lights",
+                "route": "https://haneenmahdin.gumroad.com/l/studio-lights"
             },
             {
-                "name": "Wallpapers",
-                "route": "/wallpapers"
+                "name": "Graphiik",
+                "route": "https://haneenmahdin.gumroad.com/l/graphiik"
             }
         ]
     },
@@ -29,23 +28,23 @@
         "links": [
             {
                 "name": "LinkedIn",
-                "route": "/book"
+                "route": "https://www.linkedin.com/in/haneen-mahdin-0b05a11b0/"
             },
             {
                 "name": "Instagram",
-                "route": "/ui-kits"
+                "route": "https://instagram.com/haneenmahdin"
             },
             {
                 "name": "Twitter",
-                "route": "/notion-templates"
+                "route": "https://twitter.com/HaneenMahdin"
             },
             {
                 "name": "GitHub",
-                "route": "/wallpapers"
+                "route": "https://github.com/haneenmahd"
             },
             {
                 "name": "Dribbble",
-                "route": "/wallpapers"
+                "route": "https://dribbble.com/haneenmahdin"
             },
             {
                 "name": "Collaborate",
