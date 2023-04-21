@@ -2,21 +2,30 @@ import StudioLightsThumbnail from "../images/shop/studio-lights-cover.jpeg"
 import GraphiikThumbnail from "../images/shop/graphiik-thumbnail.jpeg"
 import MyTodoThumbnail from "../images/shop/my-todo-thumbnail.jpeg"
 import CreativeOS from "../images/shop/creative-os-thumbnail.jpeg";
+import MagikThumbnail from "../images/shop/magik-thumbnail.jpeg";
 
 export default [
     {
         title: "Graphiik",
         description: "A beautifully designed wallpaper for 4k+ desktops and mobiles. The gradients in this wallpaper are made purely to match the time of the day.",
         year: 2022,
-        price: 7,
+        price: 5,
         image: GraphiikThumbnail,
         url: "https://haneenmahdin.gumroad.com/l/todo"
+    },
+    {
+        title: "Magik",
+        description: "Beautifully designed 4k wallpapers for your desk setup. ",
+        year: 2023,
+        price: 5,
+        image: MagikThumbnail,
+        url: "https://haneenmahdin.gumroad.com/l/magik"
     },
     {
         title: "Studio Lights",
         description: "Beautiful designed sleek and aesthetic wallpaper for pros, creators and everyone. Comes with 5k resolution and 7 variants for mobile and 6 for desktops.",
         year: 2022,
-        price: 2,
+        price: 5,
         image: StudioLightsThumbnail,
         url: "https://haneenmahdin.gumroad.com/l/studio-lights"
     },
@@ -24,7 +33,7 @@ export default [
         title: "Notion Todo List",
         description: "Create, track and manage all your todo-lists in a clean, minimal and intuitive way.",
         year: 2023,
-        price: 0,
+        price: 9,
         image: MyTodoThumbnail,
         url: "https://haneenmahdin.gumroad.com/l/graphiik"
     },
@@ -32,7 +41,7 @@ export default [
         title: "CreativeOS",
         description: "Transform the way you organise and manage your business. Take control of your entire businesses, goals, clients, contracts, invoices and more − all in just one place.",
         year: 2023,
-        price: 99,
+        price: 49,
         image: CreativeOS,
         url: "https://haneenmahdin.gumroad.com/l/creativeos"
     }
