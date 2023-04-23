@@ -4,20 +4,8 @@
         "external": true,
         "links": [
             {
-                "name": "CreativeOS",
-                "route": "https://haneenmahdin.gumroad.com/l/creativeos"
-            },
-            {
-                "name": "My Todo",
-                "route": "https://haneenmahdin.gumroad.com/l/todo"
-            },
-            {
-                "name": "Studio Lights",
-                "route": "https://haneenmahdin.gumroad.com/l/studio-lights"
-            },
-            {
-                "name": "Graphiik",
-                "route": "https://haneenmahdin.gumroad.com/l/graphiik"
+                "name": "Lemon Squeezy",
+                "route": "https://haneen.lemonsqueezy.com/"
             }
         ]
     },

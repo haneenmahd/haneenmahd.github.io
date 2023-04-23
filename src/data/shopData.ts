@@ -9,17 +9,17 @@ export default [
         title: "Graphiik",
         description: "A beautifully designed wallpaper for 4k+ desktops and mobiles. The gradients in this wallpaper are made purely to match the time of the day.",
         year: 2022,
-        price: 5,
+        price: 1,
         image: GraphiikThumbnail,
-        url: "https://haneenmahdin.gumroad.com/l/todo"
+        url: "https://haneen.lemonsqueezy.com/checkout/buy/1cf534aa-0a1d-4684-9ea4-b7a9410ea553"
     },
     {
         title: "Magik",
         description: "Beautifully designed 4k wallpapers for your desk setup. ",
         year: 2023,
-        price: 5,
+        price: 1,
         image: MagikThumbnail,
-        url: "https://haneenmahdin.gumroad.com/l/magik"
+        url: "https://haneen.lemonsqueezy.com/checkout/buy/6ab085d2-89c1-4c11-899a-12a27d859346"
     },
     {
         title: "Studio Lights",
@@ -27,7 +27,7 @@ export default [
         year: 2022,
         price: 5,
         image: StudioLightsThumbnail,
-        url: "https://haneenmahdin.gumroad.com/l/studio-lights"
+        url: "https://haneen.lemonsqueezy.com/checkout/buy/62b3699d-41e5-4f58-8e72-1e7131416e3f"
     },
     {
         title: "Notion Todo List",
@@ -35,14 +35,14 @@ export default [
         year: 2023,
         price: 9,
         image: MyTodoThumbnail,
-        url: "https://haneenmahdin.gumroad.com/l/graphiik"
+        url: "https://haneen.lemonsqueezy.com/checkout/buy/378e3dbd-bbd1-4e10-96de-cefad455a91a"
     },
     {
         title: "CreativeOS",
         description: "Transform the way you organise and manage your business. Take control of your entire businesses, goals, clients, contracts, invoices and more − all in just one place.",
         year: 2023,
-        price: 49,
+        price: 29,
         image: CreativeOS,
-        url: "https://haneenmahdin.gumroad.com/l/creativeos"
+        url: "https://haneen.lemonsqueezy.com/checkout/buy/63007b23-ec95-414a-8b09-310255ddb3ea"
     }
 ]
