@@ -1,7 +1,7 @@
 import HealthAppThumbmail from "../images/projects/health-app-thumbnail.jpeg"
 import TicTacGoThumbnail from "../images/projects/tic-tac-go-thumbnail.jpeg"
-import PortfolioThumbnail from "../images/projects/portfolio-thumbnail.jpeg"
 import NotyThumbnail from "../images/projects/noty-thumbnail.jpeg"
+import ThiloWebsiteThumbnail from "../images/projects/thilo-website-thumbnail.jpeg"
 
 export default [
     {
@@ -9,6 +9,12 @@ export default [
         description: "Manage and track health profiles of individuals in a minimal and clean dashboard",
         year: 2022,
         image: HealthAppThumbmail
+    },
+    {
+        title: "Thilo Friedrich",
+        description: "Portfolio re-design for German-based photographer Thilo Friedrich",
+        year: 2023,
+        image: ThiloWebsiteThumbnail
     },
     {
         title: "Noty",
@@ -21,11 +27,5 @@ export default [
         description: "Online multiplayer tic tac toe game",
         year: 2023,
         image: TicTacGoThumbnail
-    },
-    {
-        title: "Portfolio",
-        description: "Designed and coded my own porfolio from scratch using Gatsby",
-        year: 2023,
-        image: PortfolioThumbnail
     }
 ]

@@ -8,6 +8,7 @@ const LinkStyle = styled(GatsbyLink)`
     font-size: 18px;
     font-weight: 400;
     padding: 3px 8px;
+    border: 1px solid transparent;
     transition: color 200ms, background-color 150ms;
 
     &:hover {
@@ -17,6 +18,7 @@ const LinkStyle = styled(GatsbyLink)`
     &.is-active {
         background-color: ${ColorStyles.secondaryGray}30;
         border-radius: 10px;
+        border-color: ${ColorStyles.tertiaryGray};
     }
 
     &.is-active:hover {

@@ -52,7 +52,7 @@ const Hero: React.FC<HeroProps> = (props) => {
             <H1 className="hidden">My name is Haneen Mahdin, I'm a <i>software developer and designer </i> working and living in India.</H1>
 
             <DescriptionBlock className="hidden">
-                <P>I help brands to create memorable experiences through expressive design.</P>
+                <P>I help brands and startups to create memorable experiences through expressive design.</P>
 
                 <SocialLinks />
             </DescriptionBlock>
