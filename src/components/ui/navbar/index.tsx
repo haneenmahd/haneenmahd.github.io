@@ -36,6 +36,10 @@ const Block = styled.div`
         line-height: 22px; 
         letter-spacing: 0em; 
         text-align: left;
+
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
     }
 
     @media screen and (max-width: 600px) {
@@ -63,7 +67,7 @@ const LinkBlock = styled.div`
     gap: 30px;
 
     @media screen and (max-width: 600px) {
-        display: none;
+        gap: 10px;
     }
 `
 

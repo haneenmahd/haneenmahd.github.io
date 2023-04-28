@@ -24,6 +24,10 @@ const LinkStyle = styled(GatsbyLink)`
     &.is-active:hover {
         color: ${ColorStyles.black};
     }
+
+    @media screen and (max-width: 600px) {
+        font-size: 14px;
+    }
 `
 
 interface LinkProps {
