@@ -18,8 +18,9 @@ const Wrapper = styled.main`
     }
 
     @media screen and (max-width: 600px) {
-        width: 90%;
+        max-width: 100%;
         gap: 30px;
+        padding: 0 1.5rem;
     }
 `
 
