@@ -5,16 +5,16 @@ import ThiloWebsiteThumbnail from "../images/projects/thilo-website-thumbnail.jp
 
 export default [
     {
-        title: "Health Profile",
-        description: "Manage and track health profiles of individuals in a minimal and clean dashboard",
-        year: 2022,
-        image: HealthAppThumbmail
-    },
-    {
         title: "Thilo Friedrich",
         description: "Portfolio re-design for German-based photographer Thilo Friedrich",
         year: 2023,
         image: ThiloWebsiteThumbnail
+    },
+    {
+        title: "Health Profile",
+        description: "Manage and track health profiles of individuals in a minimal and clean dashboard",
+        year: 2022,
+        image: HealthAppThumbmail
     },
     {
         title: "Noty",
