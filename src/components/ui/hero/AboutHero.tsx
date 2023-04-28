@@ -59,17 +59,19 @@ const AboutHero: React.FC<AboutHeroProps> = (props) => {
         <Wrapper>
             <H1 className="hidden">My name is Haneen Mahdin, I'm a <i>software developer and designer </i> working and living in India.</H1>
 
+
             <DescriptionBlock>
                 <HeroP className="hidden" index={0}>
-                    Growing up in India, I was captivated by the world of computers and the internet. As an avid gamer, I couldn't help but wonder about the complex systems behind the video games I played, which ultimately led me to the exciting world of coding.
+                    I am Haneen Mahdin, an Indian product designer and software developer with a focus on frontend development and UI/UX design. I am particularly passionate about creating innovative products that address human needs and have a strong eye for detail when it comes to designing for iOS.
                 </HeroP>
                 <HeroP className="hidden" index={1}>
-                    Learning to code was a pivotal moment in my life, opening the doors to endless possibilities. As I built my projects, I became increasingly amazed by the power of web browsers and how they connected people across the globe. However, I quickly realized that my design and UI skills needed improvement to create more visually stunning and user-friendly interfaces. That's when I decided to hone my skills in UI/UX design.
+                    Throughout my career, I have had the pleasure of working with a diverse range of clients, including small and mid-sized companies, as well as individuals. I have collaborated with them on various design and development projects, leveraging my expertise.
                 </HeroP>
                 <HeroP className="hidden" index={2}>
-                    Continuing my journey, I delved deeper into backend development and mastered various cutting-edge technologies, including NextJS, MongoDB, Prisma, React Native, Expo, SwiftUI, and C/C++. Each new skill I acquired gave me an increased level of confidence to take on more challenging projects and build amazing things.
+                    Although my focus in on building user interfaces that enhance user experience, I also have experience developing full-stack applications, mobile apps, and websites. have mastered various cutting-edge technologies, including NextJS, MongoDB, Prisma, React Native, and Expo. My knowledge in these areas has given me the ability to tackle complex projects and build amazing things.
                 </HeroP>
                 <HeroP className="hidden" index={3}>
+                    In addition to my technical skills, I have a creative side and enjoy creating templates for Notion and Framer, as well as designing wallpapers. When I am not working on these projects, I enjoy reading books, writing articles, and contributing to open-source projects.
                     In addition to coding, I spend my time reading books, writing articles, contributing to open-source projects and exploring videography.
                 </HeroP>
 
