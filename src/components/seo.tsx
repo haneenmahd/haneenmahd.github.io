@@ -9,19 +9,18 @@ export const SEO = () => {
     description: "My name is Haneen Mahdin, I'm a software developer and designer working and living in India. I help brands to create memorable experiences through expressive design.",
     twitterUsername: '@HaneenMahdin',
     url: 'https://twitter.com/HaneenMahdin',
-    image: Banner
   };
 
   return (
     <>
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
+      <meta name="image" content={Banner} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />
-      <meta name="twitter:image" content={seo.image} />
+      <meta name="twitter:image" content={Banner} />
       <meta name="twitter:creator" content={seo.twitterUsername} />
       <meta name="google-site-verification" content="gMh6iXEuJLTxNWmsDP1PTyFmEdubu7mOHpImHz4_ZAI" />
       <link
