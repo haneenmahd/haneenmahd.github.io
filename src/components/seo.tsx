@@ -1,4 +1,5 @@
 import React from "react";
+import Banner from "../images/banner.jpeg";
 
 export const SEO = () => {
   const seo = {
@@ -8,7 +9,7 @@ export const SEO = () => {
     description: "My name is Haneen Mahdin, I'm a software developer and designer working and living in India. I help brands to create memorable experiences through expressive design.",
     twitterUsername: '@HaneenMahdin',
     url: 'https://twitter.com/HaneenMahdin',
-    image: "/banner.jpeg"
+    image: Banner
   };
 
   return (
