@@ -6,6 +6,7 @@ import Blob from "../components/blob/HeroBlob"
 import Hero from "../components/ui/hero"
 import Projects from "../components/ui/projects/Projects"
 import { inject } from '@vercel/analytics';
+import { SEO } from "../components/seo"
 
 inject();
 
@@ -32,5 +33,5 @@ const IndexPage: React.FC<PageProps> = () => {
 export default IndexPage
 
 export const Head: HeadFC = () => <>
-  <title>Home ✶ Haneen</title>
+  <SEO />
 </>

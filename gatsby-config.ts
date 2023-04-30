@@ -2,11 +2,11 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `My Portfolio`,
+    title: `Haneen | Founder / Product Designer`,
     siteUrl: `https://haneenmahdin.vercel.app`,
     lang: 'en',
     description: "My name is Haneen Mahdin, I'm a software developer and designer working and living in India. I help brands to create memorable experiences through expressive design.",
-    twitterUsername: '@HaneenMahdin'
+    twitterUsername: '@HaneenMahdin',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
