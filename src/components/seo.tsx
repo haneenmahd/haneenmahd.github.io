@@ -10,6 +10,7 @@ export const SEO = () => {
     twitterUsername: '@HaneenMahdin',
     url: 'https://twitter.com/HaneenMahdin',
     image: Banner,
+    keywords: ['developer', 'designer', 'product designer', 'open source contributor', 'open source', 'developer advocate', 'nodejs', 'design', 'great design', 'great app', 'entrepreneur', 'content creator', 'best', 'near me']
   };
 
   return (
@@ -24,6 +25,7 @@ export const SEO = () => {
       <meta name="twitter:image" content={seo.image} />
       <meta name="twitter:creator" content={seo.twitterUsername} />
       <meta name="google-site-verification" content="gMh6iXEuJLTxNWmsDP1PTyFmEdubu7mOHpImHz4_ZAI" />
+      <meta name="keywords" content={seo.keywords.join(',')} />
       <link
         rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👤</text></svg>"

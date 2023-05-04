@@ -36,7 +36,8 @@ const config: GatsbyConfig = {
         "path": "./src/pages/"
       },
       __key: "pages"
-    }
+    },
+    `gatsby-plugin-sitemap`
   ]
 };
 
