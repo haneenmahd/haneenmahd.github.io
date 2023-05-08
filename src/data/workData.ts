@@ -2,6 +2,7 @@ import HealthAppThumbmail from "../images/projects/health-app-thumbnail.jpeg"
 import TicTacGoThumbnail from "../images/projects/tic-tac-go-thumbnail.jpeg"
 import NotyThumbnail from "../images/projects/noty-thumbnail.jpeg"
 import ThiloWebsiteThumbnail from "../images/projects/thilo-website-thumbnail.jpeg"
+import TFLRaycastExtensionThumbnail from "../images/projects/tfl-raycast-thumbnail.jpeg"
 
 export default [
     {
@@ -9,6 +10,12 @@ export default [
         description: "Portfolio re-design for German-based photographer Thilo Friedrich",
         year: 2023,
         image: ThiloWebsiteThumbnail
+    },
+    {
+        title: "TFL Raycast Extension",
+        description: "Arrivals for public transport in London for Raycast",
+        year: 2023,
+        image: TFLRaycastExtensionThumbnail
     },
     {
         title: "Health Profile",
