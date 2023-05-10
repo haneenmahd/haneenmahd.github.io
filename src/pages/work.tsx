@@ -13,6 +13,6 @@ const WorkPage: React.FC<PageProps> = props => {
     )
 }
 
-export const Head: HeadFC = () => <title>About ✶ Haneen</title>
+export const Head: HeadFC = () => <title>Work ✶ Haneen</title>
 
 export default WorkPage
