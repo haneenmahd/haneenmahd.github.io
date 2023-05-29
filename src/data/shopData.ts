@@ -6,6 +6,14 @@ import MagikThumbnail from "../images/shop/magik-thumbnail.jpeg";
 
 export default [
     {
+        title: "CreativeOS",
+        description: "Transform the way you organise and manage your business. Take control of your entire businesses, goals, clients, contracts, invoices and more − all in just one place.",
+        year: 2023,
+        price: 59,
+        image: CreativeOS,
+        url: "https://haneen.lemonsqueezy.com/checkout/buy/63007b23-ec95-414a-8b09-310255ddb3ea"
+    },
+    {
         title: "Graphiik",
         description: "A beautifully designed wallpaper for 4k+ desktops and mobiles. The gradients in this wallpaper are made purely to match the time of the day.",
         year: 2022,
@@ -36,13 +44,5 @@ export default [
         price: 9,
         image: MyTodoThumbnail,
         url: "https://haneen.lemonsqueezy.com/checkout/buy/378e3dbd-bbd1-4e10-96de-cefad455a91a"
-    },
-    {
-        title: "CreativeOS",
-        description: "Transform the way you organise and manage your business. Take control of your entire businesses, goals, clients, contracts, invoices and more − all in just one place.",
-        year: 2023,
-        price: 29,
-        image: CreativeOS,
-        url: "https://haneen.lemonsqueezy.com/checkout/buy/63007b23-ec95-414a-8b09-310255ddb3ea"
     }
 ]
